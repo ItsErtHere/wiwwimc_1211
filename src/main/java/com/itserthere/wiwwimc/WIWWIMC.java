@@ -34,6 +34,9 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import static com.itserthere.wiwwimc.ModBlocks.*;
+import static com.itserthere.wiwwimc.ModItems.*;
+
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(WIWWIMC.MODID)
 public class WIWWIMC {
@@ -45,6 +48,10 @@ public class WIWWIMC {
         NeoForge.EVENT_BUS.register(this);
         modEventBus.addListener(this::addCreative);
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
+
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
+        ModCreativeModeTabs.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)
@@ -53,10 +60,14 @@ public class WIWWIMC {
     }
 
     // Add the example block item to the building blocks tab
-    private void addCreative(BuildCreativeModeTabContentsEvent event)
-    {
-        //if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
-        //    event.accept(IRON_TILE);
+    private void addCreative(BuildCreativeModeTabContentsEvent event) {
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(WOODEN_CHUNK);
+            event.accept(CUSTOM_DYE);
+        }
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(IRON_TILE); event.accept(POLISHED_IRON_TILE);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
