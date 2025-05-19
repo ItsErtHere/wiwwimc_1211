@@ -25,6 +25,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STELLAR_CORE.get())
                 .add(ModBlocks.ENDER_CORE.get())
                 .add(ModBlocks.DIAMOND_CORE.get());
+        tag(BlockTags.MINEABLE_WITH_AXE)
+                .add(ModBlocks.SMITHED_OAK_PLANKS.get());
+        tag(BlockTags.MINEABLE_WITH_SHOVEL)
+                .add(ModBlocks.FULL_GRASS.get());
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.IRON_TILE.get())
                 .add(ModBlocks.POLISHED_IRON_TILE.get());
@@ -35,6 +39,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.STELLAR_CORE.get())
                 .add(ModBlocks.ENDER_CORE.get())
                 .add(ModBlocks.DIAMOND_CORE.get());
+
+        tag(BlockTags.FENCES)
+                .add(ModBlocks.SMITHED_OAK_PLANKS_FENCE.get());
+        tag(BlockTags.FENCE_GATES)
+                .add(ModBlocks.SMITHED_OAK_PLANKS_FENCE_GATE.get());
+        tag(BlockTags.WALLS)
+                .add(ModBlocks.NETHER_CORE_WALL.get());
 
 
 

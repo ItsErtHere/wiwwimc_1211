@@ -28,6 +28,12 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.BLAZING_CORE);
                                 output.accept(ModBlocks.STELLAR_CORE);
                                 output.accept(ModBlocks.ENDER_CORE);
-                                output.accept(ModBlocks.FIRM_DRIPLEAF);
+                                output.accept(ModBlocks.SMITHED_OAK_PLANKS);
+                                output.accept(ModBlocks.SMITHED_OAK_PLANKS_STAIRS);
+                                output.accept(ModBlocks.SMITHED_OAK_PLANKS_SLAB);
+                                output.accept(ModBlocks.SMITHED_OAK_PLANKS_FENCE);
+                                output.accept(ModBlocks.SMITHED_OAK_PLANKS_FENCE_GATE);
+                                output.accept(ModBlocks.NETHER_CORE_WALL);
+                                output.accept(ModBlocks.FULL_GRASS);
     }).build());
 }

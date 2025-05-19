@@ -33,7 +33,16 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.DIAMOND_CORE.get());
         dropSelf(ModBlocks.ENDER_CORE.get());
         dropSelf(ModBlocks.REDSTONE_CORE.get());
-        dropSelf(ModBlocks.FIRM_DRIPLEAF.get());
+        //dropSelf(ModBlocks.FIRM_DRIPLEAF.get());
+        dropSelf(ModBlocks.SMITHED_OAK_PLANKS.get());
+        dropSelf(ModBlocks.SMITHED_OAK_PLANKS_STAIRS.get());
+        dropSelf(ModBlocks.SMITHED_OAK_PLANKS_FENCE.get());
+        dropSelf(ModBlocks.SMITHED_OAK_PLANKS_FENCE_GATE.get());
+        dropSelf(ModBlocks.SMITHED_OAK_PLANKS_PRESSURE_PLATE.get());
+        dropSelf(ModBlocks.SMITHED_OAK_PLANKS_STAIRS.get());
+        dropSelf(ModBlocks.NETHER_CORE_WALL.get());
+        add(ModBlocks.SMITHED_OAK_PLANKS_SLAB.get(),
+                block->createSlabItemTable(ModBlocks.SMITHED_OAK_PLANKS_SLAB.get()));
 
         //ORES
         //add(ModBlocks.EXAMPLE_ORE.get(),

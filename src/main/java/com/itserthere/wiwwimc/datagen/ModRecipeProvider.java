@@ -46,6 +46,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .requires(ModBlocks.REDSTONE_CORE).requires(Items.BLAZE_POWDER)
                 .unlockedBy("has_blaze_powder",has(Items.BLAZE_POWDER)).save(recipeOutput);
         //Second input to save(recipeOutput,file_name)
+        stairBuilder(ModBlocks.SMITHED_OAK_PLANKS_STAIRS.get(),Ingredient.of(ModBlocks.SMITHED_OAK_PLANKS.get()))
+                .unlockedBy("has_smithed_oak_planks",has(ModBlocks.SMITHED_OAK_PLANKS)).save(recipeOutput);
+        slab(recipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.SMITHED_OAK_PLANKS_SLAB,ModBlocks.SMITHED_OAK_PLANKS);
+        fenceBuilder(ModBlocks.SMITHED_OAK_PLANKS_FENCE.get(),Ingredient.of(ModBlocks.SMITHED_OAK_PLANKS.get()))
+                .unlockedBy("has_smithed_oak_planks",has(ModBlocks.SMITHED_OAK_PLANKS)).save(recipeOutput);
+        fenceGateBuilder(ModBlocks.SMITHED_OAK_PLANKS_FENCE_GATE.get(),Ingredient.of(ModBlocks.SMITHED_OAK_PLANKS.get()))
+                .unlockedBy("has_smithed_oak_planks",has(ModBlocks.SMITHED_OAK_PLANKS)).save(recipeOutput);
+        wall(recipeOutput,RecipeCategory.BUILDING_BLOCKS,ModBlocks.NETHER_CORE_WALL.get(),ModBlocks.NETHER_CORE.get());
+
 
     }
     //DO NOT TOUCH
