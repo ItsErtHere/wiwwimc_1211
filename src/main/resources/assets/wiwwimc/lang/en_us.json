@@ -2,6 +2,17 @@
   "wiwwim_blocks.wiwwimc": "WIWWIMC Blocks",
   "block.wiwwimc.iron_tile": "Iron Tile",
   "block.wiwwimc.polished_iron_tile": "Polished Iron Tile",
+  "block.wiwwimc.redstone_core": "Redstone Core",
+  "block.wiwwimc.blazing_core": "Blazing Core",
+  "block.wiwwimc.ender_core": "Ender Core",
+  "block.wiwwimc.nether_core": "Nether Core",
+  "block.wiwwimc.stellar_core": "Stellar Core",
+  "block.wiwwimc.diamond_core": "Diamond Core",
+  "block.wiwwimc.etched_planks": "Etched Planks",
+  "block.wiwwimc.chiseled_planks": "Chiseled Planks",
+  "block.wiwwimc.firm_dripleaf": "Firm Dripleaf",
+  "block.wiwwimc.mosaic": "Mosaic",
   "item.wiwwimc.wooden_chunk": "Wooden Chunk",
-  "item.wiwwimc.custom_dye": "Custom Dye"
+  "item.wiwwimc.custom_dye": "Custom Dye",
+  "tooltip.wiwwimc.forbdubs": "§9For BDoubleO100§r"
 }

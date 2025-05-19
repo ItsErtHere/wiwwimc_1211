@@ -21,4 +21,5 @@ public class ModItems {
     public static final DeferredItem<Item> CUSTOM_DYE =
             ITEMS.register("custom_dye",()->new CustomDyeItem(
                     new Item.Properties().durability(3)));
+
 }

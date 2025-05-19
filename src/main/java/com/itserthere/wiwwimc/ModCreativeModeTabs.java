@@ -22,5 +22,12 @@ public class ModCreativeModeTabs {
                             .displayItems((itemDisplayParameters,output)->{
                                 output.accept(ModBlocks.IRON_TILE);
                                 output.accept(ModBlocks.POLISHED_IRON_TILE);
+                                output.accept(ModBlocks.REDSTONE_CORE);
+                                output.accept(ModBlocks.DIAMOND_CORE);
+                                output.accept(ModBlocks.NETHER_CORE);
+                                output.accept(ModBlocks.BLAZING_CORE);
+                                output.accept(ModBlocks.STELLAR_CORE);
+                                output.accept(ModBlocks.ENDER_CORE);
+                                output.accept(ModBlocks.FIRM_DRIPLEAF);
     }).build());
 }
