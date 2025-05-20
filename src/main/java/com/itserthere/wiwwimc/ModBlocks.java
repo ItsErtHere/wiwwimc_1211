@@ -87,7 +87,7 @@ public class ModBlocks {
             "smithed_oak_planks_fence", ()->new FenceBlock(
                     BlockBehaviour.Properties.of().strength(0.2f)));
     public static final DeferredBlock<FenceGateBlock> SMITHED_OAK_PLANKS_FENCE_GATE = registerBlock(
-            "smithed_oak_planks_fence", ()->new FenceGateBlock(WoodType.OAK,
+            "smithed_oak_planks_fence_gate", ()->new FenceGateBlock(WoodType.OAK,
                     BlockBehaviour.Properties.of().strength(0.2f)));
     public static final DeferredBlock<WallBlock> NETHER_CORE_WALL = registerBlock(
             "nether_core_wall",()->new WallBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
