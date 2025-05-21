@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/template_fence_gate_wall_open",
+  "textures": {
+    "texture": "wiwwimc:block/smithed_oak_planks"
+  }
+}

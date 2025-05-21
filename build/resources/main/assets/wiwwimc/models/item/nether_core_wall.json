@@ -1,6 +1,3 @@
 {
-  "parent": "minecraft:block/wall_inventory",
-  "textures": {
-    "wall": "wiwwimc:block/nether_core"
-  }
+  "parent": "wiwwimc:block/nether_core_wall"
 }

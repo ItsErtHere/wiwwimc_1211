@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_nether_core": {
+      "conditions": {
+        "items": [
+          {
+            "items": "wiwwimc:nether_core"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "wiwwimc:nether_core_wall"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_nether_core"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "wiwwimc:nether_core_wall"
+    ]
+  }
+}

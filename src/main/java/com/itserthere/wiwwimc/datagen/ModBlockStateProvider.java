@@ -54,6 +54,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockItem(ModBlocks.SMITHED_OAK_PLANKS_FENCE_GATE);
         blockItem(ModBlocks.SMITHED_OAK_PLANKS_PRESSURE_PLATE);
         blockItem(ModBlocks.NETHER_CORE_WALL);
+        blockItem(ModBlocks.FULL_GRASS);
         simpleBlockItem(FIRM_DRIPLEAF.get(), getDripleafModel(false, 0, Direction.EAST));
 
     }
@@ -70,7 +71,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     @SubscribeEvent
     public ModelFile getDripleafModel(boolean isSlab,float deg,Direction facing) {
-        return models().getExistingFile(ResourceLocation.fromNamespaceAndPath(WIWWIMC.MODID,"block/big_dripleaf_norm"));
+        return models().getExistingFile(ResourceLocation.fromNamespaceAndPath(WIWWIMC.MODID,"block/firm_dripleaf"));
     }
     private void getDripleafBlockstate(boolean isSlab, float degree) {
         getVariantBuilder(FIRM_DRIPLEAF.get()).forAllStates(state -> {

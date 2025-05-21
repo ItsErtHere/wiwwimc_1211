@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "wiwwimc:block/smithed_oak_planks_slab"
+    },
+    "type=double": {
+      "model": "wiwwimc:block/smithed_oak_planks"
+    },
+    "type=top": {
+      "model": "wiwwimc:block/smithed_oak_planks_slab_top"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_smithed_oak_planks": {
+      "conditions": {
+        "items": [
+          {
+            "items": "wiwwimc:smithed_oak_planks"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "wiwwimc:smithed_oak_planks_stairs"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_smithed_oak_planks"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "wiwwimc:smithed_oak_planks_stairs"
+    ]
+  }
+}
