@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/fence_inventory",
+  "textures": {
+    "fence": "wiwwimc:block/smithed_oak_planks"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:block",
+  "pools": [
+    {
+      "bonus_rolls": 0.0,
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
+      ],
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "wiwwimc:firm_dripleaf"
+        }
+      ],
+      "rolls": 1.0
+    }
+  ],
+  "random_sequence": "wiwwimc:blocks/firm_dripleaf"
+}

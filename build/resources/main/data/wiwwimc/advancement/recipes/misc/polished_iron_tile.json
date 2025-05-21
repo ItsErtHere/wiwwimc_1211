@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_tile": {
+      "conditions": {
+        "items": [
+          {
+            "items": "wiwwimc:iron_tile"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "wiwwimc:polished_iron_tile"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_iron_tile"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "wiwwimc:polished_iron_tile"
+    ]
+  }
+}
