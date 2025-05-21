@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "key": {
+    "B": {
+      "item": "minecraft:redstone_block"
+    },
+    "D": {
+      "item": "minecraft:redstone"
+    }
+  },
+  "pattern": [
+    "DBD",
+    "BBB",
+    "DBD"
+  ],
+  "result": {
+    "count": 1,
+    "id": "wiwwimc:redstone_core"
+  }
+}

@@ -147,11 +147,21 @@ public class ModBlocks {
     //smithing_table_bottom     Dark Oak Tile
     //loom_bottom               Dark Oak Layers
 
-    //vault_top                 Warped Mosaic
-    //vault_bottom              Soul Iron Block
-    //trial_spawner_top         Warped Tile
-    //monster_spawner           Soul Iron Grates
-    //trial_spawner_bottom      Soul Iron Bars
-    //daylight_det_bottom       Cast Soul Iron
-    //daylight_detector_top     Cast Soul Iron Bulb (+Tiled)
+    //TEXTURE ->  REGULAR  ->  OMINOUS(stone) OR TEXTURE -> REG/OM
+    //vault_top
+    //vault_bottom -> Soul Quartz
+    //vault_side -> Soul Iron Bars
+    //vault_front -> Chiseled Soul Iron Bars
+    //(M)trial_spawner_top -> Soul Iron Block
+    //(M)trial_spawner_top_ejecting -> Framed Soul Gold
+    //trial_spawner_bottom -> Soul Gold Bars
+    //trial_spawner_top_ejecting(Inner) -> Polished Ender Core
+    //trial_spawner_side_inactive -> (OM) Soul Gold Grate
+    //(M)monster_spawner -> Soul Iron Grate
+    //daylight_det_bottom
+    //daylight_detector_top
+    //ender_chest_top -> Soul Gold Block
+
+    //REDSTONE DEVICES
+    //vault_side                Player Distance Detector
 }
