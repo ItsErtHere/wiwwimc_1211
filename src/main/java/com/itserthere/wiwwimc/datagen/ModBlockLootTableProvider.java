@@ -41,6 +41,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.SMITHED_OAK_PLANKS_PRESSURE_PLATE.get());
         dropSelf(ModBlocks.SMITHED_OAK_PLANKS_STAIRS.get());
         dropSelf(ModBlocks.NETHER_CORE_WALL.get());
+        dropSelf(ModBlocks.SCULK_FRAME.get());
         dropSelf(ModBlocks.FULL_GRASS.get());
         add(ModBlocks.SMITHED_OAK_PLANKS_SLAB.get(),
                 block->createSlabItemTable(ModBlocks.SMITHED_OAK_PLANKS_SLAB.get()));

@@ -29,9 +29,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SMITHED_OAK_PLANKS.get());
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.FULL_GRASS.get());
+        tag(BlockTags.MINEABLE_WITH_HOE)
+                .add(ModBlocks.SCULK_FRAME.get());
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.IRON_TILE.get())
                 .add(ModBlocks.POLISHED_IRON_TILE.get());
+        tag(BlockTags.NEEDS_IRON_TOOL)
+                .add(ModBlocks.SCULK_FRAME.get());
         tag(BlockTags.NEEDS_DIAMOND_TOOL)
                 .add(ModBlocks.REDSTONE_CORE.get())
                 .add(ModBlocks.NETHER_CORE.get())

@@ -1,7 +1,9 @@
-// 1.21.1	2025-05-21T10:42:30.7909897	Block States: wiwwimc
+// 1.21.1	2025-05-26T16:34:08.030801	Block States: wiwwimc
 5815b3c0569af66bc74dff0d477b5af1013ca6ab assets/wiwwimc/blockstates/blazing_core.json
 7fe55050ea63412153bf992ec869372ae7e55546 assets/wiwwimc/blockstates/diamond_core.json
 dd42ccc8d55d687c13a0d51ba566d19401aed6e9 assets/wiwwimc/blockstates/ender_core.json
+b603f486e75fcc8c694065245bbc25c1c41d8fb7 assets/wiwwimc/blockstates/firm_dripleaf.json
+9cd9490d16d5479615cb2b4ecf058245c0fdc1a5 assets/wiwwimc/blockstates/full_grass.json
 a15d1fa296db1b1c4ea29dde3c22c16821814bf0 assets/wiwwimc/blockstates/iron_tile.json
 8e2261938c7ef2e2c1d3a14573088243ab425f33 assets/wiwwimc/blockstates/nether_core.json
 7da2ea93c2849da60356373fc080ff0bdfdd0fe5 assets/wiwwimc/blockstates/nether_core_wall.json
@@ -17,6 +19,7 @@ c840ced8de3dcbc3a8311fa336a592bdc2b11d1c assets/wiwwimc/blockstates/stellar_core
 c09490c04cd0bc6c493ff01f5040b5254429d986 assets/wiwwimc/models/block/blazing_core.json
 76ffeaef11e4f4d2b3197332202af45ba2218ea2 assets/wiwwimc/models/block/diamond_core.json
 2683a368751418f82d51b39c568fb2d51d8b181d assets/wiwwimc/models/block/ender_core.json
+e48385c8a1a4ff1a9e6333537f638ecf85fc5ddb assets/wiwwimc/models/block/full_grass.json
 b23f295fe6a4561fb8e67520ea82e71db5e25de8 assets/wiwwimc/models/block/iron_tile.json
 0e26f0abe97103cccc950e8ee4eee936ce3c2470 assets/wiwwimc/models/block/nether_core.json
 143e91e21ddb9bed53f87aec9f23a7c27b3d0730 assets/wiwwimc/models/block/nether_core_wall_post.json
@@ -42,13 +45,15 @@ a25e6b2707f3e9e7b8615f0aa6d1942ce28fbf07 assets/wiwwimc/models/block/smithed_oak
 cfabc881a36ec328c629c03f92599f3ed88cd172 assets/wiwwimc/models/item/blazing_core.json
 7a817310de8f7fd571474292662ebcce8da39791 assets/wiwwimc/models/item/diamond_core.json
 37b48d4b11be4dbcd1ad50b25ae80eed9d403225 assets/wiwwimc/models/item/ender_core.json
-310df5a86f9c3eca7df527c1ce778800b4bb325c assets/wiwwimc/models/item/firm_dripleaf.json
+9b263b348dd8ea3cc5aff65e1b8dbbfa5fd816f5 assets/wiwwimc/models/item/firm_dripleaf.json
+c9a43386e32de5097b582c144516bf24fa96b3b4 assets/wiwwimc/models/item/full_grass.json
 d57330967606da9b9ed6837c334ea8bb96c40c86 assets/wiwwimc/models/item/iron_tile.json
 49afffc7269aeae4b1902ca54f7a6f2fc2c92dee assets/wiwwimc/models/item/nether_core.json
 a4432c67f639d9a50bae93cedba334e73beb3198 assets/wiwwimc/models/item/nether_core_wall.json
 4f742a244be8989c3fd5088520dd9b0f68dbc6be assets/wiwwimc/models/item/polished_iron_tile.json
 e01e728042754214f0d2319346b29b66e4d7ffc2 assets/wiwwimc/models/item/redstone_core.json
 e1fd61670e8ddbeca71749e0c2d16150e5ebec3e assets/wiwwimc/models/item/smithed_oak_planks.json
+560f08102416331141cdc6829bf13df371d9bb14 assets/wiwwimc/models/item/smithed_oak_planks_fence.json
 8b3937ca9b429d9548b9cde811552a31f046c08c assets/wiwwimc/models/item/smithed_oak_planks_fence_gate.json
 973c63f856d9d55a61ab539c7381021751cb3490 assets/wiwwimc/models/item/smithed_oak_planks_pressure_plate.json
 3544e963b932e982c2ebf5f5fef6e2a6141e9b8a assets/wiwwimc/models/item/smithed_oak_planks_slab.json

@@ -1,8 +1,8 @@
 package com.itserthere.wiwwimc;
 
+import com.itserthere.wiwwimc.Blocks.OmniDirectionalBlock;
 import com.itserthere.wiwwimc.Blocks.RedstoneCoreBlock;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.DyeColor;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -12,7 +12,6 @@ import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
-import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
 import java.util.function.Supplier;
@@ -66,8 +65,8 @@ public class ModBlocks {
     public static final DeferredBlock<Block> ENDER_CORE =
             registerCoreBlock("ender_core", MapColor.COLOR_BLACK);
     public static final DeferredBlock<Block> FIRM_DRIPLEAF =
-            registerBlock("firm_dripleaf", ()->new Block(BlockBehaviour.Properties.of()
-                    .mapColor(MapColor.PLANT).sound(SoundType.BIG_DRIPLEAF)
+            registerBlock("firm_dripleaf", ()->new OmniDirectionalBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT).sound(SoundType.BIG_DRIPLEAF).noOcclusion()
                     .pushReaction(PushReaction.DESTROY).strength(0.1f)));
     public static final DeferredBlock<Block> SMITHED_OAK_PLANKS =
             registerWoodenBlock("smithed_oak_planks");
@@ -91,15 +90,18 @@ public class ModBlocks {
                     BlockBehaviour.Properties.of().strength(0.2f)));
     public static final DeferredBlock<WallBlock> NETHER_CORE_WALL = registerBlock(
             "nether_core_wall",()->new WallBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> SCULK_FRAME = registerBlock("sculk_frame",
+            ()->new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1)
+                    .mapColor(MapColor.COLOR_BLACK)));
 
     //VANILLA TEXTURE           WIWWIMC BLOCK SET
-    //enchanting_table_top      Diamond Core
-    //beacon                    Nether Star Block
-    //nether_core_sky           Fiery Stellar Core+++
-    //conduit                   Nautilous Shell Block/Pillar
-    //respawn_anchor_top        Obsidian Frame
+    //enchanting_table_top      Diamond Core =
+    //beacon                    Nether Star Block =
+    //nether_core_sky           Fiery Stellar Core+++ =
+    //conduit                   Nautilous Shell Block/Pillar =
+    //respawn_anchor_top        Obsidian Frame =
 
-    //sculk_shrieker_top        Sculk Frame
+    //sculk_shrieker_inner_top  Sculk Frame
     //sculk_catalyst_top        Idle Sculk
     //sculk_catalyst_bottom     Sculk Core {NEEDS BONE}
     //sculk_sensor_top          Condensed Sculk
@@ -119,6 +121,7 @@ public class ModBlocks {
     //crafter_bottom            Sturdy Stone Tile
     //lodestone_side            Chiseled Andesite
     //lodestone_top             Andesite Tile
+    //chiseled_tuff_brick_top   Tuff Tile
 
     //piston_top                Smithed Oak
     //beehive_top               Oak Layers
