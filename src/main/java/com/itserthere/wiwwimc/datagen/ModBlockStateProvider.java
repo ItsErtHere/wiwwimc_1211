@@ -53,8 +53,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(ModBlocks.SMITHED_OAK_PLANKS.get()));
         wallBlock(ModBlocks.NETHER_CORE_WALL.get(),
                 blockTexture(ModBlocks.NETHER_CORE.get()));
-        //vanBlockWithItem(SCULK_FRAME,Blocks.SCULK_CATALYST,"sculk_shrieker_inner_top");
-        simpleBlockWithItem(ModBlocks.SCULK_FRAME); //Temporary
+        blockWithItemAndVanillaTexture(ModBlocks.SCULK_FRAME,
+                ResourceLocation.withDefaultNamespace("block/sculk_catalyst_inner_top"));
 
 
         blockItem(ModBlocks.SMITHED_OAK_PLANKS_SLAB);
@@ -77,13 +77,17 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(deferredBlock.get(),
                 new ModelFile.UncheckedModelFile("wiwwimc:block/"+deferredBlock.getId().getPath()));
     }
-    /*private void vanBlockWithItem(DeferredBlock<?> deferredBlock, Block originalBlock, String name) {
-        ResourceLocation blockKey = BuiltInRegistries.BLOCK.getKey(originalBlock);
-        String[] tokens = blockKey.toString().split(":");
-        ResourceLocation BLOCK_TEXTURE =
-                ResourceLocation.fromNamespaceAndPath(blockKey.getNamespace(),
-                        "textures/block/" + name + ".png");
-    }*/
+    private void vanBlockWithItem(DeferredBlock<?> deferredBlock, String name) {
+        blockWithItemAndVanillaTexture(deferredBlock,
+                ResourceLocation.withDefaultNamespace("block/"+name));
+    }
+
+    private void blockWithItemAndVanillaTexture(DeferredBlock<?> deferredBlock, ResourceLocation rl)
+    {
+        simpleBlockWithItem(deferredBlock.get(),
+                this.models().cubeAll(deferredBlock.get().toString(), rl)
+        );
+    }
     @SubscribeEvent
     public ModelFile getDripleafModel(boolean isSlab,int deg) {
         String st = "block/";
