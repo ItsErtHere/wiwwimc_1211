@@ -30,7 +30,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.FULL_GRASS.get());
         tag(BlockTags.MINEABLE_WITH_HOE)
-                .add(ModBlocks.SCULK_FRAME.get());
+                .add(ModBlocks.SCULK_FRAME.get())
+                .add(ModBlocks.FIRM_DRIPLEAF.get());
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.IRON_TILE.get())
                 .add(ModBlocks.POLISHED_IRON_TILE.get());
@@ -50,6 +51,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SMITHED_OAK_PLANKS_FENCE_GATE.get());
         tag(BlockTags.WALLS)
                 .add(ModBlocks.NETHER_CORE_WALL.get());
+        tag(ModTags.Blocks.DRIPLEAF_BLOCKS)
+                .add(ModBlocks.FIRM_DRIPLEAF.get());
 
 
 

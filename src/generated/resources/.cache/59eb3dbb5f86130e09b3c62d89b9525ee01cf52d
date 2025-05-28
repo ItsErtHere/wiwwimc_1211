@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-21T10:42:30.7869791	Loot Tables
+// 1.21.1	2025-05-27T11:23:06.8840197	Loot Tables
 9a8ba5dffaa4404626df96539a33c4ebb5e72607 data/wiwwimc/loot_table/blocks/blazing_core.json
 e29e9d0d558187324d0d75c99a01cb189b4a6f90 data/wiwwimc/loot_table/blocks/diamond_core.json
 9c871ee7ebdcf2da9b12cf2585271a41985cb27f data/wiwwimc/loot_table/blocks/ender_core.json
@@ -9,6 +9,7 @@ d84172805426b70800de88162e6a84e341833db6 data/wiwwimc/loot_table/blocks/nether_c
 c0b149e716189b36ca60f4ac88834d70e91796a0 data/wiwwimc/loot_table/blocks/nether_core_wall.json
 56f07a26967930ebf20b7c3ce1b947893c721659 data/wiwwimc/loot_table/blocks/polished_iron_tile.json
 d76dce05beb67b599addce1d458dd2a4ba2f430d data/wiwwimc/loot_table/blocks/redstone_core.json
+927be0a15eabf08e2d4a1f69dec9d586cdcc92af data/wiwwimc/loot_table/blocks/sculk_frame.json
 0f733469bcb284acc8081d0c2c43ac509e682c10 data/wiwwimc/loot_table/blocks/smithed_oak_planks.json
 75c7fd7cf7c67a9d7513e211ef72764e8afd51e8 data/wiwwimc/loot_table/blocks/smithed_oak_planks_fence.json
 9f998c46f8bf9bdcbebb5b0644fe6d9c505f3aea data/wiwwimc/loot_table/blocks/smithed_oak_planks_fence_gate.json

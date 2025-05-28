@@ -1,11 +1,13 @@
 package com.itserthere.wiwwimc;
 
+import com.itserthere.wiwwimc.Blocks.DripleafBlock;
 import com.itserthere.wiwwimc.Blocks.OmniDirectionalBlock;
 import com.itserthere.wiwwimc.Blocks.RedstoneCoreBlock;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
@@ -14,6 +16,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.Objects;
 import java.util.function.Supplier;
 
 public class ModBlocks {
@@ -48,6 +51,11 @@ public class ModBlocks {
                         .requiresCorrectToolForDrops()
                         .sound(SoundType.GLASS).mapColor(mapColor)));
     }
+    //OTHER USES
+    public static DeferredBlock<Block> getDeferredBlock(BlockState state) {
+        return DeferredBlock.createBlock(Objects.requireNonNull(state.getBlockHolder().getKey()));
+    }
+    //BLOCK REGISTRIES
     public static final DeferredBlock<Block> IRON_TILE =
             registerMetalBlock("iron_tile",MapColor.COLOR_BLACK);
     public static final DeferredBlock<Block> POLISHED_IRON_TILE =
@@ -64,10 +72,12 @@ public class ModBlocks {
             registerCoreBlock("blazing_core", MapColor.TERRACOTTA_YELLOW);
     public static final DeferredBlock<Block> ENDER_CORE =
             registerCoreBlock("ender_core", MapColor.COLOR_BLACK);
+
     public static final DeferredBlock<Block> FIRM_DRIPLEAF =
-            registerBlock("firm_dripleaf", ()->new OmniDirectionalBlock(BlockBehaviour.Properties.of()
+            registerBlock("firm_dripleaf", ()->new DripleafBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.PLANT).sound(SoundType.BIG_DRIPLEAF).noOcclusion()
                     .pushReaction(PushReaction.DESTROY).strength(0.1f)));
+
     public static final DeferredBlock<Block> SMITHED_OAK_PLANKS =
             registerWoodenBlock("smithed_oak_planks");
     public static final DeferredBlock<Block> FULL_GRASS =

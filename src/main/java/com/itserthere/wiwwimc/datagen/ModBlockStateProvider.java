@@ -21,7 +21,6 @@ import net.neoforged.neoforge.registries.DeferredBlock;
 import java.util.Vector;
 import java.util.function.Function;
 import static com.itserthere.wiwwimc.ModBlocks.FIRM_DRIPLEAF;
-import static com.itserthere.wiwwimc.ModBlocks.SCULK_FRAME;
 
 public class ModBlockStateProvider extends BlockStateProvider {
     public boolean isRot = false;
@@ -40,7 +39,6 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(ModBlocks.IRON_TILE);
         simpleBlockWithItem(ModBlocks.POLISHED_IRON_TILE);
         simpleBlockWithItem(ModBlocks.SMITHED_OAK_PLANKS);
-        simpleBlockWithItem(ModBlocks.SCULK_FRAME);
         simpleBlockWithItem(ModBlocks.FULL_GRASS);
         stairsBlock(ModBlocks.SMITHED_OAK_PLANKS_STAIRS.get(),
                 blockTexture(ModBlocks.SMITHED_OAK_PLANKS.get()));
@@ -55,7 +53,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(ModBlocks.SMITHED_OAK_PLANKS.get()));
         wallBlock(ModBlocks.NETHER_CORE_WALL.get(),
                 blockTexture(ModBlocks.NETHER_CORE.get()));
-        vanBlockWithItem(SCULK_FRAME,Blocks.SCULK_CATALYST,"sculk_shrieker_inner_top");
+        //vanBlockWithItem(SCULK_FRAME,Blocks.SCULK_CATALYST,"sculk_shrieker_inner_top");
+        simpleBlockWithItem(ModBlocks.SCULK_FRAME); //Temporary
 
 
         blockItem(ModBlocks.SMITHED_OAK_PLANKS_SLAB);
@@ -78,13 +77,13 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(deferredBlock.get(),
                 new ModelFile.UncheckedModelFile("wiwwimc:block/"+deferredBlock.getId().getPath()));
     }
-    private void vanBlockWithItem(DeferredBlock<?> deferredBlock, Block originalBlock, String name) {
+    /*private void vanBlockWithItem(DeferredBlock<?> deferredBlock, Block originalBlock, String name) {
         ResourceLocation blockKey = BuiltInRegistries.BLOCK.getKey(originalBlock);
         String[] tokens = blockKey.toString().split(":");
         ResourceLocation BLOCK_TEXTURE =
                 ResourceLocation.fromNamespaceAndPath(blockKey.getNamespace(),
                         "textures/block/" + name + ".png");
-    }
+    }*/
     @SubscribeEvent
     public ModelFile getDripleafModel(boolean isSlab,int deg) {
         String st = "block/";
@@ -118,7 +117,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
     public void dripleafBlockWithItem(Block bl, boolean isSlab, int deg) {
         omnidirectionalBlockWithItem(bl, getDripleafModel(isSlab,deg), getRotDripleafModel(isSlab,deg));
     }
-    public void omniDirectionalBlock(Block block, ModelFile modelFile, ModelFile rotModelFile, int angleOffset) {
+    public void omniDirectionalBlock(Block block, ModelFile modelFile, ModelFile rotModelFile,
+                                     int angleOffset) {
         getVariantBuilder(block)
                 .forAllStates(state -> {
                     Direction face = state.getValue(OmniDirectionalBlock.FACE);

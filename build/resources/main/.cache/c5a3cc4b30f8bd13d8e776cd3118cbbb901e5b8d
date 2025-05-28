@@ -1,4 +1,4 @@
-// 1.21.1	2025-05-26T16:34:08.030801	Block States: wiwwimc
+// 1.21.1	2025-05-27T16:39:16.0544593	Block States: wiwwimc
 5815b3c0569af66bc74dff0d477b5af1013ca6ab assets/wiwwimc/blockstates/blazing_core.json
 7fe55050ea63412153bf992ec869372ae7e55546 assets/wiwwimc/blockstates/diamond_core.json
 dd42ccc8d55d687c13a0d51ba566d19401aed6e9 assets/wiwwimc/blockstates/ender_core.json
@@ -9,6 +9,7 @@ a15d1fa296db1b1c4ea29dde3c22c16821814bf0 assets/wiwwimc/blockstates/iron_tile.js
 7da2ea93c2849da60356373fc080ff0bdfdd0fe5 assets/wiwwimc/blockstates/nether_core_wall.json
 0df5ec375cffc3437a92083eb007e605149ed01d assets/wiwwimc/blockstates/polished_iron_tile.json
 b6e0ddc2beecb7f944b46386c26f25b44436ca59 assets/wiwwimc/blockstates/redstone_core.json
+779d1f572df8dc14b190d6496461136f3d82b027 assets/wiwwimc/blockstates/sculk_frame.json
 366744fbd44df4a8cfd5e328f2c698e2fc1c69f8 assets/wiwwimc/blockstates/smithed_oak_planks.json
 5c9f2c095f9c4fdaf3decf5301a98184e33780fd assets/wiwwimc/blockstates/smithed_oak_planks_fence.json
 598679b9e117a6a36bd8bbc4477ad57d99a109f2 assets/wiwwimc/blockstates/smithed_oak_planks_fence_gate.json
@@ -27,6 +28,7 @@ b23f295fe6a4561fb8e67520ea82e71db5e25de8 assets/wiwwimc/models/block/iron_tile.j
 319e42f56e4634ba7d2439d71b4b966dcc9822f6 assets/wiwwimc/models/block/nether_core_wall_side_tall.json
 73dd25ac6fbbd9ca0d072c1a4d2e20bcd5349784 assets/wiwwimc/models/block/polished_iron_tile.json
 0840accc5b1b11eeeb0d27a137ab139a106643c7 assets/wiwwimc/models/block/redstone_core.json
+e75dc56eea3e9ed6682301a9a1cf28632c1d2772 assets/wiwwimc/models/block/sculk_frame.json
 c876b5fa364c8fde261a4ce2f8ecd0c2a007a54d assets/wiwwimc/models/block/smithed_oak_planks.json
 b9191c5923889499426ef9f5f7ba97cfc98d5494 assets/wiwwimc/models/block/smithed_oak_planks_fence_gate.json
 b193888bb48aa9d3e0e4cea426dfdddfa43fe38e assets/wiwwimc/models/block/smithed_oak_planks_fence_gate_open.json
@@ -52,6 +54,7 @@ d57330967606da9b9ed6837c334ea8bb96c40c86 assets/wiwwimc/models/item/iron_tile.js
 a4432c67f639d9a50bae93cedba334e73beb3198 assets/wiwwimc/models/item/nether_core_wall.json
 4f742a244be8989c3fd5088520dd9b0f68dbc6be assets/wiwwimc/models/item/polished_iron_tile.json
 e01e728042754214f0d2319346b29b66e4d7ffc2 assets/wiwwimc/models/item/redstone_core.json
+f47dcbd95e4194efb5a135a62eb260d642503d04 assets/wiwwimc/models/item/sculk_frame.json
 e1fd61670e8ddbeca71749e0c2d16150e5ebec3e assets/wiwwimc/models/item/smithed_oak_planks.json
 560f08102416331141cdc6829bf13df371d9bb14 assets/wiwwimc/models/item/smithed_oak_planks_fence.json
 8b3937ca9b429d9548b9cde811552a31f046c08c assets/wiwwimc/models/item/smithed_oak_planks_fence_gate.json
