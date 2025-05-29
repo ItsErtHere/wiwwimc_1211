@@ -5,57 +5,55 @@
     },
     "face=down,front=east": {
       "model": "wiwwimc:block/big_dripleaf_norm",
-      "y": 270
+      "y": 90
     },
     "face=down,front=north": {
-      "model": "wiwwimc:block/big_dripleaf_norm",
-      "y": 180
+      "model": "wiwwimc:block/big_dripleaf_norm"
     },
     "face=down,front=south": {
-      "model": "wiwwimc:block/big_dripleaf_norm"
+      "model": "wiwwimc:block/big_dripleaf_norm",
+      "y": 180
     },
     "face=down,front=up": {
       "model": "wiwwimc:block/big_dripleaf_norm"
     },
     "face=down,front=west": {
       "model": "wiwwimc:block/big_dripleaf_norm",
-      "y": 90
+      "y": 270
     },
     "face=east,front=down": {
       "model": "wiwwimc:block/big_dripleaf_norm",
-      "x": 270,
-      "y": 90
+      "x": 90,
+      "y": 270
     },
     "face=east,front=east": {
       "model": "wiwwimc:block/big_dripleaf_norm_rot"
     },
     "face=east,front=north": {
       "model": "wiwwimc:block/big_dripleaf_norm_rot",
-      "x": 270,
-      "y": 90
+      "x": 90,
+      "y": 270
     },
     "face=east,front=south": {
       "model": "wiwwimc:block/big_dripleaf_norm_rot",
-      "x": 90,
-      "y": 270
+      "x": 270,
+      "y": 90
     },
     "face=east,front=up": {
       "model": "wiwwimc:block/big_dripleaf_norm",
-      "x": 90,
-      "y": 270
+      "x": 270,
+      "y": 90
     },
     "face=east,front=west": {
       "model": "wiwwimc:block/big_dripleaf_norm_rot"
     },
     "face=north,front=down": {
       "model": "wiwwimc:block/big_dripleaf_norm",
-      "x": 90,
-      "y": 180
+      "x": 270
     },
     "face=north,front=east": {
       "model": "wiwwimc:block/big_dripleaf_norm_rot",
-      "x": 90,
-      "y": 180
+      "x": 270
     },
     "face=north,front=north": {
       "model": "wiwwimc:block/big_dripleaf_norm_rot"
@@ -65,19 +63,23 @@
     },
     "face=north,front=up": {
       "model": "wiwwimc:block/big_dripleaf_norm",
-      "x": 270
+      "x": 90,
+      "y": 180
     },
     "face=north,front=west": {
       "model": "wiwwimc:block/big_dripleaf_norm_rot",
-      "x": 270
+      "x": 90,
+      "y": 180
     },
     "face=south,front=down": {
       "model": "wiwwimc:block/big_dripleaf_norm",
-      "x": 90
+      "x": 270,
+      "y": 180
     },
     "face=south,front=east": {
       "model": "wiwwimc:block/big_dripleaf_norm_rot",
-      "x": 90
+      "x": 270,
+      "y": 180
     },
     "face=south,front=north": {
       "model": "wiwwimc:block/big_dripleaf_norm_rot"
@@ -87,13 +89,11 @@
     },
     "face=south,front=up": {
       "model": "wiwwimc:block/big_dripleaf_norm",
-      "x": 270,
-      "y": 180
+      "x": 90
     },
     "face=south,front=west": {
       "model": "wiwwimc:block/big_dripleaf_norm_rot",
-      "x": 270,
-      "y": 180
+      "x": 90
     },
     "face=up,front=down": {
       "model": "wiwwimc:block/big_dripleaf_norm",
@@ -102,16 +102,16 @@
     "face=up,front=east": {
       "model": "wiwwimc:block/big_dripleaf_norm",
       "x": 180,
-      "y": 90
+      "y": 270
     },
     "face=up,front=north": {
       "model": "wiwwimc:block/big_dripleaf_norm",
-      "x": 180
+      "x": 180,
+      "y": 180
     },
     "face=up,front=south": {
       "model": "wiwwimc:block/big_dripleaf_norm",
-      "x": 180,
-      "y": 180
+      "x": 180
     },
     "face=up,front=up": {
       "model": "wiwwimc:block/big_dripleaf_norm",
@@ -120,30 +120,30 @@
     "face=up,front=west": {
       "model": "wiwwimc:block/big_dripleaf_norm",
       "x": 180,
-      "y": 270
+      "y": 90
     },
     "face=west,front=down": {
       "model": "wiwwimc:block/big_dripleaf_norm",
-      "x": 270,
-      "y": 270
+      "x": 90,
+      "y": 90
     },
     "face=west,front=east": {
       "model": "wiwwimc:block/big_dripleaf_norm_rot"
     },
     "face=west,front=north": {
       "model": "wiwwimc:block/big_dripleaf_norm_rot",
-      "x": 90,
-      "y": 90
-    },
-    "face=west,front=south": {
-      "model": "wiwwimc:block/big_dripleaf_norm_rot",
       "x": 270,
       "y": 270
     },
-    "face=west,front=up": {
-      "model": "wiwwimc:block/big_dripleaf_norm",
+    "face=west,front=south": {
+      "model": "wiwwimc:block/big_dripleaf_norm_rot",
       "x": 90,
       "y": 90
+    },
+    "face=west,front=up": {
+      "model": "wiwwimc:block/big_dripleaf_norm",
+      "x": 270,
+      "y": 270
     },
     "face=west,front=west": {
       "model": "wiwwimc:block/big_dripleaf_norm_rot"

@@ -36,7 +36,16 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.SMITHED_OAK_PLANKS_FENCE_GATE);
                                 output.accept(ModBlocks.SMITHED_OAK_PLANKS_PRESSURE_PLATE);
                                 output.accept(ModBlocks.FULL_GRASS);
-                                output.accept(ModBlocks.FIRM_DRIPLEAF);
                                 output.accept(ModBlocks.SCULK_FRAME);
+                                output.accept(ModBlocks.FIRM_DRIPLEAF);
+                                output.accept(ModBlocks.FIRM_DRIPLEAF_PARTIAL);
+                                output.accept(ModBlocks.FIRM_DRIPLEAF_FULL);
+                                output.accept(ModBlocks.FIRM_DRIPLEAF_XTRA);
+                                output.accept(ModBlocks.DRIPLEAF_STEM);
+                                output.accept(ModBlocks.HALF_DRIPLEAF);
+                                output.accept(ModBlocks.HALF_DRIPLEAF_PARTIAL);
+                                output.accept(ModBlocks.HALF_DRIPLEAF_FULL);
+                                output.accept(ModBlocks.HALF_DRIPLEAF_XTRA);
+                                output.accept(ModBlocks.HALF_DRIPLEAF_STEM);
     }).build());
 }

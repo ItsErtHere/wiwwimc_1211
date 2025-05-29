@@ -1,0 +1,107 @@
+{
+	"parent": "block/block",
+	"textures": {
+		"particle": "wiwwimc:block/big_dripleaf_top",
+		"top": "wiwwimc:block/big_dripleaf_top",
+		"stem": "wiwwimc:block/big_dripleaf_stem",
+		"side": "wiwwimc:block/big_dripleaf_side1",
+		"tip": "wiwwimc:block/big_dripleaf_side2"
+	},
+	"elements": [
+		{
+			"from": [15.998, -2, 16],
+			"to": [16, 14, 20],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [0, 15, 16]},
+			"faces": {
+				"east": {"uv": [16, 0, 0, 4], "rotation": 90, "texture": "#side", "cullface": "east"},
+				"west": {"uv": [0, 0, 16, 4], "rotation": 270, "texture": "#side"}
+			}
+		},
+		{
+			"from": [0, -1, 16],
+			"to": [16, 15, 16],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [0, 15, 16]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 16], "rotation": 180, "texture": "#top"},
+				"south": {"uv": [0, 16, 16, 0], "texture": "#top"}
+			}
+		},
+		{
+			"from": [0, -5, 16],
+			"to": [16, -1, 16.002],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [0, 15, 16]},
+			"faces": {
+				"north": {"uv": [0, 0, 16, 4], "texture": "#tip", "cullface": "north"},
+				"south": {"uv": [16, 0, 0, 4], "texture": "#tip"}
+			}
+		},
+		{
+			"from": [0, -2, 16],
+			"to": [0.002, 14, 20],
+			"shade": false,
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [0, 15, 16]},
+			"faces": {
+				"east": {"uv": [16, 0, 0, 4], "rotation": 90, "texture": "#side"},
+				"west": {"uv": [0, 0, 16, 4], "rotation": 270, "texture": "#side", "cullface": "west"}
+			}
+		},
+		{
+			"from": [5, 0, 12],
+			"to": [11, 15, 12],
+			"shade": false,
+			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 12], "rescale": true},
+			"faces": {
+				"north": {"uv": [3, 0, 14, 16], "texture": "#stem"},
+				"south": {"uv": [3, 0, 14, 16], "texture": "#stem"}
+			}
+		},
+		{
+			"from": [5, 0, 12],
+			"to": [11, 15, 12],
+			"shade": false,
+			"rotation": {"angle": -45, "axis": "y", "origin": [8, 8, 12], "rescale": true},
+			"faces": {
+				"north": {"uv": [3, 0, 14, 16], "texture": "#stem"},
+				"south": {"uv": [3, 0, 14, 16], "texture": "#stem"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"thirdperson_lefthand": {
+			"scale": [0.25, 0.25, 0.25]
+		},
+		"firstperson_righthand": {
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"firstperson_lefthand": {
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"ground": {
+			"scale": [0.5, 0.5, 0.5]
+		},
+		"gui": {
+			"rotation": [-165.5, -57.5, 180],
+			"scale": [0.5, 0.5, 0.5]
+		}
+	},
+	"groups": [
+		{
+			"name": "leaf",
+			"origin": [0, 0, 0],
+			"color": 0,
+			"children": [0, 1, 2, 3]
+		},
+		{
+			"name": "stem",
+			"origin": [8, 8, 12],
+			"color": 0,
+			"children": [4, 5]
+		}
+	]
+}

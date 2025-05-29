@@ -1,5 +1,14 @@
 {
   "values": [
-    "wiwwimc:firm_dripleaf"
+    "wiwwimc:firm_dripleaf",
+    "wiwwimc:firm_dripleaf_partial",
+    "wiwwimc:firm_dripleaf_full",
+    "wiwwimc:firm_dripleaf_xtra",
+    "wiwwimc:firm_dripleaf_stem",
+    "wiwwimc:half_dripleaf",
+    "wiwwimc:half_dripleaf_partial",
+    "wiwwimc:half_dripleaf_full",
+    "wiwwimc:half_dripleaf_xtra",
+    "wiwwimc:half_dripleaf_stem"
   ]
 }

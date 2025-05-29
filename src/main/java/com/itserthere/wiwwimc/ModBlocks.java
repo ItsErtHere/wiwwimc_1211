@@ -3,9 +3,13 @@ package com.itserthere.wiwwimc;
 import com.itserthere.wiwwimc.Blocks.DripleafBlock;
 import com.itserthere.wiwwimc.Blocks.OmniDirectionalBlock;
 import com.itserthere.wiwwimc.Blocks.RedstoneCoreBlock;
+import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -16,6 +20,7 @@ import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
+import java.util.List;
 import java.util.Objects;
 import java.util.function.Supplier;
 
@@ -28,9 +33,23 @@ public class ModBlocks {
     public static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block) {
         ModItems.ITEMS.register(name, ()-> new BlockItem(block.get(),new Item.Properties()));
     }
+    public static <T extends Block> void registerBlockItem(String name, DeferredBlock<T> block, String tooltip) {
+        ModItems.ITEMS.register(name, ()-> new BlockItem(block.get(),new Item.Properties()){
+            @Override
+            public void appendHoverText(ItemStack stack, TooltipContext context, List<Component> tooltipComponents, TooltipFlag tooltipFlag) {
+                tooltipComponents.add(Component.translatable(tooltip));
+                super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);
+            }
+        });
+    }
     public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> bl = BLOCKS.register(name,block);
         registerBlockItem(name, bl);
+        return bl;
+    }
+    public static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block, String tooltip) {
+        DeferredBlock<T> bl = BLOCKS.register(name,block);
+        registerBlockItem(name, bl,tooltip);
         return bl;
     }
     public static DeferredBlock<Block> registerWoodenBlock(String name) {
@@ -44,6 +63,12 @@ public class ModBlocks {
                         .requiresCorrectToolForDrops()
                         .sound(SoundType.METAL).mapColor(mapColor)));
     }
+    public static DeferredBlock<Block> registerMetalBlock(String name, MapColor mapColor, String tooltip) {
+        return registerBlock(name,
+                ()->new Block(BlockBehaviour.Properties.of().strength(0.4f,0.6f)
+                        .requiresCorrectToolForDrops()
+                        .sound(SoundType.METAL).mapColor(mapColor)), tooltip);
+    }
     public static DeferredBlock<Block> registerCoreBlock(String name, MapColor mapColor) {
         return registerBlock(name,
                 ()->new RedstoneCoreBlock(
@@ -55,9 +80,12 @@ public class ModBlocks {
     public static DeferredBlock<Block> getDeferredBlock(BlockState state) {
         return DeferredBlock.createBlock(Objects.requireNonNull(state.getBlockHolder().getKey()));
     }
+    public static String getBlockName(BlockState state) {
+        return getDeferredBlock(state).getRegisteredName();
+    }
     //BLOCK REGISTRIES
     public static final DeferredBlock<Block> IRON_TILE =
-            registerMetalBlock("iron_tile",MapColor.COLOR_BLACK);
+            registerMetalBlock("iron_tile",MapColor.COLOR_BLACK,"tooltip.wiwwimc.for_tango");
     public static final DeferredBlock<Block> POLISHED_IRON_TILE =
             registerMetalBlock("polished_iron_tile",MapColor.COLOR_BLACK);
     public static final DeferredBlock<Block> NETHER_CORE =
@@ -72,16 +100,62 @@ public class ModBlocks {
             registerCoreBlock("blazing_core", MapColor.TERRACOTTA_YELLOW);
     public static final DeferredBlock<Block> ENDER_CORE =
             registerCoreBlock("ender_core", MapColor.COLOR_BLACK);
-
+    //DRIPLEAFS
     public static final DeferredBlock<Block> FIRM_DRIPLEAF =
             registerBlock("firm_dripleaf", ()->new DripleafBlock(BlockBehaviour.Properties.of()
                     .mapColor(MapColor.PLANT).sound(SoundType.BIG_DRIPLEAF).noOcclusion()
                     .pushReaction(PushReaction.DESTROY).strength(0.1f)));
+    public static final DeferredBlock<Block> FIRM_DRIPLEAF_PARTIAL =
+            registerBlock("firm_dripleaf_partial", ()->new DripleafBlock(
+                    BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT).sound(SoundType.BIG_DRIPLEAF).noOcclusion()
+                    .pushReaction(PushReaction.DESTROY).strength(0.1f)));
+    public static final DeferredBlock<Block> FIRM_DRIPLEAF_FULL =
+            registerBlock("firm_dripleaf_full", ()->new DripleafBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT).sound(SoundType.BIG_DRIPLEAF).noOcclusion()
+                            .pushReaction(PushReaction.DESTROY).strength(0.1f)));
+    public static final DeferredBlock<Block> FIRM_DRIPLEAF_XTRA =
+            registerBlock("firm_dripleaf_xtra", ()->new DripleafBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT).sound(SoundType.BIG_DRIPLEAF).noOcclusion()
+                            .pushReaction(PushReaction.DESTROY).strength(0.1f)));
+    public static final DeferredBlock<Block> DRIPLEAF_STEM =
+            registerBlock("firm_dripleaf_stem", ()->new DripleafBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT).sound(SoundType.BIG_DRIPLEAF).noOcclusion()
+                            .pushReaction(PushReaction.DESTROY).strength(0.1f)));
+    public static final DeferredBlock<Block> HALF_DRIPLEAF =
+            registerBlock("half_dripleaf", ()->new DripleafBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT).sound(SoundType.BIG_DRIPLEAF).noOcclusion()
+                    .pushReaction(PushReaction.DESTROY).strength(0.1f)));
+    public static final DeferredBlock<Block> HALF_DRIPLEAF_PARTIAL =
+            registerBlock("half_dripleaf_partial", ()->new DripleafBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT).sound(SoundType.BIG_DRIPLEAF).noOcclusion()
+                            .pushReaction(PushReaction.DESTROY).strength(0.1f)));
+    public static final DeferredBlock<Block> HALF_DRIPLEAF_FULL =
+            registerBlock("half_dripleaf_full", ()->new DripleafBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT).sound(SoundType.BIG_DRIPLEAF).noOcclusion()
+                            .pushReaction(PushReaction.DESTROY).strength(0.1f)));
+    public static final DeferredBlock<Block> HALF_DRIPLEAF_XTRA =
+            registerBlock("half_dripleaf_xtra", ()->new DripleafBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT).sound(SoundType.BIG_DRIPLEAF).noOcclusion()
+                            .pushReaction(PushReaction.DESTROY).strength(0.1f)));
+    public static final DeferredBlock<Block> HALF_DRIPLEAF_STEM =
+            registerBlock("half_dripleaf_stem", ()->new DripleafBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT).sound(SoundType.BIG_DRIPLEAF).noOcclusion()
+                            .pushReaction(PushReaction.DESTROY).strength(0.1f)));
 
+    //WOODEN BLOCKS
     public static final DeferredBlock<Block> SMITHED_OAK_PLANKS =
             registerWoodenBlock("smithed_oak_planks");
     public static final DeferredBlock<Block> FULL_GRASS =
-            registerWoodenBlock("full_grass");
+            registerBlock("full_grass", ()->new GrassBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.GRASS).strength(0.6F).sound(SoundType.GRASS)));
     public static final DeferredBlock<StairBlock> SMITHED_OAK_PLANKS_STAIRS = registerBlock(
             "smithed_oak_planks_stairs", ()->new StairBlock(
                     ModBlocks.SMITHED_OAK_PLANKS.get().defaultBlockState(),
@@ -108,9 +182,9 @@ public class ModBlocks {
     //enchanting_table_top      Diamond Core =
     //beacon                    Nether Star Block =
     //nether_core_sky           Fiery Stellar Core+++ =
-    //conduit                   Nautilous Shell Block/Pillar =
-    //respawn_anchor_top        Obsidian Frame =
+    //conduit                   Nautilous Shell Block/Pillar
 
+    //respawn_anchor_top        Obsidian Frame
     //sculk_shrieker_inner_top  Sculk Frame
     //sculk_catalyst_top        Idle Sculk
     //sculk_catalyst_bottom     Sculk Core {NEEDS BONE}

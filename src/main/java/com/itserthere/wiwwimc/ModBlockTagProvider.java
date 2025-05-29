@@ -52,7 +52,16 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.WALLS)
                 .add(ModBlocks.NETHER_CORE_WALL.get());
         tag(ModTags.Blocks.DRIPLEAF_BLOCKS)
-                .add(ModBlocks.FIRM_DRIPLEAF.get());
+                .add(ModBlocks.FIRM_DRIPLEAF.get())
+                .add(ModBlocks.FIRM_DRIPLEAF_PARTIAL.get())
+                .add(ModBlocks.FIRM_DRIPLEAF_FULL.get())
+                .add(ModBlocks.FIRM_DRIPLEAF_XTRA.get())
+                .add(ModBlocks.DRIPLEAF_STEM.get())
+                .add(ModBlocks.HALF_DRIPLEAF.get())
+                .add(ModBlocks.HALF_DRIPLEAF_PARTIAL.get())
+                .add(ModBlocks.HALF_DRIPLEAF_FULL.get())
+                .add(ModBlocks.HALF_DRIPLEAF_XTRA.get())
+                .add(ModBlocks.HALF_DRIPLEAF_STEM.get());
 
 
 

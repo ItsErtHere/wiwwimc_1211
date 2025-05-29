@@ -23,9 +23,19 @@
   "block.wiwwimc.chiseled_planks_fence_gate": "Chiseled Oak Fence Gate",
   "block.wiwwimc.chiseled_planks": "Chiseled Oak Planks",
   "block.wiwwimc.firm_dripleaf": "Firm Dripleaf",
+  "block.wiwwimc.firm_dripleaf_partial": "Firm Dripleaf (Partial Tilt)",
+  "block.wiwwimc.firm_dripleaf_full": "Firm Dripleaf (Full Tilt)",
+  "block.wiwwimc.firm_dripleaf_xtra": "Firm Dripleaf (Extra Tilt)",
+  "block.wiwwimc.firm_dripleaf_stem": "Dripleaf Stem",
+  "block.wiwwimc.half_dripleaf": "Half Dripleaf",
+  "block.wiwwimc.half_dripleaf_partial": "Half Dripleaf (Partial Tilt)",
+  "block.wiwwimc.half_dripleaf_full": "Half Dripleaf (Full Tilt)",
+  "block.wiwwimc.half_dripleaf_xtra": "Half Dripleaf (Extra Tilt)",
+  "block.wiwwimc.half_dripleaf_stem": "Half Dripleaf Stem",
   "block.wiwwimc.smithed_oak_planks": "Smithed Oak Planks",
   "block.wiwwimc.mosaic": "Mosaic",
   "item.wiwwimc.wooden_chunk": "Wooden Chunk",
   "item.wiwwimc.custom_dye": "Custom Dye",
-  "tooltip.wiwwimc.forbdubs": "§9For BDoubleO100§r"
+  "tooltip.wiwwimc.for_bdubs": "§2For BDoubleO100§r",
+  "tooltip.wiwwimc.for_tango": "§2For Tango§r"
 }

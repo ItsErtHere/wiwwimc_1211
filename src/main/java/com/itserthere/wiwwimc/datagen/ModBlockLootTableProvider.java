@@ -33,7 +33,6 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.DIAMOND_CORE.get());
         dropSelf(ModBlocks.ENDER_CORE.get());
         dropSelf(ModBlocks.REDSTONE_CORE.get());
-        dropSelf(ModBlocks.FIRM_DRIPLEAF.get());
         dropSelf(ModBlocks.SMITHED_OAK_PLANKS.get());
         dropSelf(ModBlocks.SMITHED_OAK_PLANKS_STAIRS.get());
         dropSelf(ModBlocks.SMITHED_OAK_PLANKS_FENCE.get());
@@ -43,6 +42,18 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.NETHER_CORE_WALL.get());
         dropSelf(ModBlocks.SCULK_FRAME.get());
         dropSelf(ModBlocks.FULL_GRASS.get());
+        //DRIPLEAFS
+        dropSelf(ModBlocks.FIRM_DRIPLEAF.get());
+        dropSelf(ModBlocks.FIRM_DRIPLEAF_PARTIAL.get());
+        dropSelf(ModBlocks.FIRM_DRIPLEAF_FULL.get());
+        dropSelf(ModBlocks.FIRM_DRIPLEAF_XTRA.get());
+        dropSelf(ModBlocks.DRIPLEAF_STEM.get());
+        dropSelf(ModBlocks.HALF_DRIPLEAF.get());
+        dropSelf(ModBlocks.HALF_DRIPLEAF_PARTIAL.get());
+        dropSelf(ModBlocks.HALF_DRIPLEAF_FULL.get());
+        dropSelf(ModBlocks.HALF_DRIPLEAF_XTRA.get());
+        dropSelf(ModBlocks.HALF_DRIPLEAF_STEM.get());
+        //SLABS
         add(ModBlocks.SMITHED_OAK_PLANKS_SLAB.get(),
                 block->createSlabItemTable(ModBlocks.SMITHED_OAK_PLANKS_SLAB.get()));
 

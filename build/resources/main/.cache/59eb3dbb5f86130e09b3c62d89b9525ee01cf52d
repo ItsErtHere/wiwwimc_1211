@@ -1,9 +1,18 @@
-// 1.21.1	2025-05-27T11:23:06.8840197	Loot Tables
+// 1.21.1	2025-05-28T12:03:48.5113584	Loot Tables
 9a8ba5dffaa4404626df96539a33c4ebb5e72607 data/wiwwimc/loot_table/blocks/blazing_core.json
 e29e9d0d558187324d0d75c99a01cb189b4a6f90 data/wiwwimc/loot_table/blocks/diamond_core.json
 9c871ee7ebdcf2da9b12cf2585271a41985cb27f data/wiwwimc/loot_table/blocks/ender_core.json
 38332a18b73a8d4fdb32c52ca16bc82e38e37d8b data/wiwwimc/loot_table/blocks/firm_dripleaf.json
+02c6a539c620f9876e4534a6b2a8d1bd71928e4f data/wiwwimc/loot_table/blocks/firm_dripleaf_full.json
+a09ea9b2ee313a9c0afb98507d9d1355ccb0a9bb data/wiwwimc/loot_table/blocks/firm_dripleaf_partial.json
+09374f64211972ed8288f6323b815d905592ddaf data/wiwwimc/loot_table/blocks/firm_dripleaf_stem.json
+9775de49d88ff473a1e16bab1079876c2f7c52ab data/wiwwimc/loot_table/blocks/firm_dripleaf_xtra.json
 260e85deb0414a9333fd1c145c7af07092abc625 data/wiwwimc/loot_table/blocks/full_grass.json
+05706ee1a73bcd41a14b059c42bb87c70192a9db data/wiwwimc/loot_table/blocks/half_dripleaf.json
+799866c3a241b8850a877c99d3d53de67900835f data/wiwwimc/loot_table/blocks/half_dripleaf_full.json
+2ea594099b9dc74c185c5597b9e9af3b1a08ff57 data/wiwwimc/loot_table/blocks/half_dripleaf_partial.json
+85a394e8694b92c3efe738e5bbce1f17832b7015 data/wiwwimc/loot_table/blocks/half_dripleaf_stem.json
+5031114179b4cb9f6682acb4ff5c481fddf6f351 data/wiwwimc/loot_table/blocks/half_dripleaf_xtra.json
 393773e76578a0d4ecff0efc3e31d5cfd799ef53 data/wiwwimc/loot_table/blocks/iron_tile.json
 d84172805426b70800de88162e6a84e341833db6 data/wiwwimc/loot_table/blocks/nether_core.json
 c0b149e716189b36ca60f4ac88834d70e91796a0 data/wiwwimc/loot_table/blocks/nether_core_wall.json
