@@ -61,7 +61,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.HALF_DRIPLEAF_PARTIAL.get())
                 .add(ModBlocks.HALF_DRIPLEAF_FULL.get())
                 .add(ModBlocks.HALF_DRIPLEAF_XTRA.get())
-                .add(ModBlocks.HALF_DRIPLEAF_STEM.get());
+                .add(ModBlocks.HALF_DRIPLEAF_STEM.get())
+                .add(ModBlocks.DRIPLEAF_LEAF.get());
 
 
 

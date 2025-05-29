@@ -1,7 +1,6 @@
 package com.itserthere.wiwwimc;
 
 import com.itserthere.wiwwimc.Blocks.DripleafBlock;
-import com.itserthere.wiwwimc.Blocks.OmniDirectionalBlock;
 import com.itserthere.wiwwimc.Blocks.RedstoneCoreBlock;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.BlockItem;
@@ -9,8 +8,8 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -149,6 +148,11 @@ public class ModBlocks {
                     BlockBehaviour.Properties.of()
                             .mapColor(MapColor.PLANT).sound(SoundType.BIG_DRIPLEAF).noOcclusion()
                             .pushReaction(PushReaction.DESTROY).strength(0.1f)));
+    public static final DeferredBlock<Block> DRIPLEAF_LEAF =
+            registerBlock("dripleaf_leaf", ()->new DripleafBlock(
+                    BlockBehaviour.Properties.of()
+                            .mapColor(MapColor.PLANT).sound(SoundType.BIG_DRIPLEAF).noOcclusion()
+                            .pushReaction(PushReaction.DESTROY).strength(0.1f)));
 
     //WOODEN BLOCKS
     public static final DeferredBlock<Block> SMITHED_OAK_PLANKS =
@@ -206,6 +210,7 @@ public class ModBlocks {
     //lodestone_side            Chiseled Andesite
     //lodestone_top             Andesite Tile
     //chiseled_tuff_brick_top   Tuff Tile
+    //chiseled_resin_brick_top  Resin Tile
 
     //piston_top                Smithed Oak
     //beehive_top               Oak Layers
@@ -245,7 +250,7 @@ public class ModBlocks {
     //trial_spawner_top_ejecting(Inner) -> Polished Ender Core
     //trial_spawner_side_inactive -> (OM) Soul Gold Grate
     //(M)monster_spawner -> Soul Iron Grate
-    //daylight_det_bottom
+    //daylight_detector_bottom
     //daylight_detector_top
     //ender_chest_top -> Soul Gold Block
 

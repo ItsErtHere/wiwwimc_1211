@@ -56,6 +56,62 @@ public class ModBlockStateProvider extends BlockStateProvider {
         wallBlock(ModBlocks.NETHER_CORE_WALL.get(),
                 blockTexture(ModBlocks.NETHER_CORE.get()));
         blockWithItemAndVanillaTexture(ModBlocks.SCULK_FRAME,"sculk_shrieker_inner_top");
+        /*
+       blockWithItemAndVanillaTexture(ModBlocks.IDLE_SCULK,"sculk_catalyst_top");
+       blockWithItemAndVanillaTexture(ModBlocks.SCULK_CORE,"sculk_catalyst_bottom");
+       blockWithItemAndVanillaTexture(ModBlocks.CONDENSED_SCULK,"sculk_sensor_top");
+       blockWithItemAndVanillaTexture(ModBlocks.SCULKY_PILLAR,"sculk_catalyst_side");
+
+       blockWithItemAndVanillaTexture(ModBlocks.CHISELED_CAST_IRON,"cauldron_side");
+       blockWithItemAndVanillaTexture(ModBlocks.CAST_IRON,"cauldron_bottom");
+       blockWithItemAndVanillaTexture(ModBlocks.SMITHED_IRON,"anvil_top");
+       blockWithItemAndVanillaTexture(ModBlocks.RESMITHED_IRON,"anvil_side"); //??
+
+       blockWithItemAndVanillaTexture(ModBlocks.SMOOTH_STONE_TILE,"stonecutter_bottom");
+       blockWithItemAndVanillaTexture(ModBlocks.STURDY_STONE_TILE,"crafter_bottom");
+       blockWithItemAndVanillaTexture(ModBlocks.CHISELED_ANDESITE,"lodestone_side");
+       blockWithItemAndVanillaTexture(ModBlocks.ANDESITE_TILE,"lodestone_top");
+       blockWithItemAndVanillaTexture(ModBlocks.TUFF_TILE,"chiseled_tuff_brick_top");
+       blockWithItemAndVanillaTexture(ModBlocks.RESIN_TILE,"chiseled_resin_brick_top");
+
+       blockWithItemAndVanillaTexture(ModBlocks.OAK_LAYERS,"beehive_top");
+       blockWithItemAndVanillaTexture(ModBlocks.SMOOTH_OAK,"beehive_side");
+       blockWithItemAndVanillaTexture(ModBlocks.BORDERED_SMOOTH_OAK,"beehive_front");
+       blockWithItemAndVanillaTexture(ModBlocks.OAK_MOSAIC,"chiseled_bookshelf_top");
+       blockWithItemAndVanillaTexture(ModBlocks.OAK_VENTS ,"chiseled_bookshelf_front");
+       blockWithItemAndVanillaTexture(ModBlocks.CHISELED_OAK,"chiseled_bookshelf_side");
+       blockWithItemAndVanillaTexture(ModBlocks.OAK_TILE,"lectern_top");
+       blockWithItemAndVanillaTexture(ModBlocks.ENCASED_OAK,"crafter_side"); //Stone encased
+       blockWithItemAndVanillaTexture(ModBlocks.ENCASED_OAK_PILLAR,"crafter_back");
+
+       blockWithItemAndVanillaTexture(ModBlocks.BIRCH_TILE,"fletching_table_top");
+       blockWithItemAndVanillaTexture(ModBlocks.JUNGLE_TILE,"chest_top");
+
+       blockWithItemAndVanillaTexture(ModBlocks.BAMBOO_TILE,"bee_nest_top");
+       blockWithItemAndVanillaTexture(ModBlocks.BAMBOO_LAYERS,"bee_nest_side");
+
+       blockWithItemAndVanillaTexture(ModBlocks.SPRUCE_VENTS,"loom_side");
+       blockWithItemAndVanillaTexture(ModBlocks.SMITHED_SPRUCE,"loom_top");
+       blockWithItemAndVanillaTexture(ModBlocks.SPRUCE_LAYERS,"composter_side");
+       blockWithItemAndVanillaTexture(ModBlocks.CHISELED_SPRUCE,"composter_bottom");
+       blockWithItemAndVanillaTexture(ModBlocks.SPRUCE_TILE,"barrel_top");
+
+       blockWithItemAndVanillaTexture(ModBlocks.CHISELED_DARK_OAK,"smithing_table_side");
+       blockWithItemAndVanillaTexture(ModBlocks.DARK_OAK_TILE,"smithing_table_bottom");
+       blockWithItemAndVanillaTexture(ModBlocks.DARK_OAK_LAYERS,"loom_bottom");
+
+       blockWithItemAndVanillaTexture(ModBlocks.SOUL_QUARTZ,"vault_bottom");
+       blockWithItemAndVanillaTexture(ModBlocks.SOUL_QUARTZ_TILES,"daylight_detector_bottom");
+       blockWithItemAndVanillaTexture(ModBlocks.SOUL_QUARTZ_BULBS,"daylight_detector_top");
+       blockWithItemAndVanillaTexture(ModBlocks.SOUL_IRON_BLOCK,"trial_spawner_top");
+       blockWithItemAndVanillaTexture(ModBlocks.SOUL_IRON_BARS,"vault_side");
+       blockWithItemAndVanillaTexture(ModBlocks.CHISELED_SOUL_IRON_BARS,"vault_front");
+       blockWithItemAndVanillaTexture(ModBlocks.SOUL_GOLD_BLOCK,"ender_chest_top");
+       blockWithItemAndVanillaTexture(ModBlocks.SOUL_GOLD_BARS,"trial_spawner_bottom");
+       blockWithItemAndVanillaTexture(ModBlocks.SOUL_GOLD_GRATES,"trial_spawner_side_inactive_ominous");
+       blockWithItemAndVanillaTexture(ModBlocks.SOUL_GOLD_TILE,"trial_spawner_top_ejecting");
+
+         */
 
         blockItem(ModBlocks.SMITHED_OAK_PLANKS_SLAB);
         blockItem(ModBlocks.SMITHED_OAK_PLANKS_STAIRS);
@@ -74,6 +130,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         dripleafBlockWithItem(HALF_DRIPLEAF_FULL.get(), true,2);
         dripleafBlockWithItem(HALF_DRIPLEAF_XTRA.get(), true,3);
         dripleafBlockWithItem(HALF_DRIPLEAF_STEM.get(), true,4);
+        dripleafBlockWithItem(DRIPLEAF_LEAF.get(), false,5);
 
 
     }

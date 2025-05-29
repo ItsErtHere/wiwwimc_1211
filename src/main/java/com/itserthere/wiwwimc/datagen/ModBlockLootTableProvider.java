@@ -53,6 +53,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.HALF_DRIPLEAF_FULL.get());
         dropSelf(ModBlocks.HALF_DRIPLEAF_XTRA.get());
         dropSelf(ModBlocks.HALF_DRIPLEAF_STEM.get());
+        dropSelf(ModBlocks.DRIPLEAF_LEAF.get());
         //SLABS
         add(ModBlocks.SMITHED_OAK_PLANKS_SLAB.get(),
                 block->createSlabItemTable(ModBlocks.SMITHED_OAK_PLANKS_SLAB.get()));

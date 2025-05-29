@@ -47,5 +47,6 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.HALF_DRIPLEAF_FULL);
                                 output.accept(ModBlocks.HALF_DRIPLEAF_XTRA);
                                 output.accept(ModBlocks.HALF_DRIPLEAF_STEM);
+                                output.accept(ModBlocks.DRIPLEAF_LEAF);
     }).build());
 }

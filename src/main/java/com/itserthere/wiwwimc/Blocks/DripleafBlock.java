@@ -2,13 +2,9 @@ package com.itserthere.wiwwimc.Blocks;
 
 import com.itserthere.wiwwimc.ModBlocks;
 import com.itserthere.wiwwimc.ModTags;
-import com.itserthere.wiwwimc.WIWWIMC;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
-import net.minecraft.world.ItemInteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
@@ -25,6 +21,8 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 import java.util.List;
 
+import static com.itserthere.wiwwimc.Blocks.DripleafVoxels.getTilt;
+
 public class DripleafBlock extends OmniDirectionalBlock {
     public DripleafBlock(Properties properties) {
         super(properties);
@@ -36,14 +34,15 @@ public class DripleafBlock extends OmniDirectionalBlock {
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         VoxelShape voxelShape = Block.box(0,0,0,16,16,16);
         if(ModBlocks.getDeferredBlock(state).is(ModTags.Blocks.DRIPLEAF_BLOCKS)) {
-            voxelShape = DripleafVoxels.getDripleafVoxel(state);
+            if(getTilt(state)==4) {voxelShape = DripleafVoxels.getStemVoxel(state);}
+            else voxelShape = DripleafVoxels.getDripleafVoxel(state);
         }
         return voxelShape;
     }
 
     @Override
     protected InteractionResult useWithoutItem(BlockState state, Level level, BlockPos pos, Player player, BlockHitResult hitResult) {
-        if(!level.isClientSide()){
+        if(!level.isClientSide() && getTilt(state)!=4){
             boolean currentState = state.getValue(STRETCHED);
             level.setBlockAndUpdate(pos,state.setValue(STRETCHED,!currentState));
         }
