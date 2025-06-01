@@ -1,5 +1,18 @@
 {
   "values": [
-    "wiwwimc:smithed_oak_planks"
+    "wiwwimc:smithed_oak_planks",
+    "wiwwimc:oak_vents",
+    "wiwwimc:oak_tile",
+    "wiwwimc:oak_mosaic",
+    "wiwwimc:oak_layers",
+    "wiwwimc:birch_tile",
+    "wiwwimc:spruce_vents",
+    "wiwwimc:spruce_tile",
+    "wiwwimc:spruce_layers",
+    "wiwwimc:dark_oak_tile",
+    "wiwwimc:dark_oak_layers",
+    "wiwwimc:chiseled_dark_oak_planks",
+    "wiwwimc:encased_oak_planks",
+    "wiwwimc:bordered_smooth_oak_planks"
   ]
 }

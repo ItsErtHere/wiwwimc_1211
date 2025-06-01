@@ -69,6 +69,7 @@
 			}
 		}
 	],
+	"render_type":"cutout",
 	"display": {
 		"thirdperson_righthand": {
 			"rotation": [180, 0, 0],

@@ -25,6 +25,9 @@ public class DripleafVoxels {
     public static boolean isDripleaf(DeferredBlock<?> block) {
         return block.is(ModTags.Blocks.DRIPLEAF_BLOCKS);
     }
+    public static boolean isDripleaf(BlockState state) {
+        return state.is(ModTags.Blocks.DRIPLEAF_BLOCKS);
+    }
     private static int getTilt(DeferredBlock<?> block) {
         int x=-1;
         if(isDripleaf(block)) {
@@ -34,17 +37,28 @@ public class DripleafVoxels {
             else if(blockId.contains("_full")) {x = 2;}
             else if(blockId.contains("_xtra")) {x = 3;}
             else if(blockId.contains("_stem")) {x = 4;}
+            else if(blockId.contains("_leaf")) {x = 5;}
         }
         return x;
     }
     public static int getTilt(BlockState state) {
-        return getTilt(ModBlocks.getDeferredBlock(state));
+        int x=-1;
+        if(isDripleaf(ModBlocks.getDeferredBlock(state))) {
+            String blockId = state.getBlock().getDescriptionId();
+            if(blockId.contains("_norm")||blockId.contains("firm_dripleaf")) {x = 0;}
+            else if(blockId.contains("_partial")) {x = 1;}
+            else if(blockId.contains("_full")) {x = 2;}
+            else if(blockId.contains("_xtra")) {x = 3;}
+            else if(blockId.contains("_stem")) {x = 4;}
+            else if(blockId.contains("_leaf")) {x = 5;}
+        }
+        return x;
     }
     public static boolean getSlab(DeferredBlock<?> block) {
         return (isDripleaf(block) && block.getRegisteredName().contains("slab_"));
     }
     public static boolean getSlab(BlockState state) {
-        return getSlab(ModBlocks.getDeferredBlock(state));
+        return (isDripleaf(state) && state.getBlock().getDescriptionId().contains("slab_"));
     }
     public boolean getRot(DeferredBlock<?> block) {
         return (isDripleaf(block) && block.getRegisteredName().contains("_rot"));
@@ -77,7 +91,7 @@ public class DripleafVoxels {
     }
     public static VoxelShape getDripleafVoxel(BlockState state) {
         VoxelShape newVoxel = Block.box(0,0,0,16,16,16);
-        if((getTilt(state)==2 && getSlab(state))|| getTilt(state)==3  || getTilt(state)==4){
+        if(getTilt(state)==2|| getTilt(state)==3  || getTilt(state)==4){
             newVoxel=Block.box(0,0,0,0,0,0);
         }
         else if(conShape(state,0,NORTH,false)) {newVoxel=Block.box(0 ,0 ,1 ,16,16,5 );}
@@ -94,46 +108,19 @@ public class DripleafVoxels {
         else if(conShape(state,1,UP   ,false)) {newVoxel=Block.box(0,4,0,16,8 ,16);}
         else if(conShape(state,1,DOWN ,false)) {newVoxel=Block.box(0,8,0,16,12,16);}
 
+        else if(conShape(state,1,NORTH,true)) {newVoxel=Block.box(0,0,0 ,16,16,1 );}
+        else if(conShape(state,1,SOUTH,true)) {newVoxel=Block.box(0,0,15,16,16,16);}
+        else if(conShape(state,1,EAST ,true)) {newVoxel=Block.box(15,0,0,16,16,16);}
+        else if(conShape(state,1,WEST ,true)) {newVoxel=Block.box(0 ,0,0,1 ,16,16);}
+        else if(conShape(state,1,UP   ,true)) {newVoxel=Block.box(0,15,0,16,16,16);}
+        else if(conShape(state,1,DOWN ,true)) {newVoxel=Block.box(0,0 ,0,16,1 ,16);}
+
         else if(conShape(state,5,NORTH,false)) {newVoxel=Block.box(0,0,0 ,16,16,1 );}
         else if(conShape(state,5,SOUTH,false)) {newVoxel=Block.box(0,0,15,16,16,16);}
         else if(conShape(state,5,EAST ,false)) {newVoxel=Block.box(15,0,0,16,16,16);}
         else if(conShape(state,5,WEST ,false)) {newVoxel=Block.box(0 ,0,0,1 ,16,16);}
         else if(conShape(state,5,UP   ,false)) {newVoxel=Block.box(0,15,0,16,16,16);}
         else if(conShape(state,5,DOWN ,false)) {newVoxel=Block.box(0,0 ,0,16,1 ,16);}
-
-        else if(conShape(state,2,NORTH,true )) {newVoxel=Block.box(0,0,10,16,16,14);}
-        else if(conShape(state,2,SOUTH,true )) {newVoxel=Block.box(0,0,2 ,16,16,6 );}
-        else if(conShape(state,2,EAST ,true )) {newVoxel=Block.box(10,0,0,14,16,16);}
-        else if(conShape(state,2,WEST ,true )) {newVoxel=Block.box(2 ,0,0,6 ,16,16);}
-        else if(conShape(state,2,UP   ,true )) {newVoxel=Block.box(0,10,0,16,14,16);}
-        else if(conShape(state,2,DOWN ,true )) {newVoxel=Block.box(0,2 ,0,16,6 ,16);}
-
-        else if(conShape(state,2,NORTH,EAST,false)) {newVoxel=Block.box(11,5 ,1,14,11,16);}
-        else if(conShape(state,2,SOUTH,EAST,false)) {newVoxel=Block.box(11,5 ,0,14,11,15);}
-        else if(conShape(state,2,NORTH,WEST,false)) {newVoxel=Block.box(2 ,5 ,1,5 ,11,16);}
-        else if(conShape(state,2,SOUTH,WEST,false)) {newVoxel=Block.box(2 ,5 ,0,5 ,11,15);}
-        else if(conShape(state,2,NORTH,UP  ,false)) {newVoxel=Block.box(2 ,11,1,11,14,16);}
-        else if(conShape(state,2,SOUTH,UP  ,false)) {newVoxel=Block.box(2 ,11,0,11,14,15);}
-        else if(conShape(state,2,NORTH,DOWN,false)) {newVoxel=Block.box(5 ,2 ,1,11,5 ,16);}
-        else if(conShape(state,2,SOUTH,DOWN,false)) {newVoxel=Block.box(5 ,2 ,0,11,5 ,15);}
-
-        else if(conShape(state,2,EAST,NORTH,false)) {newVoxel=Block.box(0,0,6,15,16,10);}
-        else if(conShape(state,2,WEST,NORTH,false)) {newVoxel=Block.box(1,0,6,16,16,10);}
-        else if(conShape(state,2,EAST,SOUTH,false)) {newVoxel=Block.box(0,0,6,15,16,10);}
-        else if(conShape(state,2,WEST,SOUTH,false)) {newVoxel=Block.box(1,0,6,16,16,10);}
-        else if(conShape(state,2,EAST,UP   ,false)) {newVoxel=Block.box(0,6,0,15,10,16);}
-        else if(conShape(state,2,WEST,UP   ,false)) {newVoxel=Block.box(1,6,0,16,10,16);}
-        else if(conShape(state,2,EAST,DOWN ,false)) {newVoxel=Block.box(0,6,0,15,10,16);}
-        else if(conShape(state,2,WEST,DOWN ,false)) {newVoxel=Block.box(1,6,0,16,10,16);}
-
-        else if(conShape(state,2,UP  ,NORTH,false)) {newVoxel=Block.box(0,1,6,16,16,10);}
-        else if(conShape(state,2,DOWN,NORTH,false)) {newVoxel=Block.box(0,0,6,16,15,10);}
-        else if(conShape(state,2,UP  ,SOUTH,false)) {newVoxel=Block.box(0,1,6,16,16,10);}
-        else if(conShape(state,2,DOWN,SOUTH,false)) {newVoxel=Block.box(0,0,6,16,15,10);}
-        else if(conShape(state,2,UP  ,EAST ,false)) {newVoxel=Block.box(6,1,0,10,16,16);}
-        else if(conShape(state,2,DOWN,EAST ,false)) {newVoxel=Block.box(6,0,0,10,15,16);}
-        else if(conShape(state,2,UP  ,WEST ,false)) {newVoxel=Block.box(6,1,0,10,16,16);}
-        else if(conShape(state,2,DOWN,WEST ,false)) {newVoxel=Block.box(6,0,0,10,15,16);}
 
         return newVoxel;
     }
@@ -144,18 +131,26 @@ public class DripleafVoxels {
             case NORTH, WEST, DOWN: {mx = getSlab(state) ? 7 : 15;}
             case SOUTH, EAST, UP: {mx=16; mn = getSlab(state) ? 9 : 1;}
         }
-        if(conDirX(state,NORTH,EAST))      {newVoxel=Block.box(11,5 ,mn,14,11,mx);}
-        else if(conDirX(state,NORTH,WEST)) {newVoxel=Block.box(2 ,5 ,mn,5 ,11,mx);}
-        else if(conDirX(state,NORTH,UP  )) {newVoxel=Block.box(5 ,11,mn,11,14,mx);}
-        else if(conDirX(state,NORTH,DOWN)) {newVoxel=Block.box(5 ,2 ,mn,11,5 ,mx);}
-        else if(conDirX(state,EAST,NORTH)) {newVoxel=Block.box(mn,5 ,2 ,mx,11,5 );}
-        else if(conDirX(state,EAST,SOUTH)) {newVoxel=Block.box(mn,5 ,11,mx,11,14);}
-        else if(conDirX(state,EAST,UP   )) {newVoxel=Block.box(mn,2 ,5 ,mx,5 ,11);}
-        else if(conDirX(state,EAST,DOWN )) {newVoxel=Block.box(mn,11,5 ,mx,14,11);}
-        else if(conDirX(state,UP  ,NORTH)) {newVoxel=Block.box(5 ,mn,2 ,11,mx,5 );}
-        else if(conDirX(state,UP  ,SOUTH)) {newVoxel=Block.box(5 ,mn,11,11,mx,14);}
-        else if(conDirX(state,DOWN,EAST )) {newVoxel=Block.box(2 ,mn,5 ,5 ,mx,11);}
-        else if(conDirX(state,DOWN,WEST )) {newVoxel=Block.box(11,mn,5 ,14,mx,11);}
+        if(conDir(state,NORTH,WEST))      {newVoxel=Block.box(11,5 ,mn,14,11,mx);}
+        else if(conDir(state,NORTH,EAST)) {newVoxel=Block.box(2 ,5 ,mn,5 ,11,mx);}
+        else if(conDir(state,NORTH,UP  )) {newVoxel=Block.box(5 ,11,mn,11,14,mx);}
+        else if(conDir(state,NORTH,DOWN)) {newVoxel=Block.box(5 ,2 ,mn,11,5 ,mx);}
+        else if(conDir(state,SOUTH,WEST)) {newVoxel=Block.box(11,5 ,mn,14,11,mx);}
+        else if(conDir(state,SOUTH,EAST)) {newVoxel=Block.box(2 ,5 ,mn,5 ,11,mx);}
+        else if(conDir(state,SOUTH,UP  )) {newVoxel=Block.box(5 ,11,mn,11,14,mx);}
+        else if(conDir(state,SOUTH,DOWN)) {newVoxel=Block.box(5 ,2 ,mn,11,5 ,mx);}
+        else if(conDir(state,EAST,SOUTH)) {newVoxel=Block.box(mn,5 ,2 ,mx,11,5 );}
+        else if(conDir(state,EAST,NORTH)) {newVoxel=Block.box(mn,5 ,11,mx,11,14);}
+        else if(conDir(state,EAST,UP   )) {newVoxel=Block.box(mn,2 ,5 ,mx,5 ,11);}
+        else if(conDir(state,EAST,DOWN )) {newVoxel=Block.box(mn,11,5 ,mx,14,11);}
+        else if(conDir(state,DOWN,SOUTH)) {newVoxel=Block.box(5 ,mn,2 ,11,mx,5 );}
+        else if(conDir(state,DOWN,NORTH)) {newVoxel=Block.box(5 ,mn,11,11,mx,14);}
+        else if(conDir(state,DOWN,EAST )) {newVoxel=Block.box(2 ,mn,5 ,5 ,mx,11);}
+        else if(conDir(state,DOWN,WEST )) {newVoxel=Block.box(11,mn,5 ,14,mx,11);}
+        else if(conDir(state,UP  ,SOUTH)) {newVoxel=Block.box(5 ,mn,2 ,11,mx,5 );}
+        else if(conDir(state,UP  ,NORTH)) {newVoxel=Block.box(5 ,mn,11,11,mx,14);}
+        else if(conDir(state,UP  ,EAST )) {newVoxel=Block.box(2 ,mn,5 ,5 ,mx,11);}
+        else if(conDir(state,UP  ,WEST )) {newVoxel=Block.box(11,mn,5 ,14,mx,11);}
         return newVoxel;
     }
 }

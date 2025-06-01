@@ -1,6 +1,16 @@
 {
   "values": [
     "wiwwimc:iron_tile",
-    "wiwwimc:polished_iron_tile"
+    "wiwwimc:polished_iron_tile",
+    "wiwwimc:cast_iron",
+    "wiwwimc:chiseled_cast_iron",
+    "wiwwimc:smithed_iron",
+    "wiwwimc:smooth_sturdy_stone",
+    "wiwwimc:sturdy_stone",
+    "wiwwimc:chiseled_sturdy_stone",
+    "wiwwimc:sturdy_stone_tile",
+    "wiwwimc:chiseled_andesite",
+    "wiwwimc:andesite_tile",
+    "wiwwimc:tuff_tile"
   ]
 }

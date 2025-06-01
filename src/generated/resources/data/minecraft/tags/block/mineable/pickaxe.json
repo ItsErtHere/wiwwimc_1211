@@ -7,6 +7,19 @@
     "wiwwimc:blazing_core",
     "wiwwimc:stellar_core",
     "wiwwimc:ender_core",
-    "wiwwimc:diamond_core"
+    "wiwwimc:diamond_core",
+    "wiwwimc:cast_iron",
+    "wiwwimc:chiseled_cast_iron",
+    "wiwwimc:smithed_iron",
+    "wiwwimc:sturdy_stone",
+    "wiwwimc:chiseled_sturdy_stone",
+    "wiwwimc:smooth_sturdy_stone",
+    "wiwwimc:tuff_tile",
+    "wiwwimc:tuff_brick_tile",
+    "wiwwimc:tuff_mosaic",
+    "wiwwimc:tuff_brick_mosaic",
+    "wiwwimc:sturdy_stone_tile",
+    "wiwwimc:soul_quartz_tiles",
+    "wiwwimc:soul_quartz_bulbs"
   ]
 }

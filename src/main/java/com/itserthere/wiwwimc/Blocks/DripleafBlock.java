@@ -34,7 +34,9 @@ public class DripleafBlock extends OmniDirectionalBlock {
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         VoxelShape voxelShape = Block.box(0,0,0,16,16,16);
         if(ModBlocks.getDeferredBlock(state).is(ModTags.Blocks.DRIPLEAF_BLOCKS)) {
-            if(getTilt(state)==4) {voxelShape = DripleafVoxels.getStemVoxel(state);}
+            if(getTilt(state)==4 || getTilt(state)==2) {
+                voxelShape = DripleafVoxels.getStemVoxel(state);
+            }
             else voxelShape = DripleafVoxels.getDripleafVoxel(state);
         }
         return voxelShape;
@@ -57,6 +59,7 @@ public class DripleafBlock extends OmniDirectionalBlock {
 
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        super.createBlockStateDefinition(builder);
         builder.add(STRETCHED);
     }
 }

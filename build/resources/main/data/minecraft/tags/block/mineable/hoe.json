@@ -1,6 +1,23 @@
 {
   "values": [
     "wiwwimc:sculk_frame",
-    "wiwwimc:firm_dripleaf"
+    "wiwwimc:active_sculk_frame",
+    "wiwwimc:firm_dripleaf",
+    "wiwwimc:firm_dripleaf_partial",
+    "wiwwimc:firm_dripleaf_full",
+    "wiwwimc:firm_dripleaf_xtra",
+    "wiwwimc:firm_dripleaf_stem",
+    "wiwwimc:half_dripleaf",
+    "wiwwimc:half_dripleaf_partial",
+    "wiwwimc:half_dripleaf_full",
+    "wiwwimc:half_dripleaf_xtra",
+    "wiwwimc:half_dripleaf_stem",
+    "wiwwimc:dripleaf_leaf",
+    "wiwwimc:idle_sculk",
+    "wiwwimc:bright_idle_sculk",
+    "wiwwimc:blooming_sculk",
+    "wiwwimc:blue_sculk",
+    "wiwwimc:condensed_sculk_catalyst",
+    "wiwwimc:sculk_tube"
   ]
 }

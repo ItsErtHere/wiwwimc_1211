@@ -1,14 +1,10 @@
 package com.itserthere.wiwwimc.datagen;
 
 import com.itserthere.wiwwimc.ModBlocks;
-import com.itserthere.wiwwimc.ModItems;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.loot.BlockLootSubProvider;
-import net.minecraft.world.flag.FeatureFlag;
-import net.minecraft.world.flag.FeatureFlagSet;
 import net.minecraft.world.flag.FeatureFlags;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
 
 import java.util.Set;
@@ -41,7 +37,70 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.SMITHED_OAK_PLANKS_STAIRS.get());
         dropSelf(ModBlocks.NETHER_CORE_WALL.get());
         dropSelf(ModBlocks.SCULK_FRAME.get());
+        dropSelf(ModBlocks.ACTIVE_SCULK_FRAME.get());
         dropSelf(ModBlocks.FULL_GRASS.get());
+        dropSelf(ModBlocks.SCULK_CORE.get());
+        dropSelf(ModBlocks.ACTIVE_SCULK_CORE.get());
+        dropSelf(ModBlocks.SOULITE.get());
+        dropSelf(ModBlocks.IDLE_SCULK.get());
+        dropSelf(ModBlocks.BRIGHT_IDLE_SCULK.get());
+        dropSelf(ModBlocks.BLOOMING_SCULK.get());
+        dropSelf(ModBlocks.BLUE_SCULK.get());
+        dropSelf(ModBlocks.SCULK_TUBE.get());
+        dropSelf(ModBlocks.CONDENSED_SCULK_CATALYST.get());
+        dropSelf(ModBlocks.SMITHED_IRON.get());
+        dropSelf(ModBlocks.CAST_IRON.get());
+        dropSelf(ModBlocks.CHISELED_CAST_IRON.get());
+        dropSelf(ModBlocks.STURDY_STONE.get());
+        dropSelf(ModBlocks.CHISELED_STURDY_STONE.get());
+        dropSelf(ModBlocks.SMOOTH_STURDY_STONE.get());
+        dropSelf(ModBlocks.STURDY_STONE_TILE.get());
+        dropSelf(ModBlocks.ANDESITE_TILE.get());
+        dropSelf(ModBlocks.CHISELED_ANDESITE.get());
+        dropSelf(ModBlocks.TUFF_TILE.get());
+        dropSelf(ModBlocks.OAK_LAYERS.get());
+        dropSelf(ModBlocks.OAK_MOSAIC.get());
+        dropSelf(ModBlocks.OAK_TILE.get());
+        dropSelf(ModBlocks.OAK_VENTS.get());
+        dropSelf(ModBlocks.SMOOTH_OAK_PLANKS.get());
+        dropSelf(ModBlocks.BIRCH_TILE.get());
+        dropSelf(ModBlocks.SPRUCE_LAYERS.get());
+        dropSelf(ModBlocks.SPRUCE_TILE.get());
+        dropSelf(ModBlocks.SPRUCE_VENTS.get());
+        dropSelf(ModBlocks.SMITHED_SPRUCE_PLANKS.get());
+        dropSelf(ModBlocks.DARK_OAK_LAYERS.get());
+        dropSelf(ModBlocks.DARK_OAK_TILE.get());
+        dropSelf(ModBlocks.CHISELED_DARK_OAK_PLANKS.get());
+        dropSelf(ModBlocks.ENCASED_OAK_PLANKS.get());
+        dropSelf(ModBlocks.BORDERED_SMOOTH_OAK_PLANKS.get());
+        dropSelf(ModBlocks.CHISELED_OAK_PLANKS.get());
+        dropSelf(ModBlocks.JUNGLE_TILE.get());
+        dropSelf(ModBlocks.BAMBOO_TILE.get());
+        dropSelf(ModBlocks.BAMBOO_LAYERS.get());
+        dropSelf(ModBlocks.CHISELED_SPRUCE_PLANKS.get());
+        dropSelf(ModBlocks.SOUL_QUARTZ_BULBS.get());
+        dropSelf(ModBlocks.SOUL_QUARTZ_TILES.get());
+        dropSelf(ModBlocks.TUFF_BRICK_TILE.get());
+        dropSelf(ModBlocks.TUFF_BRICK_MOSAIC.get());
+        dropSelf(ModBlocks.TUFF_MOSAIC.get());
+        dropSelf(ModBlocks.ENCASED_SPRUCE_PLANKS.get());
+        dropSelf(ModBlocks.SOUL_QUARTZ.get());
+        dropSelf(ModBlocks.SOUL_GOLD_BARS_BLOCK.get());
+        dropSelf(ModBlocks.SOUL_IRON_BARS_BLOCK.get());
+        dropSelf(ModBlocks.CHISELED_SOUL_IRON_BARS_BLOCK.get());
+        dropSelf(ModBlocks.SOUL_GOLD_GRATES.get());
+        dropSelf(ModBlocks.SOUL_GOLD_BLOCK.get());
+        dropSelf(ModBlocks.SOUL_IRON_BLOCK.get());
+        dropSelf(ModBlocks.SOUL_GOLD_TILE.get());
+        dropSelf(ModBlocks.ENCASED_SOULITE.get());
+        dropSelf(ModBlocks.ENCASED_SOUL_QUARTZ.get());
+        dropSelf(ModBlocks.SMITHED_TUFF.get());
+
+
+
+
+
+
         //DRIPLEAFS
         dropSelf(ModBlocks.FIRM_DRIPLEAF.get());
         dropSelf(ModBlocks.FIRM_DRIPLEAF_PARTIAL.get());

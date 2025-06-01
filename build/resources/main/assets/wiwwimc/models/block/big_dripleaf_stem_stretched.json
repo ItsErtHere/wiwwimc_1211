@@ -1,31 +1,32 @@
 {
 	"parent": "block/block",
 	"textures": {
-		"particle": "wiwwimc:block/big_dripleaf_top",
-		"stem": "wiwwimc:block/big_dripleaf_stem"
+		"stem": "wiwwimc:block/big_dripleaf_stem",
+		"particle": "wiwwimc:block/big_dripleaf_top"
 	},
 	"elements": [
 		{
 			"from": [5, 0, 12],
-			"to": [11, 13, 12],
+			"to": [11, 16, 12],
 			"shade": false,
 			"rotation": {"angle": 45, "axis": "y", "origin": [8, 8, 12], "rescale": true},
 			"faces": {
-				"north": {"uv": [3, 3, 14, 16], "texture": "#stem"},
+				"north": {"uv": [3, 0, 14, 16], "texture": "#stem"},
 				"south": {"uv": [3, 3, 14, 16], "texture": "#stem"}
 			}
 		},
 		{
 			"from": [5, 0, 12],
-			"to": [11, 13, 12],
+			"to": [11, 16, 12],
 			"shade": false,
 			"rotation": {"angle": -45, "axis": "y", "origin": [8, 8, 12], "rescale": true},
 			"faces": {
-				"north": {"uv": [3, 3, 14, 16], "texture": "#stem"},
-				"south": {"uv": [3, 3, 14, 16], "texture": "#stem"}
+				"north": {"uv": [3, 0, 14, 16], "texture": "#stem"},
+				"south": {"uv": [3, 0, 14, 16], "texture": "#stem"}
 			}
 		}
 	],
+	"render_type":"cutout",
 	"display": {
 		"thirdperson_righthand": {
 			"translation": [0, 2.25, 0],

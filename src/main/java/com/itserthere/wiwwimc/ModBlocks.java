@@ -1,15 +1,12 @@
 package com.itserthere.wiwwimc;
 
 import com.itserthere.wiwwimc.Blocks.DripleafBlock;
+import com.itserthere.wiwwimc.Blocks.MultidirectionalBlock;
 import com.itserthere.wiwwimc.Blocks.RedstoneCoreBlock;
 import net.minecraft.network.chat.Component;
-import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.TooltipFlag;
+import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -99,6 +96,43 @@ public class ModBlocks {
             registerCoreBlock("blazing_core", MapColor.TERRACOTTA_YELLOW);
     public static final DeferredBlock<Block> ENDER_CORE =
             registerCoreBlock("ender_core", MapColor.COLOR_BLACK);
+    public static final DeferredBlock<Block> SCULK_CORE =
+            registerCoreBlock("sculk_core", MapColor.COLOR_BLACK);
+    public static final DeferredBlock<Block> ACTIVE_SCULK_CORE =
+            registerCoreBlock("active_sculk_core", MapColor.COLOR_BLACK);
+    public static final DeferredBlock<Block> SOULITE =
+            registerBlock("soulite", ()->new Block(BlockBehaviour.Properties.of()
+                    .mapColor(DyeColor.BLACK).requiresCorrectToolForDrops().strength(1)
+                    .sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> ENCASED_SOULITE =
+            registerBlock("encased_soulite", ()->new Block(BlockBehaviour.Properties.of()
+                    .mapColor(DyeColor.BLACK).requiresCorrectToolForDrops().strength(1)
+                    .sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> IDLE_SCULK =
+            registerBlock("idle_sculk", ()->new Block(BlockBehaviour.Properties.of()
+                    .mapColor(DyeColor.CYAN).requiresCorrectToolForDrops().strength(1)
+                    .sound(SoundType.SCULK)));
+    public static final DeferredBlock<Block> BRIGHT_IDLE_SCULK =
+            registerBlock("bright_idle_sculk", ()->new Block(BlockBehaviour.Properties.of()
+                    .mapColor(DyeColor.CYAN).requiresCorrectToolForDrops().strength(1)
+                    .sound(SoundType.SCULK)));
+    public static final DeferredBlock<Block> BLOOMING_SCULK =
+            registerBlock("blooming_sculk", ()->new Block(BlockBehaviour.Properties.of()
+                    .mapColor(DyeColor.CYAN).requiresCorrectToolForDrops().strength(1)
+                    .sound(SoundType.SCULK)));
+    public static final DeferredBlock<Block> BLUE_SCULK =
+            registerBlock("blue_sculk", ()->new Block(BlockBehaviour.Properties.of()
+                    .mapColor(DyeColor.CYAN).requiresCorrectToolForDrops().strength(1)
+                    .sound(SoundType.SCULK)));
+    public static final DeferredBlock<Block> SCULK_TUBE =
+            registerBlock("sculk_tube", ()->new Block(BlockBehaviour.Properties.of()
+                    .mapColor(DyeColor.CYAN).requiresCorrectToolForDrops().strength(1)
+                    .sound(SoundType.SCULK)));
+    public static final DeferredBlock<Block> CONDENSED_SCULK_CATALYST =
+            registerBlock("condensed_sculk_catalyst", ()->new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(DyeColor.CYAN).requiresCorrectToolForDrops().strength(1)
+                    .sound(SoundType.SCULK)) {
+            });
     //DRIPLEAFS
     public static final DeferredBlock<Block> FIRM_DRIPLEAF =
             registerBlock("firm_dripleaf", ()->new DripleafBlock(BlockBehaviour.Properties.of()
@@ -181,6 +215,100 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SCULK_FRAME = registerBlock("sculk_frame",
             ()->new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1)
                     .mapColor(MapColor.COLOR_BLACK)));
+    public static final DeferredBlock<Block> ACTIVE_SCULK_FRAME = registerBlock("active_sculk_frame",
+            ()->new Block(BlockBehaviour.Properties.of().requiresCorrectToolForDrops().strength(1)
+                    .mapColor(MapColor.COLOR_BLACK)));
+    public static final DeferredBlock<Block> CAST_IRON = registerMetalBlock("cast_iron",MapColor.COLOR_BLACK);
+    public static final DeferredBlock<Block> CHISELED_CAST_IRON = registerBlock("chiseled_cast_iron",
+                ()->new MultidirectionalBlock(BlockBehaviour.Properties.of().strength(0.4f,0.6f)
+                        .requiresCorrectToolForDrops()
+                        .sound(SoundType.METAL).mapColor(MapColor.COLOR_BLACK)));
+    public static final DeferredBlock<Block> SMITHED_IRON = registerMetalBlock("smithed_iron",MapColor.COLOR_BLACK);
+    public static final DeferredBlock<Block> STURDY_STONE = registerBlock("sturdy_stone",()->new Block(
+            BlockBehaviour.Properties.of().sound(SoundType.STONE).requiresCorrectToolForDrops().strength(1).mapColor(MapColor.STONE)
+                    .pushReaction(PushReaction.BLOCK)));
+    public static final DeferredBlock<Block> CHISELED_STURDY_STONE = registerBlock("chiseled_sturdy_stone",()->new MultidirectionalBlock(
+            BlockBehaviour.Properties.of().sound(SoundType.STONE).requiresCorrectToolForDrops().strength(1).mapColor(MapColor.STONE)
+                    .pushReaction(PushReaction.BLOCK)));
+    public static final DeferredBlock<Block> SMOOTH_STURDY_STONE = registerBlock("smooth_sturdy_stone",()->new Block(
+            BlockBehaviour.Properties.of().sound(SoundType.STONE).requiresCorrectToolForDrops().strength(1).mapColor(MapColor.STONE)
+                    .pushReaction(PushReaction.BLOCK)));
+    public static final DeferredBlock<Block> STURDY_STONE_TILE = registerBlock("sturdy_stone_tile",()->new Block(
+            BlockBehaviour.Properties.of().sound(SoundType.STONE).requiresCorrectToolForDrops().strength(1).mapColor(MapColor.STONE)
+                    .pushReaction(PushReaction.BLOCK)));
+    public static final DeferredBlock<Block> ANDESITE_TILE = registerBlock("andesite_tile",()->new Block(
+            BlockBehaviour.Properties.of().sound(SoundType.STONE).requiresCorrectToolForDrops().strength(1).mapColor(MapColor.STONE)));
+    public static final DeferredBlock<Block> TUFF_TILE = registerBlock("tuff_tile",()->new Block(
+            BlockBehaviour.Properties.of().sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1)
+                    .mapColor(MapColor.STONE)));
+    public static final DeferredBlock<Block> SMITHED_TUFF = registerBlock("smithed_tuff",()->new Block(
+            BlockBehaviour.Properties.of().sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1)
+                    .mapColor(MapColor.STONE)));
+    public static final DeferredBlock<Block> TUFF_BRICK_TILE = registerBlock("tuff_brick_tile",()->new Block(
+            BlockBehaviour.Properties.of().sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1)
+                    .mapColor(MapColor.STONE)));
+    public static final DeferredBlock<Block> TUFF_BRICK_MOSAIC = registerBlock("tuff_brick_mosaic",()->new Block(
+            BlockBehaviour.Properties.of().sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1)
+                    .mapColor(MapColor.STONE)));
+    public static final DeferredBlock<Block> TUFF_MOSAIC = registerBlock("tuff_mosaic",()->new Block(
+            BlockBehaviour.Properties.of().sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1)
+                    .mapColor(MapColor.STONE)));
+    public static final DeferredBlock<Block> CHISELED_ANDESITE = registerBlock("chiseled_andesite",()->new Block(
+            BlockBehaviour.Properties.of().sound(SoundType.STONE).requiresCorrectToolForDrops().strength(1).mapColor(MapColor.STONE)));
+    public static final DeferredBlock<Block> OAK_LAYERS = registerWoodenBlock("oak_layers");
+    public static final DeferredBlock<Block> SMOOTH_OAK_PLANKS = registerWoodenBlock("smooth_oak_planks");
+    public static final DeferredBlock<Block> BORDERED_SMOOTH_OAK_PLANKS = registerWoodenBlock("bordered_smooth_oak_planks");
+    public static final DeferredBlock<Block> OAK_MOSAIC = registerWoodenBlock("oak_mosaic");
+    public static final DeferredBlock<Block> OAK_VENTS = registerWoodenBlock("oak_vents");
+    public static final DeferredBlock<Block> CHISELED_OAK_PLANKS = registerWoodenBlock("chiseled_oak_planks");
+    public static final DeferredBlock<Block> OAK_TILE = registerWoodenBlock("oak_tile");
+    public static final DeferredBlock<Block> ENCASED_OAK_PLANKS = registerWoodenBlock("encased_oak_planks");
+    public static final DeferredBlock<Block> BIRCH_TILE = registerWoodenBlock("birch_tile");
+    public static final DeferredBlock<Block> JUNGLE_TILE = registerWoodenBlock("jungle_tile");
+    public static final DeferredBlock<Block> BAMBOO_TILE = registerWoodenBlock("bamboo_tile");
+    public static final DeferredBlock<Block> BAMBOO_LAYERS = registerWoodenBlock("bamboo_layers");
+    public static final DeferredBlock<Block> SPRUCE_VENTS = registerWoodenBlock("spruce_vents");
+    public static final DeferredBlock<Block> SMITHED_SPRUCE_PLANKS = registerWoodenBlock("smithed_spruce_planks");
+    public static final DeferredBlock<Block> SPRUCE_LAYERS = registerWoodenBlock("spruce_layers");
+    public static final DeferredBlock<Block> CHISELED_SPRUCE_PLANKS = registerWoodenBlock("chiseled_spruce_planks");
+    public static final DeferredBlock<Block> SPRUCE_TILE = registerWoodenBlock("spruce_tile");
+    public static final DeferredBlock<Block> ENCASED_SPRUCE_PLANKS = registerWoodenBlock("encased_spruce_planks");
+    public static final DeferredBlock<Block> CHISELED_DARK_OAK_PLANKS = registerWoodenBlock("chiseled_dark_oak_planks");
+    public static final DeferredBlock<Block> DARK_OAK_TILE = registerWoodenBlock("dark_oak_tile");
+    public static final DeferredBlock<Block> DARK_OAK_LAYERS = registerWoodenBlock("dark_oak_layers");
+    public static final DeferredBlock<Block> SOUL_QUARTZ_TILES = registerBlock("soul_quartz_tiles",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
+                    .requiresCorrectToolForDrops().sound(SoundType.STONE)));
+    public static final DeferredBlock<Block> SOUL_QUARTZ_BULBS = registerBlock("soul_quartz_bulbs",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
+                    .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
+    public static final DeferredBlock<Block> SOUL_QUARTZ = registerBlock("soul_quartz",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
+                    .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
+    public static final DeferredBlock<Block> ENCASED_SOUL_QUARTZ = registerBlock("encased_soul_quartz",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
+                    .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
+    public static final DeferredBlock<Block> SOUL_GOLD_BARS_BLOCK = registerBlock("soul_gold_bars_block",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
+                    .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
+    public static final DeferredBlock<Block> SOUL_IRON_BARS_BLOCK = registerBlock("soul_iron_bars_block",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
+                    .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
+    public static final DeferredBlock<Block> CHISELED_SOUL_IRON_BARS_BLOCK = registerBlock("chiseled_soul_iron_bars_block",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
+                    .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
+    public static final DeferredBlock<Block> SOUL_GOLD_GRATES = registerBlock("soul_gold_grates",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
+                    .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
+    public static final DeferredBlock<Block> SOUL_GOLD_TILE = registerBlock("soul_gold_tile",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
+                    .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
+    public static final DeferredBlock<Block> SOUL_GOLD_BLOCK = registerBlock("soul_gold_block",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
+                    .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
+    public static final DeferredBlock<Block> SOUL_IRON_BLOCK = registerBlock("soul_iron_block",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
+                    .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
 
     //VANILLA TEXTURE           WIWWIMC BLOCK SET
     //enchanting_table_top      Diamond Core =
