@@ -1,0 +1,300 @@
+{
+  "variants": {
+    "face=down,front=down,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz"
+    },
+    "face=down,front=down,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert"
+    },
+    "face=down,front=east,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "y": 90
+    },
+    "face=down,front=east,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "y": 90
+    },
+    "face=down,front=north,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz"
+    },
+    "face=down,front=north,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert"
+    },
+    "face=down,front=south,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "y": 180
+    },
+    "face=down,front=south,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "y": 180
+    },
+    "face=down,front=up,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz"
+    },
+    "face=down,front=up,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert"
+    },
+    "face=down,front=west,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "y": 270
+    },
+    "face=down,front=west,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "y": 270
+    },
+    "face=east,front=down,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "x": 90,
+      "y": 270
+    },
+    "face=east,front=down,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "x": 90,
+      "y": 270
+    },
+    "face=east,front=east,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot"
+    },
+    "face=east,front=east,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot"
+    },
+    "face=east,front=north,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot",
+      "x": 90,
+      "y": 270
+    },
+    "face=east,front=north,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot",
+      "x": 90,
+      "y": 270
+    },
+    "face=east,front=south,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot",
+      "x": 270,
+      "y": 90
+    },
+    "face=east,front=south,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot",
+      "x": 270,
+      "y": 90
+    },
+    "face=east,front=up,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "x": 270,
+      "y": 90
+    },
+    "face=east,front=up,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "x": 270,
+      "y": 90
+    },
+    "face=east,front=west,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot"
+    },
+    "face=east,front=west,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot"
+    },
+    "face=north,front=down,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "x": 270
+    },
+    "face=north,front=down,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "x": 270
+    },
+    "face=north,front=east,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot",
+      "x": 270
+    },
+    "face=north,front=east,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot",
+      "x": 270
+    },
+    "face=north,front=north,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot"
+    },
+    "face=north,front=north,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot"
+    },
+    "face=north,front=south,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot"
+    },
+    "face=north,front=south,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot"
+    },
+    "face=north,front=up,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "x": 90,
+      "y": 180
+    },
+    "face=north,front=up,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "x": 90,
+      "y": 180
+    },
+    "face=north,front=west,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot",
+      "x": 90,
+      "y": 180
+    },
+    "face=north,front=west,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot",
+      "x": 90,
+      "y": 180
+    },
+    "face=south,front=down,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "x": 270,
+      "y": 180
+    },
+    "face=south,front=down,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "x": 270,
+      "y": 180
+    },
+    "face=south,front=east,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot",
+      "x": 270,
+      "y": 180
+    },
+    "face=south,front=east,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot",
+      "x": 270,
+      "y": 180
+    },
+    "face=south,front=north,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot"
+    },
+    "face=south,front=north,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot"
+    },
+    "face=south,front=south,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot"
+    },
+    "face=south,front=south,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot"
+    },
+    "face=south,front=up,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "x": 90
+    },
+    "face=south,front=up,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "x": 90
+    },
+    "face=south,front=west,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot",
+      "x": 90
+    },
+    "face=south,front=west,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot",
+      "x": 90
+    },
+    "face=up,front=down,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "x": 180
+    },
+    "face=up,front=down,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "x": 180
+    },
+    "face=up,front=east,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "x": 180,
+      "y": 270
+    },
+    "face=up,front=east,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "x": 180,
+      "y": 270
+    },
+    "face=up,front=north,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "x": 180,
+      "y": 180
+    },
+    "face=up,front=north,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "x": 180,
+      "y": 180
+    },
+    "face=up,front=south,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "x": 180
+    },
+    "face=up,front=south,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "x": 180
+    },
+    "face=up,front=up,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "x": 180
+    },
+    "face=up,front=up,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "x": 180
+    },
+    "face=up,front=west,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "x": 180,
+      "y": 90
+    },
+    "face=up,front=west,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "x": 180,
+      "y": 90
+    },
+    "face=west,front=down,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "x": 90,
+      "y": 90
+    },
+    "face=west,front=down,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "x": 90,
+      "y": 90
+    },
+    "face=west,front=east,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot"
+    },
+    "face=west,front=east,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot"
+    },
+    "face=west,front=north,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot",
+      "x": 270,
+      "y": 270
+    },
+    "face=west,front=north,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot",
+      "x": 270,
+      "y": 270
+    },
+    "face=west,front=south,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot",
+      "x": 90,
+      "y": 90
+    },
+    "face=west,front=south,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot",
+      "x": 90,
+      "y": 90
+    },
+    "face=west,front=up,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz",
+      "x": 270,
+      "y": 270
+    },
+    "face=west,front=up,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert",
+      "x": 270,
+      "y": 270
+    },
+    "face=west,front=west,vertical=false": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_horiz_rot"
+    },
+    "face=west,front=west,vertical=true": {
+      "model": "wiwwimc:block/chiseled_sturdy_stone_vert_rot"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "wiwwimc:block/template_multidirectional_horiz_rot",
+  "textures": {
+    "texture": "minecraft:block/observer_top"
+  }
+}

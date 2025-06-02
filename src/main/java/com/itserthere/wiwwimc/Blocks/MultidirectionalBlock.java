@@ -28,11 +28,17 @@ import java.util.Objects;
 
 import net.minecraft.data.models.ModelProvider.*;
 
+import static net.minecraft.core.Direction.NORTH;
+import static net.minecraft.core.Direction.UP;
 import static net.neoforged.neoforge.client.model.generators.ModelProvider.BLOCK_FOLDER;
 
 public class MultidirectionalBlock extends OmniDirectionalBlock {
     public MultidirectionalBlock(Properties properties) {
         super(properties);
+        this.registerDefaultState(
+                this.stateDefinition
+                        .any()
+                        .setValue(FACE, NORTH).setValue(FRONT,UP).setValue(VERTICAL, false));
     }
     public static final BooleanProperty VERTICAL = BooleanProperty.create("vertical");
     //public static final BooleanProperty OPPOSITE = BooleanProperty.create("opposite");

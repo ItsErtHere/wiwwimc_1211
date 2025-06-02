@@ -1,0 +1,6 @@
+{
+  "parent": "wiwwimc:block/template_multidirectional_vert",
+  "textures": {
+    "texture": "minecraft:block/observer_side"
+  }
+}

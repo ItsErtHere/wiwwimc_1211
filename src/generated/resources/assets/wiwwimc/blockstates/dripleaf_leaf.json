@@ -1,0 +1,300 @@
+{
+  "variants": {
+    "face=down,front=down,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf"
+    },
+    "face=down,front=down,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched"
+    },
+    "face=down,front=east,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "y": 90
+    },
+    "face=down,front=east,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "y": 90
+    },
+    "face=down,front=north,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf"
+    },
+    "face=down,front=north,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched"
+    },
+    "face=down,front=south,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "y": 180
+    },
+    "face=down,front=south,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "y": 180
+    },
+    "face=down,front=up,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf"
+    },
+    "face=down,front=up,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched"
+    },
+    "face=down,front=west,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "y": 270
+    },
+    "face=down,front=west,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "y": 270
+    },
+    "face=east,front=down,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "x": 90,
+      "y": 270
+    },
+    "face=east,front=down,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "x": 90,
+      "y": 270
+    },
+    "face=east,front=east,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot"
+    },
+    "face=east,front=east,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched"
+    },
+    "face=east,front=north,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot",
+      "x": 90,
+      "y": 270
+    },
+    "face=east,front=north,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched",
+      "x": 90,
+      "y": 270
+    },
+    "face=east,front=south,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot",
+      "x": 270,
+      "y": 90
+    },
+    "face=east,front=south,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched",
+      "x": 270,
+      "y": 90
+    },
+    "face=east,front=up,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "x": 270,
+      "y": 90
+    },
+    "face=east,front=up,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "x": 270,
+      "y": 90
+    },
+    "face=east,front=west,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot"
+    },
+    "face=east,front=west,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched"
+    },
+    "face=north,front=down,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "x": 270
+    },
+    "face=north,front=down,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "x": 270
+    },
+    "face=north,front=east,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot",
+      "x": 270
+    },
+    "face=north,front=east,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched",
+      "x": 270
+    },
+    "face=north,front=north,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot"
+    },
+    "face=north,front=north,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched"
+    },
+    "face=north,front=south,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot"
+    },
+    "face=north,front=south,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched"
+    },
+    "face=north,front=up,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "x": 90,
+      "y": 180
+    },
+    "face=north,front=up,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "x": 90,
+      "y": 180
+    },
+    "face=north,front=west,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot",
+      "x": 90,
+      "y": 180
+    },
+    "face=north,front=west,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched",
+      "x": 90,
+      "y": 180
+    },
+    "face=south,front=down,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "x": 270,
+      "y": 180
+    },
+    "face=south,front=down,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "x": 270,
+      "y": 180
+    },
+    "face=south,front=east,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot",
+      "x": 270,
+      "y": 180
+    },
+    "face=south,front=east,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched",
+      "x": 270,
+      "y": 180
+    },
+    "face=south,front=north,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot"
+    },
+    "face=south,front=north,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched"
+    },
+    "face=south,front=south,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot"
+    },
+    "face=south,front=south,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched"
+    },
+    "face=south,front=up,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "x": 90
+    },
+    "face=south,front=up,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "x": 90
+    },
+    "face=south,front=west,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot",
+      "x": 90
+    },
+    "face=south,front=west,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched",
+      "x": 90
+    },
+    "face=up,front=down,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "x": 180
+    },
+    "face=up,front=down,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "x": 180
+    },
+    "face=up,front=east,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "x": 180,
+      "y": 270
+    },
+    "face=up,front=east,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "x": 180,
+      "y": 270
+    },
+    "face=up,front=north,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "x": 180,
+      "y": 180
+    },
+    "face=up,front=north,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "x": 180,
+      "y": 180
+    },
+    "face=up,front=south,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "x": 180
+    },
+    "face=up,front=south,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "x": 180
+    },
+    "face=up,front=up,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "x": 180
+    },
+    "face=up,front=up,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "x": 180
+    },
+    "face=up,front=west,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "x": 180,
+      "y": 90
+    },
+    "face=up,front=west,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "x": 180,
+      "y": 90
+    },
+    "face=west,front=down,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "x": 90,
+      "y": 90
+    },
+    "face=west,front=down,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "x": 90,
+      "y": 90
+    },
+    "face=west,front=east,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot"
+    },
+    "face=west,front=east,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched"
+    },
+    "face=west,front=north,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot",
+      "x": 270,
+      "y": 270
+    },
+    "face=west,front=north,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched",
+      "x": 270,
+      "y": 270
+    },
+    "face=west,front=south,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot",
+      "x": 90,
+      "y": 90
+    },
+    "face=west,front=south,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched",
+      "x": 90,
+      "y": 90
+    },
+    "face=west,front=up,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf",
+      "x": 270,
+      "y": 270
+    },
+    "face=west,front=up,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_stretched",
+      "x": 270,
+      "y": 270
+    },
+    "face=west,front=west,stretched=false": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot"
+    },
+    "face=west,front=west,stretched=true": {
+      "model": "wiwwimc:block/big_dripleaf_leaf_rot_stretched"
+    }
+  }
+}
