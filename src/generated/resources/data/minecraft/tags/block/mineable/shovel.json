@@ -1,5 +1,9 @@
 {
   "values": [
-    "wiwwimc:full_grass"
+    "wiwwimc:full_grass",
+    "wiwwimc:alt_podzol",
+    "wiwwimc:alt_mycelium",
+    "wiwwimc:alt_crimson_nylium",
+    "wiwwimc:alt_warped_nylium"
   ]
 }

@@ -5,6 +5,9 @@
     "wiwwimc:blazing_core",
     "wiwwimc:stellar_core",
     "wiwwimc:ender_core",
-    "wiwwimc:diamond_core"
+    "wiwwimc:diamond_core",
+    "wiwwimc:glowing_obsidian",
+    "wiwwimc:obsidian_casing",
+    "wiwwimc:portalic_casing"
   ]
 }

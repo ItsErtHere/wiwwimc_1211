@@ -64,6 +64,7 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.SMITHED_IRON);
                                 output.accept(ModBlocks.STURDY_STONE);
                                 output.accept(ModBlocks.CHISELED_STURDY_STONE);
+                                output.accept(ModBlocks.SMITHED_STURDY_STONE);
                                 output.accept(ModBlocks.SMOOTH_STURDY_STONE);
                                 output.accept(ModBlocks.STURDY_STONE_TILE);
                                 output.accept(ModBlocks.CHISELED_ANDESITE);
@@ -94,17 +95,29 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.CHISELED_DARK_OAK_PLANKS);
                                 output.accept(ModBlocks.DARK_OAK_LAYERS);
                                 output.accept(ModBlocks.DARK_OAK_TILE);
+                                output.accept(ModBlocks.SOUL_QUARTZ);
                                 output.accept(ModBlocks.SOUL_QUARTZ_BULBS);
                                 output.accept(ModBlocks.SOUL_QUARTZ_TILES);
                                 output.accept(ModBlocks.ENCASED_SOUL_QUARTZ);
+                                output.accept(ModBlocks.SOUL_GOLD_BLOCK);
+                                output.accept(ModBlocks.SOUL_GOLD_TILE);
                                 output.accept(ModBlocks.SOUL_GOLD_BARS_BLOCK);
                                 output.accept(ModBlocks.SOUL_GOLD_GRATES);
+                                output.accept(ModBlocks.SOUL_IRON_BLOCK);
                                 output.accept(ModBlocks.SOUL_IRON_BARS_BLOCK);
                                 output.accept(ModBlocks.CHISELED_SOUL_IRON_BARS_BLOCK);
-                                output.accept(ModBlocks.SOUL_QUARTZ);
-                                output.accept(ModBlocks.SOUL_GOLD_BLOCK);
-                                output.accept(ModBlocks.SOUL_IRON_BLOCK);
-                                output.accept(ModBlocks.SOUL_GOLD_TILE);
+                                output.accept(ModBlocks.GLOWING_OBSIDIAN);
+                                output.accept(ModBlocks.AZALEA_BUSH);
+                                output.accept(ModBlocks.FLOWERING_AZALEA_BUSH);
+                                output.accept(ModBlocks.ALT_PODZOL);
+                                output.accept(ModBlocks.ALT_MYCELIUM);
+                                output.accept(ModBlocks.ALT_CRIMSON_NYLIUM);
+                                output.accept(ModBlocks.ALT_WARPED_NYLIUM);
+                                output.accept(ModBlocks.ALT_DRY_FARMLAND);
+                                output.accept(ModBlocks.ALT_WET_FARMLAND);
+                                output.accept(ModBlocks.PURPUR_TILE);
+                                output.accept(ModBlocks.OBSIDIAN_CASING);
+                                output.accept(ModBlocks.PORTALIC_CASING);
 
     }).build());
 }

@@ -88,6 +88,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.SOUL_GOLD_BARS_BLOCK.get());
         dropSelf(ModBlocks.SOUL_IRON_BARS_BLOCK.get());
         dropSelf(ModBlocks.CHISELED_SOUL_IRON_BARS_BLOCK.get());
+        dropSelf(ModBlocks.SMITHED_STURDY_STONE.get());
         dropSelf(ModBlocks.SOUL_GOLD_GRATES.get());
         dropSelf(ModBlocks.SOUL_GOLD_BLOCK.get());
         dropSelf(ModBlocks.SOUL_IRON_BLOCK.get());
@@ -95,11 +96,18 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.ENCASED_SOULITE.get());
         dropSelf(ModBlocks.ENCASED_SOUL_QUARTZ.get());
         dropSelf(ModBlocks.SMITHED_TUFF.get());
-
-
-
-
-
+        dropSelf(ModBlocks.GLOWING_OBSIDIAN.get());
+        dropSelf(ModBlocks.AZALEA_BUSH.get());
+        dropSelf(ModBlocks.FLOWERING_AZALEA_BUSH.get());
+        dropSelf(ModBlocks.ALT_PODZOL.get());
+        dropSelf(ModBlocks.ALT_MYCELIUM.get());
+        dropSelf(ModBlocks.ALT_CRIMSON_NYLIUM.get());
+        dropSelf(ModBlocks.ALT_WARPED_NYLIUM.get());
+        dropSelf(ModBlocks.ALT_DRY_FARMLAND.get());
+        dropSelf(ModBlocks.ALT_WET_FARMLAND.get());
+        dropSelf(ModBlocks.PURPUR_TILE.get());
+        dropSelf(ModBlocks.OBSIDIAN_CASING.get());
+        dropSelf(ModBlocks.PORTALIC_CASING.get());
 
         //DRIPLEAFS
         dropSelf(ModBlocks.FIRM_DRIPLEAF.get());

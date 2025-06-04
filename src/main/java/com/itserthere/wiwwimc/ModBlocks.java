@@ -1,14 +1,14 @@
 package com.itserthere.wiwwimc;
 
-import com.itserthere.wiwwimc.Blocks.DripleafBlock;
-import com.itserthere.wiwwimc.Blocks.MultidirectionalBlock;
-import com.itserthere.wiwwimc.Blocks.RedstoneCoreBlock;
+import com.itserthere.wiwwimc.Blocks.*;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.minecraft.world.level.material.MapColor;
 import net.minecraft.world.level.material.PushReaction;
@@ -19,6 +19,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Supplier;
+import java.util.function.ToIntFunction;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(WIWWIMC.MODID);
@@ -236,6 +237,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> STURDY_STONE_TILE = registerBlock("sturdy_stone_tile",()->new Block(
             BlockBehaviour.Properties.of().sound(SoundType.STONE).requiresCorrectToolForDrops().strength(1).mapColor(MapColor.STONE)
                     .pushReaction(PushReaction.BLOCK)));
+    public static final DeferredBlock<Block> SMITHED_STURDY_STONE = registerBlock("smithed_sturdy_stone",()->new Block(
+            BlockBehaviour.Properties.of().sound(SoundType.STONE).requiresCorrectToolForDrops().strength(1).mapColor(MapColor.STONE)
+                    .pushReaction(PushReaction.BLOCK)));
     public static final DeferredBlock<Block> ANDESITE_TILE = registerBlock("andesite_tile",()->new Block(
             BlockBehaviour.Properties.of().sound(SoundType.STONE).requiresCorrectToolForDrops().strength(1).mapColor(MapColor.STONE)));
     public static final DeferredBlock<Block> TUFF_TILE = registerBlock("tuff_tile",()->new Block(
@@ -290,16 +294,16 @@ public class ModBlocks {
                     .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
     public static final DeferredBlock<Block> SOUL_GOLD_BARS_BLOCK = registerBlock("soul_gold_bars_block",
             ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
-                    .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
+                    .requiresCorrectToolForDrops().sound(SoundType.VAULT).noOcclusion()));
     public static final DeferredBlock<Block> SOUL_IRON_BARS_BLOCK = registerBlock("soul_iron_bars_block",
             ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
-                    .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
+                    .requiresCorrectToolForDrops().sound(SoundType.VAULT).noOcclusion()));
     public static final DeferredBlock<Block> CHISELED_SOUL_IRON_BARS_BLOCK = registerBlock("chiseled_soul_iron_bars_block",
             ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
-                    .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
+                    .requiresCorrectToolForDrops().sound(SoundType.VAULT).noOcclusion()));
     public static final DeferredBlock<Block> SOUL_GOLD_GRATES = registerBlock("soul_gold_grates",
             ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
-                    .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
+                    .requiresCorrectToolForDrops().sound(SoundType.VAULT).noOcclusion()));
     public static final DeferredBlock<Block> SOUL_GOLD_TILE = registerBlock("soul_gold_tile",
             ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
                     .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
@@ -309,11 +313,50 @@ public class ModBlocks {
     public static final DeferredBlock<Block> SOUL_IRON_BLOCK = registerBlock("soul_iron_block",
             ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_GRAY).strength(1)
                     .requiresCorrectToolForDrops().sound(SoundType.VAULT)));
+    public static final DeferredBlock<Block> GLOWING_OBSIDIAN = registerBlock("glowing_obsidian",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED).sound(SoundType.STONE)
+                    .requiresCorrectToolForDrops().lightLevel(i->5).strength(50,1200)));
+    public static final DeferredBlock<Block> AZALEA_BUSH = registerBlock("azalea_bush",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).sound(SoundType.AZALEA)
+                    .instabreak()));
+    public static final DeferredBlock<Block> FLOWERING_AZALEA_BUSH = registerBlock("flowering_azalea_bush",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.PLANT).sound(SoundType.FLOWERING_AZALEA)
+                    .instabreak()));
+    public static final DeferredBlock<Block> ALT_PODZOL = registerBlock("alt_podzol",
+            ()->new Block(BlockBehaviour.Properties.of().strength(0.5F).sound(SoundType.GRAVEL)
+                    .mapColor(MapColor.PODZOL)));
+    public static final DeferredBlock<Block> ALT_MYCELIUM = registerBlock("alt_mycelium",
+            ()->new Block(BlockBehaviour.Properties.of().strength(0.5F).sound(SoundType.GRASS)
+                    .mapColor(MapColor.COLOR_GRAY)));
+    public static final DeferredBlock<Block> ALT_CRIMSON_NYLIUM = registerBlock("alt_crimson_nylium",
+            ()->new Block(BlockBehaviour.Properties.of().strength(0.5F).sound(SoundType.GRAVEL)
+                    .mapColor(MapColor.PODZOL)));
+    public static final DeferredBlock<Block> ALT_WARPED_NYLIUM = registerBlock("alt_warped_nylium",
+            ()->new NyliumBlock(
+                    BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_NYLIUM)
+                            .instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops()
+                            .strength(0.4F).sound(SoundType.NYLIUM).randomTicks()));
+    public static final DeferredBlock<Block> ALT_DRY_FARMLAND = registerBlock("alt_dry_farmland",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.DIRT)
+                            .strength(0.6F).sound(SoundType.GRAVEL)));
+    public static final DeferredBlock<Block> ALT_WET_FARMLAND = registerBlock("alt_wet_farmland",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.DIRT)
+                    .strength(0.6F).sound(SoundType.GRAVEL)));
+    public static final DeferredBlock<Block> PURPUR_TILE = registerBlock("purpur_tile",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA)
+                    .instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F)));
+    public static final DeferredBlock<Block> OBSIDIAN_CASING = registerBlock("obsidian_casing",
+            ()->new ObsidianCasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F).noOcclusion()));
+    public static final DeferredBlock<Block> PORTALIC_CASING = registerBlock("portalic_casing",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F).noOcclusion()));
 
     //VANILLA TEXTURE           WIWWIMC BLOCK SET
     //enchanting_table_top      Diamond Core =
     //beacon                    Nether Star Block =
-    //nether_core_sky           Fiery Stellar Core+++ =
+    //nether_core_sky           Stellar Core =
     //conduit                   Nautilous Shell Block/Pillar
 
     //respawn_anchor_top        Obsidian Frame

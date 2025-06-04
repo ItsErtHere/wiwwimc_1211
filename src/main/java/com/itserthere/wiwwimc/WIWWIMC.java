@@ -1,5 +1,6 @@
 package com.itserthere.wiwwimc;
 
+import com.itserthere.wiwwimc.BlockEntities.ModBlockEntities;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -37,6 +38,7 @@ public class WIWWIMC {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModCreativeModeTabs.register(modEventBus);
+        ModBlockEntities.register(modEventBus);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event)

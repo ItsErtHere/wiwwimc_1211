@@ -5,6 +5,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
 import java.util.concurrent.CompletableFuture;
@@ -15,7 +16,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
     }
 
     @Override
-    protected void addTags(HolderLookup.Provider provider) {
+    protected void addTags(HolderLookup.@NotNull Provider provider) {
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.IRON_TILE.get())
                 .add(ModBlocks.POLISHED_IRON_TILE.get())
@@ -37,7 +38,9 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.TUFF_BRICK_MOSAIC.get())
                 .add(ModBlocks.STURDY_STONE_TILE.get())
                 .add(ModBlocks.SOUL_QUARTZ_TILES.get())
-                .add(ModBlocks.SOUL_QUARTZ_BULBS.get());
+                .add(ModBlocks.SOUL_QUARTZ_BULBS.get())
+                .add(ModBlocks.GLOWING_OBSIDIAN.get())
+                .add(ModBlocks.PURPUR_TILE.get());
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.SMITHED_OAK_PLANKS.get())
                 .add(ModBlocks.OAK_VENTS.get())
@@ -53,10 +56,15 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.CHISELED_DARK_OAK_PLANKS.get())
                 .add(ModBlocks.ENCASED_OAK_PLANKS.get())
                 .add(ModBlocks.BORDERED_SMOOTH_OAK_PLANKS.get())
-
+                .add(ModBlocks.OBSIDIAN_CASING.get())
+                .add(ModBlocks.PORTALIC_CASING.get())
         ;
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
-                .add(ModBlocks.FULL_GRASS.get());
+                .add(ModBlocks.FULL_GRASS.get())
+                .add(ModBlocks.ALT_PODZOL.get())
+                .add(ModBlocks.ALT_MYCELIUM.get())
+                .add(ModBlocks.ALT_CRIMSON_NYLIUM.get())
+                .add(ModBlocks.ALT_WARPED_NYLIUM.get());
         tag(BlockTags.MINEABLE_WITH_HOE)
                 .add(ModBlocks.SCULK_FRAME.get())
                 .add(ModBlocks.ACTIVE_SCULK_FRAME.get())
@@ -84,6 +92,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.CHISELED_CAST_IRON.get())
                 .add(ModBlocks.SMITHED_IRON.get())
                 .add(ModBlocks.SMOOTH_STURDY_STONE.get())
+                .add(ModBlocks.SMITHED_STURDY_STONE.get())
                 .add(ModBlocks.STURDY_STONE.get())
                 .add(ModBlocks.CHISELED_STURDY_STONE.get())
                 .add(ModBlocks.STURDY_STONE_TILE.get())
@@ -98,7 +107,11 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLAZING_CORE.get())
                 .add(ModBlocks.STELLAR_CORE.get())
                 .add(ModBlocks.ENDER_CORE.get())
-                .add(ModBlocks.DIAMOND_CORE.get());
+                .add(ModBlocks.DIAMOND_CORE.get())
+                .add(ModBlocks.GLOWING_OBSIDIAN.get())
+                .add(ModBlocks.OBSIDIAN_CASING.get())
+                .add(ModBlocks.PORTALIC_CASING.get())
+        ;
 
         tag(BlockTags.FENCES)
                 .add(ModBlocks.SMITHED_OAK_PLANKS_FENCE.get());

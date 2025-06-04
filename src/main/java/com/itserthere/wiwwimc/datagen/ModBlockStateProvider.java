@@ -77,7 +77,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItemAndVanillaTexture(TUFF_BRICK_MOSAIC,"chiseled_tuff_bricks");
        blockWithItemAndVanillaTexture(ModBlocks.OAK_LAYERS,"beehive_side");
        simpleBlockWithItem(SMOOTH_OAK_PLANKS);
-       blockWithItemAndVanillaTexture(ModBlocks.BORDERED_SMOOTH_OAK_PLANKS,"beehive_front");
+       blockWithItemAndVanillaTexture(ModBlocks.BORDERED_SMOOTH_OAK_PLANKS,"beehive_end");
        blockWithItemAndVanillaTexture(ModBlocks.OAK_MOSAIC,"chiseled_bookshelf_top");
        blockWithItemAndVanillaTexture(ModBlocks.OAK_VENTS ,"chiseled_bookshelf_empty");
        blockWithItemAndVanillaTexture(ModBlocks.CHISELED_OAK_PLANKS,"chiseled_bookshelf_side");
@@ -106,14 +106,27 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //simpleBlockWithItem(ModBlocks.SOUL_GOLD_VENTS);
         blockWithItemAndVanillaTexture(SOUL_GOLD_BARS_BLOCK,"spawner");
         blockWithItemAndTexture(SOUL_GOLD_GRATES,"soul_gold_grates");
-        blockWithItemAndVanillaTexture(ModBlocks.SOUL_GOLD_TILE,"trial_spawner_top_inactive_ominous");
+        blockWithItemAndVanillaTexture(ModBlocks.SOUL_GOLD_TILE,"vault_top");
         blockWithItemAndVanillaTexture(ModBlocks.ENCASED_SOULITE,"vault_top_ejecting");
         blockWithItemAndVanillaTexture(ModBlocks.SMITHED_TUFF,"vault_top_ominous");
         blockWithItemAndVanillaTexture(ModBlocks.ENCASED_SOUL_QUARTZ,"vault_top_ejecting_ominous");
-        /*azalea_top, flowering_azalea_top, podzol, mycelium_top, crimson_nylium, warped_nylium, beacon, bee_nest_bottom,
-        blast_furnace_side, blast_furnace_top, cake_bottom, dried_kelp_top, end_frame_top,
-        farmland_dry, farmland_wet, glow_lichen, hopper_top (casing), polished_basalt_top (basalt tiles),
-        portal, respawn_anchor_top, respawn_anchor_top_off, glowing_obsidian, stonecutter_top (old)
+        blockWithItemAndVanillaTexture(AZALEA_BUSH,"azalea_top");
+        blockWithItemAndVanillaTexture(FLOWERING_AZALEA_BUSH,"flowering_azalea_top");
+        simpleBlockWithItem(GLOWING_OBSIDIAN);
+        simpleBlockWithItem(OBSIDIAN_CASING);
+        blockWithItemAndVanillaTexture(PORTALIC_CASING,"respawn_anchor_top");
+        blockWithItemAndVanillaTexture(ALT_CRIMSON_NYLIUM,"crimson_nylium");
+        blockWithItemAndVanillaTexture(ALT_WARPED_NYLIUM,"warped_nylium");
+        blockWithItemAndVanillaTexture(ALT_MYCELIUM,"mycelium_top");
+        blockWithItemAndVanillaTexture(ALT_PODZOL,"podzol_top");
+        blockWithItemAndVanillaTexture(ALT_DRY_FARMLAND,"farmland");
+        blockWithItemAndVanillaTexture(ALT_WET_FARMLAND,"farmland_moist");
+        blockWithItemAndVanillaTexture(PURPUR_TILE,"purpur_pillar_top");
+        blockWithItemAndVanillaTexture(SMITHED_STURDY_STONE, "blast_furnace_top");
+        /*beacon, bee_nest_bottom, blast_furnace_side (MD), cake_bottom, dried_kelp_top,
+        end_frame_top (BE), [glow_lichen], hopper_top (casing),
+        polished_basalt_top (basalt tiles), portal, {respawn_anchor_top, respawn_anchor_top_off} (casing),
+        stonecutter_top (old)
          */
 
         blockItem(ModBlocks.SMITHED_OAK_PLANKS_SLAB);
