@@ -1,0 +1,29 @@
+{
+  "variants": {
+    "face=down": {
+      "model": "wiwwimc:block/alt_brown_mushroom"
+    },
+    "face=east": {
+      "model": "wiwwimc:block/alt_brown_mushroom",
+      "x": 90,
+      "y": 270
+    },
+    "face=north": {
+      "model": "wiwwimc:block/alt_brown_mushroom",
+      "x": 270
+    },
+    "face=south": {
+      "model": "wiwwimc:block/alt_brown_mushroom",
+      "x": 90
+    },
+    "face=up": {
+      "model": "wiwwimc:block/alt_brown_mushroom",
+      "x": 180
+    },
+    "face=west": {
+      "model": "wiwwimc:block/alt_brown_mushroom",
+      "x": 90,
+      "y": 90
+    }
+  }
+}

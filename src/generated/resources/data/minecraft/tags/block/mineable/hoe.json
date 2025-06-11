@@ -18,6 +18,15 @@
     "wiwwimc:blooming_sculk",
     "wiwwimc:blue_sculk",
     "wiwwimc:condensed_sculk_catalyst",
-    "wiwwimc:sculk_tube"
+    "wiwwimc:sculk_tube",
+    "wiwwimc:alt_fire_coral_block",
+    "wiwwimc:alt_horn_coral_block",
+    "wiwwimc:alt_tube_coral_block",
+    "wiwwimc:alt_brain_coral_block",
+    "wiwwimc:alt_bubble_coral_block",
+    "wiwwimc:alt_mushroom_stem",
+    "wiwwimc:alt_brown_mushroom_block",
+    "wiwwimc:alt_red_mushroom_block",
+    "wiwwimc:stripped_mushroom_stem"
   ]
 }

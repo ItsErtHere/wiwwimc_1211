@@ -107,7 +107,43 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.ALT_WET_FARMLAND.get());
         dropSelf(ModBlocks.PURPUR_TILE.get());
         dropSelf(ModBlocks.OBSIDIAN_CASING.get());
-        dropSelf(ModBlocks.PORTALIC_CASING.get());
+        dropSelf(ModBlocks.STONE_CASING.get());
+        dropSelf(ModBlocks.ALT_HAY_BALE.get());
+        dropSelf(ModBlocks.ALT_DRIED_KELP_BLOCK.get());
+        dropSelf(ModBlocks.ACTIVE_REDSTONE_LAMP.get());
+        dropSelf(ModBlocks.ALT_BASALT.get());
+        dropSelf(ModBlocks.ALT_CHISELED_TUFF_BRICKS.get());
+        dropSelf(ModBlocks.ALT_REINFORCED_DEEPSLATE.get());
+        dropSelf(ModBlocks.ALT_CHISELED_TUFF.get());
+        dropSelf(ModBlocks.STURDY_STONE_VENTS.get());
+        dropSelf(ModBlocks.SMITHED_DEEPSLATE.get());
+        dropSelf(ModBlocks.ALT_BONE_BLOCK.get());
+        dropSelf(ModBlocks.DEEPSLATE_CASING.get());
+        dropSelf(ModBlocks.SOUL_GOLD_CASING.get());
+        dropSelf(ModBlocks.SOUL_IRON_CASING.get());
+        dropSelf(ModBlocks.PLANT_CASING.get());
+        dropSelf(ModBlocks.BLACKSTONE_CASING.get());
+        dropSelf(ModBlocks.ALT_COPPER_GRATE.get());
+        dropSelf(ModBlocks.COPPER_FRAME.get());
+        dropSelf(ModBlocks.EXPOSED_COPPER_FRAME.get());
+        dropSelf(ModBlocks.WEATHERED_COPPER_FRAME.get());
+        dropSelf(ModBlocks.OXIDIZED_COPPER_FRAME.get());
+        dropSelf(ModBlocks.ALT_EXPOSED_COPPER_GRATE.get());
+        dropSelf(ModBlocks.ALT_WEATHERED_COPPER_GRATE.get());
+        dropSelf(ModBlocks.ALT_OXIDIZED_COPPER_GRATE.get());
+        dropSelf(ModBlocks.PORTALIC_BLOCK.get());
+        dropSelf(ModBlocks.WATER_TANK.get());
+        dropSelf(ModBlocks.LAVA_TANK.get());
+        dropSelf(ModBlocks.BONE_CASING.get());
+        dropSelf(ModBlocks.OAK_FRAME.get());
+        dropSelf(ModBlocks.JUNGLE_FRAME.get());
+        dropSelf(ModBlocks.ACACIA_FRAME.get());
+        dropSelf(ModBlocks.MANGROVE_FRAME.get());
+        dropSelf(ModBlocks.BAMBOO_FRAME.get());
+        dropSelf(ModBlocks.CHERRY_FRAME.get());
+        dropSelf(ModBlocks.CRIMSON_FRAME.get());
+        dropSelf(ModBlocks.WARPED_FRAME.get());
+        dropSelf(ModBlocks.IRON_FRAME.get());
 
         //DRIPLEAFS
         dropSelf(ModBlocks.FIRM_DRIPLEAF.get());
@@ -121,6 +157,58 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.HALF_DRIPLEAF_XTRA.get());
         dropSelf(ModBlocks.HALF_DRIPLEAF_STEM.get());
         dropSelf(ModBlocks.DRIPLEAF_LEAF.get());
+        //CORALS
+        dropSelf(ModBlocks.ALT_FIRE_CORAL_BLOCK.get());
+        dropSelf(ModBlocks.ALT_HORN_CORAL_BLOCK.get());
+        dropSelf(ModBlocks.ALT_TUBE_CORAL_BLOCK.get());
+        dropSelf(ModBlocks.ALT_BRAIN_CORAL_BLOCK.get());
+        dropSelf(ModBlocks.ALT_BUBBLE_CORAL_BLOCK.get());
+
+        dropSelf(ModBlocks.ALT_FIRE_CORAL_FAN.get());
+        dropSelf(ModBlocks.ALT_FIRE_CORAL_WALL_FAN.get());
+        dropSelf(ModBlocks.ALT_FIRE_CORAL.get());
+        dropSelf(ModBlocks.ALT_DEAD_FIRE_CORAL_FAN.get());
+        dropSelf(ModBlocks.ALT_DEAD_FIRE_CORAL_WALL_FAN.get());
+        dropSelf(ModBlocks.ALT_DEAD_FIRE_CORAL.get());
+
+        dropSelf(ModBlocks.ALT_HORN_CORAL_FAN.get());
+        dropSelf(ModBlocks.ALT_HORN_CORAL_WALL_FAN.get());
+        dropSelf(ModBlocks.ALT_HORN_CORAL.get());
+        dropSelf(ModBlocks.ALT_DEAD_HORN_CORAL_FAN.get());
+        dropSelf(ModBlocks.ALT_DEAD_HORN_CORAL_WALL_FAN.get());
+        dropSelf(ModBlocks.ALT_DEAD_HORN_CORAL.get());
+
+        dropSelf(ModBlocks.ALT_TUBE_CORAL_FAN.get());
+        dropSelf(ModBlocks.ALT_TUBE_CORAL_WALL_FAN.get());
+        dropSelf(ModBlocks.ALT_TUBE_CORAL.get());
+        dropSelf(ModBlocks.ALT_DEAD_TUBE_CORAL_FAN.get());
+        dropSelf(ModBlocks.ALT_DEAD_TUBE_CORAL_WALL_FAN.get());
+        dropSelf(ModBlocks.ALT_DEAD_TUBE_CORAL.get());
+
+        dropSelf(ModBlocks.ALT_BRAIN_CORAL_FAN.get());
+        dropSelf(ModBlocks.ALT_BRAIN_CORAL_WALL_FAN.get());
+        dropSelf(ModBlocks.ALT_BRAIN_CORAL.get());
+        dropSelf(ModBlocks.ALT_DEAD_BRAIN_CORAL_FAN.get());
+        dropSelf(ModBlocks.ALT_DEAD_BRAIN_CORAL_WALL_FAN.get());
+        dropSelf(ModBlocks.ALT_DEAD_BRAIN_CORAL.get());
+
+        dropSelf(ModBlocks.ALT_BUBBLE_CORAL_FAN.get());
+        dropSelf(ModBlocks.ALT_BUBBLE_CORAL_WALL_FAN.get());
+        dropSelf(ModBlocks.ALT_BUBBLE_CORAL.get());
+        dropSelf(ModBlocks.ALT_DEAD_BUBBLE_CORAL_FAN.get());
+        dropSelf(ModBlocks.ALT_DEAD_BUBBLE_CORAL_WALL_FAN.get());
+        dropSelf(ModBlocks.ALT_DEAD_BUBBLE_CORAL.get());
+
+        dropSelf(ModBlocks.ALT_MUSHROOM_STEM.get());
+        dropSelf(ModBlocks.ALT_RED_MUSHROOM_BLOCK.get());
+        dropSelf(ModBlocks.ALT_BROWN_MUSHROOM_BLOCK.get());
+        dropSelf(ModBlocks.STRIPPED_MUSHROOM_STEM.get());
+        dropSelf(ModBlocks.ALT_BROWN_MUSHROOM.get());
+        dropSelf(ModBlocks.ALT_RED_MUSHROOM.get());
+        dropSelf(ModBlocks.ALT_CRIMSON_FUNGUS.get());
+        dropSelf(ModBlocks.ALT_WARPED_FUNGUS.get());
+
+        dropSelf(ModBlocks.ALT_GLOW_LICHEN.get());
         //SLABS
         add(ModBlocks.SMITHED_OAK_PLANKS_SLAB.get(),
                 block->createSlabItemTable(ModBlocks.SMITHED_OAK_PLANKS_SLAB.get()));

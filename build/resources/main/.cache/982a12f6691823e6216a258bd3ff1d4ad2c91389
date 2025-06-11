@@ -1,12 +1,20 @@
-// 1.21.1	2025-06-02T16:36:05.9460813	Tags for minecraft:block mod id wiwwimc
+// 1.21.1	2025-06-09T16:19:12.4696777	Tags for minecraft:block mod id wiwwimc
 cd24ccb5ec5947ef97ea836183af08632626e6a4 data/minecraft/tags/block/fences.json
 8c848b41a52cffdfc4d4931950a0cac65f227589 data/minecraft/tags/block/fence_gates.json
-07db4b7c69cb9170a94bbfe1332f2b0f6816b2cf data/minecraft/tags/block/mineable/axe.json
-e007b10d1b8b20909d21ba116f901f142d2bcf75 data/minecraft/tags/block/mineable/hoe.json
-5e527471f25e95462b460de4ec3cb8df58e5679e data/minecraft/tags/block/mineable/pickaxe.json
+0889633cb40a8f19e0c4864d8918160f9e6d54bc data/minecraft/tags/block/mineable/axe.json
+817853c862226b5ef8b5a81bcf2458f00085fbb6 data/minecraft/tags/block/mineable/hoe.json
+27421a8911fe42d74bea79ddedcd77e2be06e69a data/minecraft/tags/block/mineable/pickaxe.json
 f07bf3194e16610d5b7c8d7aec4d0bd9612cb828 data/minecraft/tags/block/mineable/shovel.json
-88d6b0dc995197ce2bccee09582cb9fa03096f1c data/minecraft/tags/block/needs_diamond_tool.json
+f30a13cae69f9eda14f15b1907cf617fea8a8137 data/minecraft/tags/block/needs_diamond_tool.json
 aa741d9325c7829a168d2a0b056577f87d17e431 data/minecraft/tags/block/needs_iron_tool.json
 9da8b5c3d2e2c6a68d51de868a462c3314ded6b8 data/minecraft/tags/block/needs_stone_tool.json
 90b6ac7466ed61d247922239b36a4c2952d3d151 data/minecraft/tags/block/walls.json
+8e93b9a1b07301462c5c6acaa1fba31c796ac3e3 data/wiwwimc/tags/block/all_casings.json
+17ce57956b26ed82d317935a90d444ce21dc86c8 data/wiwwimc/tags/block/all_coral_fans.json
+6501c511f1e24e402769974fd858e9fd7e4821af data/wiwwimc/tags/block/all_coral_plants.json
+8aec5250ef64c82c53b6141f32606d68df168d7e data/wiwwimc/tags/block/all_coral_wall_fans.json
+ed6db09ed629e91e9d76a71b23cafff55e07bd43 data/wiwwimc/tags/block/all_fungi.json
+866fc0d7147b5fd2f588349313490befa5302680 data/wiwwimc/tags/block/all_grates.json
+4623e9e0855bfd2fec83c1731ba9bc127b0cd81a data/wiwwimc/tags/block/dead_coral_plants.json
 00a6719b1476cdb42425a9d9109a8d3e03f5353d data/wiwwimc/tags/block/dripleaf_blocks.json
+03ad86f3d4d3333bd0a84b1fb7a0f992637da19f data/wiwwimc/tags/block/dripleaf_halves.json

@@ -1,6 +1,9 @@
 package com.itserthere.wiwwimc;
 
 import com.itserthere.wiwwimc.BlockEntities.ModBlockEntities;
+import com.itserthere.wiwwimc.BlockEntities.CasingBlockEntity;
+import com.itserthere.wiwwimc.BlockEntities.renderers.CasingBlockEntityRenderer;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -72,6 +75,12 @@ public class WIWWIMC {
             // Some client setup code
             LOGGER.info("HELLO FROM CLIENT SETUP");
             LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        }
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(
+                    ModBlockEntities.CASING_BE.get(), CasingBlockEntityRenderer::new
+            );
         }
     }
 }

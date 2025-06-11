@@ -116,8 +116,96 @@ public class ModCreativeModeTabs {
                                 output.accept(ModBlocks.ALT_DRY_FARMLAND);
                                 output.accept(ModBlocks.ALT_WET_FARMLAND);
                                 output.accept(ModBlocks.PURPUR_TILE);
+                                output.accept(ModBlocks.STONE_CASING);
                                 output.accept(ModBlocks.OBSIDIAN_CASING);
-                                output.accept(ModBlocks.PORTALIC_CASING);
+                                output.accept(ModBlocks.DEEPSLATE_CASING);
+                                output.accept(ModBlocks.BLACKSTONE_CASING);
+                                output.accept(ModBlocks.PLANT_CASING);
+                                output.accept(ModBlocks.SOUL_GOLD_CASING);
+                                output.accept(ModBlocks.SOUL_IRON_CASING);
+                                output.accept(ModBlocks.BONE_CASING);
+                                output.accept(ModBlocks.ALT_COPPER_GRATE);
+                                output.accept(ModBlocks.ALT_EXPOSED_COPPER_GRATE);
+                                output.accept(ModBlocks.ALT_WEATHERED_COPPER_GRATE);
+                                output.accept(ModBlocks.ALT_OXIDIZED_COPPER_GRATE);
+                                output.accept(ModBlocks.COPPER_FRAME);
+                                output.accept(ModBlocks.EXPOSED_COPPER_FRAME);
+                                output.accept(ModBlocks.WEATHERED_COPPER_FRAME);
+                                output.accept(ModBlocks.OXIDIZED_COPPER_FRAME);
+                                output.accept(ModBlocks.OAK_FRAME);
+                                output.accept(ModBlocks.JUNGLE_FRAME);
+                                output.accept(ModBlocks.ACACIA_FRAME);
+                                output.accept(ModBlocks.MANGROVE_FRAME);
+                                output.accept(ModBlocks.CHERRY_FRAME);
+                                output.accept(ModBlocks.BAMBOO_FRAME);
+                                output.accept(ModBlocks.CRIMSON_FRAME);
+                                output.accept(ModBlocks.WARPED_FRAME);
+                                output.accept(ModBlocks.IRON_FRAME);
+
+                                output.accept(ModBlocks.ALT_FIRE_CORAL_BLOCK);
+                                output.accept(ModBlocks.ALT_HORN_CORAL_BLOCK);
+                                output.accept(ModBlocks.ALT_TUBE_CORAL_BLOCK);
+                                output.accept(ModBlocks.ALT_BRAIN_CORAL_BLOCK);
+                                output.accept(ModBlocks.ALT_BUBBLE_CORAL_BLOCK);
+                                output.accept(ModBlocks.STRIPPED_MUSHROOM_STEM);
+                                output.accept(ModBlocks.ALT_BROWN_MUSHROOM_BLOCK);
+                                output.accept(ModBlocks.ALT_RED_MUSHROOM_BLOCK);
+                                output.accept(ModBlocks.ALT_MUSHROOM_STEM);
+
+                                output.accept(ModBlocks.ALT_FIRE_CORAL_FAN);
+                                output.accept(ModBlocks.ALT_FIRE_CORAL_WALL_FAN);
+                                output.accept(ModBlocks.ALT_FIRE_CORAL);
+                                output.accept(ModBlocks.ALT_DEAD_FIRE_CORAL_FAN);
+                                output.accept(ModBlocks.ALT_DEAD_FIRE_CORAL_WALL_FAN);
+                                output.accept(ModBlocks.ALT_DEAD_FIRE_CORAL);
+
+                                output.accept(ModBlocks.ALT_HORN_CORAL_FAN);
+                                output.accept(ModBlocks.ALT_HORN_CORAL_WALL_FAN);
+                                output.accept(ModBlocks.ALT_HORN_CORAL);
+                                output.accept(ModBlocks.ALT_DEAD_HORN_CORAL_FAN);
+                                output.accept(ModBlocks.ALT_DEAD_HORN_CORAL_WALL_FAN);
+                                output.accept(ModBlocks.ALT_DEAD_HORN_CORAL);
+
+                                output.accept(ModBlocks.ALT_TUBE_CORAL_FAN);
+                                output.accept(ModBlocks.ALT_TUBE_CORAL_WALL_FAN);
+                                output.accept(ModBlocks.ALT_TUBE_CORAL);
+                                output.accept(ModBlocks.ALT_DEAD_TUBE_CORAL_FAN);
+                                output.accept(ModBlocks.ALT_DEAD_TUBE_CORAL_WALL_FAN);
+                                output.accept(ModBlocks.ALT_DEAD_TUBE_CORAL);
+
+                                output.accept(ModBlocks.ALT_BRAIN_CORAL_FAN);
+                                output.accept(ModBlocks.ALT_BRAIN_CORAL_WALL_FAN);
+                                output.accept(ModBlocks.ALT_BRAIN_CORAL);
+                                output.accept(ModBlocks.ALT_DEAD_BRAIN_CORAL_FAN);
+                                output.accept(ModBlocks.ALT_DEAD_BRAIN_CORAL_WALL_FAN);
+                                output.accept(ModBlocks.ALT_DEAD_BRAIN_CORAL);
+
+                                output.accept(ModBlocks.ALT_BUBBLE_CORAL_FAN);
+                                output.accept(ModBlocks.ALT_BUBBLE_CORAL_WALL_FAN);
+                                output.accept(ModBlocks.ALT_BUBBLE_CORAL);
+                                output.accept(ModBlocks.ALT_DEAD_BUBBLE_CORAL_FAN);
+                                output.accept(ModBlocks.ALT_DEAD_BUBBLE_CORAL_WALL_FAN);
+                                output.accept(ModBlocks.ALT_DEAD_BUBBLE_CORAL);
+
+                                output.accept(ModBlocks.ALT_BROWN_MUSHROOM);
+                                output.accept(ModBlocks.ALT_RED_MUSHROOM);
+                                output.accept(ModBlocks.ALT_CRIMSON_FUNGUS);
+                                output.accept(ModBlocks.ALT_WARPED_FUNGUS);
+                                output.accept(ModBlocks.ALT_GLOW_LICHEN);
+
+                                output.accept(ModBlocks.ALT_HAY_BALE);
+                                output.accept(ModBlocks.ALT_DRIED_KELP_BLOCK);
+                                output.accept(ModBlocks.ACTIVE_REDSTONE_LAMP);
+                                output.accept(ModBlocks.ALT_REINFORCED_DEEPSLATE);
+                                output.accept(ModBlocks.ALT_BASALT);
+                                output.accept(ModBlocks.ALT_CHISELED_TUFF);
+                                output.accept(ModBlocks.ALT_CHISELED_TUFF_BRICKS);
+                                output.accept(ModBlocks.SMITHED_DEEPSLATE);
+                                output.accept(ModBlocks.STURDY_STONE_VENTS);
+                                output.accept(ModBlocks.ALT_BONE_BLOCK);
+                                output.accept(ModBlocks.PORTALIC_BLOCK);
+                                output.accept(ModBlocks.WATER_TANK);
+                                output.accept(ModBlocks.LAVA_TANK);
 
     }).build());
 }

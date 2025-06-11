@@ -17,6 +17,7 @@ public class ModBlockTagProvider extends BlockTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.@NotNull Provider provider) {
+        //TOOL TYPES
         tag(BlockTags.MINEABLE_WITH_PICKAXE)
                 .add(ModBlocks.IRON_TILE.get())
                 .add(ModBlocks.POLISHED_IRON_TILE.get())
@@ -40,7 +41,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SOUL_QUARTZ_TILES.get())
                 .add(ModBlocks.SOUL_QUARTZ_BULBS.get())
                 .add(ModBlocks.GLOWING_OBSIDIAN.get())
-                .add(ModBlocks.PURPUR_TILE.get());
+                .add(ModBlocks.PURPUR_TILE.get())
+                .add(ModBlocks.OBSIDIAN_CASING.get());
         tag(BlockTags.MINEABLE_WITH_AXE)
                 .add(ModBlocks.SMITHED_OAK_PLANKS.get())
                 .add(ModBlocks.OAK_VENTS.get())
@@ -56,8 +58,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.CHISELED_DARK_OAK_PLANKS.get())
                 .add(ModBlocks.ENCASED_OAK_PLANKS.get())
                 .add(ModBlocks.BORDERED_SMOOTH_OAK_PLANKS.get())
-                .add(ModBlocks.OBSIDIAN_CASING.get())
-                .add(ModBlocks.PORTALIC_CASING.get())
         ;
         tag(BlockTags.MINEABLE_WITH_SHOVEL)
                 .add(ModBlocks.FULL_GRASS.get())
@@ -84,7 +84,18 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.BLOOMING_SCULK.get())
                 .add(ModBlocks.BLUE_SCULK.get())
                 .add(ModBlocks.CONDENSED_SCULK_CATALYST.get())
-                .add(ModBlocks.SCULK_TUBE.get());
+                .add(ModBlocks.SCULK_TUBE.get())
+                .add(ModBlocks.ALT_FIRE_CORAL_BLOCK.get())
+                .add(ModBlocks.ALT_HORN_CORAL_BLOCK.get())
+                .add(ModBlocks.ALT_TUBE_CORAL_BLOCK.get())
+                .add(ModBlocks.ALT_BRAIN_CORAL_BLOCK.get())
+                .add(ModBlocks.ALT_BUBBLE_CORAL_BLOCK.get())
+                .add(ModBlocks.ALT_MUSHROOM_STEM.get())
+                .add(ModBlocks.ALT_BROWN_MUSHROOM_BLOCK.get())
+                .add(ModBlocks.ALT_RED_MUSHROOM_BLOCK.get())
+                .add(ModBlocks.STRIPPED_MUSHROOM_STEM.get());
+
+        //TOOL TIERS
         tag(BlockTags.NEEDS_STONE_TOOL)
                 .add(ModBlocks.IRON_TILE.get())
                 .add(ModBlocks.POLISHED_IRON_TILE.get())
@@ -110,7 +121,6 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.DIAMOND_CORE.get())
                 .add(ModBlocks.GLOWING_OBSIDIAN.get())
                 .add(ModBlocks.OBSIDIAN_CASING.get())
-                .add(ModBlocks.PORTALIC_CASING.get())
         ;
 
         tag(BlockTags.FENCES)
@@ -119,6 +129,8 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.SMITHED_OAK_PLANKS_FENCE_GATE.get());
         tag(BlockTags.WALLS)
                 .add(ModBlocks.NETHER_CORE_WALL.get());
+
+        //MODDED TAGS
         tag(ModTags.Blocks.DRIPLEAF_BLOCKS)
                 .add(ModBlocks.FIRM_DRIPLEAF.get())
                 .add(ModBlocks.FIRM_DRIPLEAF_PARTIAL.get())
@@ -131,6 +143,65 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.HALF_DRIPLEAF_XTRA.get())
                 .add(ModBlocks.HALF_DRIPLEAF_STEM.get())
                 .add(ModBlocks.DRIPLEAF_LEAF.get());
+        tag(ModTags.Blocks.DRIPLEAF_HALVES)
+                .add(ModBlocks.HALF_DRIPLEAF.get())
+                .add(ModBlocks.HALF_DRIPLEAF_PARTIAL.get())
+                .add(ModBlocks.HALF_DRIPLEAF_FULL.get())
+                .add(ModBlocks.HALF_DRIPLEAF_XTRA.get())
+                .add(ModBlocks.HALF_DRIPLEAF_STEM.get());
+        tag(ModTags.Blocks.ALL_CASINGS)
+                .add(ModBlocks.STONE_CASING.get())
+                .add(ModBlocks.OBSIDIAN_CASING.get())
+                .add(ModBlocks.PLANT_CASING.get())
+                .add(ModBlocks.SOUL_IRON_CASING.get())
+                .add(ModBlocks.SOUL_GOLD_CASING.get())
+                .add(ModBlocks.BLACKSTONE_CASING.get())
+                .add(ModBlocks.DEEPSLATE_CASING.get())
+                .add(ModBlocks.BONE_CASING.get());
+        tag(ModTags.Blocks.ALL_GRATES)
+                .add(ModBlocks.ALT_COPPER_GRATE.get())
+                .add(ModBlocks.ALT_EXPOSED_COPPER_GRATE.get())
+                .add(ModBlocks.ALT_WEATHERED_COPPER_GRATE.get())
+                .add(ModBlocks.ALT_OXIDIZED_COPPER_GRATE.get());
+        tag(ModTags.Blocks.DEAD_CORAL_PLANTS)
+                .add(ModBlocks.ALT_DEAD_FIRE_CORAL.get())
+                .add(ModBlocks.ALT_DEAD_FIRE_CORAL_FAN.get())
+                .add(ModBlocks.ALT_DEAD_FIRE_CORAL_WALL_FAN.get())
+                .add(ModBlocks.ALT_DEAD_HORN_CORAL.get())
+                .add(ModBlocks.ALT_DEAD_HORN_CORAL_FAN.get())
+                .add(ModBlocks.ALT_DEAD_HORN_CORAL_WALL_FAN.get())
+                .add(ModBlocks.ALT_DEAD_TUBE_CORAL.get())
+                .add(ModBlocks.ALT_DEAD_TUBE_CORAL_FAN.get())
+                .add(ModBlocks.ALT_DEAD_TUBE_CORAL_WALL_FAN.get())
+                .add(ModBlocks.ALT_DEAD_BRAIN_CORAL.get())
+                .add(ModBlocks.ALT_DEAD_BRAIN_CORAL_FAN.get())
+                .add(ModBlocks.ALT_DEAD_BRAIN_CORAL_WALL_FAN.get())
+                .add(ModBlocks.ALT_DEAD_BUBBLE_CORAL.get())
+                .add(ModBlocks.ALT_DEAD_BUBBLE_CORAL_FAN.get())
+                .add(ModBlocks.ALT_DEAD_BUBBLE_CORAL_WALL_FAN.get());
+        tag(ModTags.Blocks.ALL_CORAL_PLANTS)
+                .add(ModBlocks.ALT_FIRE_CORAL.get()).add(ModBlocks.ALT_DEAD_FIRE_CORAL.get())
+                .add(ModBlocks.ALT_HORN_CORAL.get()).add(ModBlocks.ALT_DEAD_HORN_CORAL.get())
+                .add(ModBlocks.ALT_TUBE_CORAL.get()).add(ModBlocks.ALT_DEAD_TUBE_CORAL.get())
+                .add(ModBlocks.ALT_BRAIN_CORAL.get()).add(ModBlocks.ALT_DEAD_BRAIN_CORAL.get())
+                .add(ModBlocks.ALT_BUBBLE_CORAL.get()).add(ModBlocks.ALT_DEAD_BUBBLE_CORAL.get());
+        tag(ModTags.Blocks.ALL_CORAL_FANS)
+                .add(ModBlocks.ALT_FIRE_CORAL_FAN.get()).add(ModBlocks.ALT_DEAD_FIRE_CORAL_FAN.get())
+                .add(ModBlocks.ALT_HORN_CORAL_FAN.get()).add(ModBlocks.ALT_DEAD_HORN_CORAL_FAN.get())
+                .add(ModBlocks.ALT_TUBE_CORAL_FAN.get()).add(ModBlocks.ALT_DEAD_TUBE_CORAL_FAN.get())
+                .add(ModBlocks.ALT_BRAIN_CORAL_FAN.get()).add(ModBlocks.ALT_DEAD_BRAIN_CORAL_FAN.get())
+                .add(ModBlocks.ALT_BUBBLE_CORAL_FAN.get()).add(ModBlocks.ALT_DEAD_BUBBLE_CORAL_FAN.get());
+        tag(ModTags.Blocks.ALL_CORAL_WALL_FANS)
+                .add(ModBlocks.ALT_FIRE_CORAL_WALL_FAN.get()).add(ModBlocks.ALT_DEAD_FIRE_CORAL_WALL_FAN.get())
+                .add(ModBlocks.ALT_HORN_CORAL_WALL_FAN.get()).add(ModBlocks.ALT_DEAD_HORN_CORAL_WALL_FAN.get())
+                .add(ModBlocks.ALT_TUBE_CORAL_WALL_FAN.get()).add(ModBlocks.ALT_DEAD_TUBE_CORAL_WALL_FAN.get())
+                .add(ModBlocks.ALT_BRAIN_CORAL_WALL_FAN.get()).add(ModBlocks.ALT_DEAD_BRAIN_CORAL_WALL_FAN.get())
+                .add(ModBlocks.ALT_BUBBLE_CORAL_WALL_FAN.get()).add(ModBlocks.ALT_DEAD_BUBBLE_CORAL_WALL_FAN.get());
+        tag(ModTags.Blocks.ALL_FUNGI)
+                .add(ModBlocks.ALT_BROWN_MUSHROOM.get()).add(ModBlocks.ALT_RED_MUSHROOM.get())
+                .add(ModBlocks.ALT_CRIMSON_FUNGUS.get()).add(ModBlocks.ALT_WARPED_FUNGUS.get());
+
+
 
 
 

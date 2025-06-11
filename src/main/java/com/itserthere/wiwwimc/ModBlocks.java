@@ -4,8 +4,8 @@ import com.itserthere.wiwwimc.Blocks.*;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.minecraft.world.level.block.*;
-import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
@@ -19,7 +19,6 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 import java.util.List;
 import java.util.Objects;
 import java.util.function.Supplier;
-import java.util.function.ToIntFunction;
 
 public class ModBlocks {
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(WIWWIMC.MODID);
@@ -72,6 +71,18 @@ public class ModBlocks {
                         BlockBehaviour.Properties.of().strength(0.4f,0.6f)
                         .requiresCorrectToolForDrops()
                         .sound(SoundType.GLASS).mapColor(mapColor)));
+    }
+    public static DeferredBlock<Block> registerDPlant(String name, SoundType soundType) {
+        return registerBlock(name,
+                ()->new DirectionalPartialBlock(BlockBehaviour.Properties.of()
+                        .requiresCorrectToolForDrops().noOcclusion().noCollission()
+                        .pushReaction(PushReaction.DESTROY).sound(soundType)));
+    }
+    public static DeferredBlock<Block> registerODPlant(String name, SoundType soundType) {
+        return registerBlock(name,
+                ()->new OmniDirectionalPartial(BlockBehaviour.Properties.of()
+                        .requiresCorrectToolForDrops().noOcclusion().noCollission()
+                        .pushReaction(PushReaction.DESTROY).sound(soundType)));
     }
     //OTHER USES
     public static DeferredBlock<Block> getDeferredBlock(BlockState state) {
@@ -126,14 +137,42 @@ public class ModBlocks {
                     .mapColor(DyeColor.CYAN).requiresCorrectToolForDrops().strength(1)
                     .sound(SoundType.SCULK)));
     public static final DeferredBlock<Block> SCULK_TUBE =
-            registerBlock("sculk_tube", ()->new Block(BlockBehaviour.Properties.of()
+            registerBlock("sculk_tube", ()->new RotatedPillarBlock(BlockBehaviour.Properties.of()
                     .mapColor(DyeColor.CYAN).requiresCorrectToolForDrops().strength(1)
                     .sound(SoundType.SCULK)));
+    public static final DeferredBlock<Block> ALT_BASALT =
+            registerBlock("alt_basalt", ()->new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_BLACK)
+                    .instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops()
+                    .strength(1.25F, 4.2F).sound(SoundType.BASALT)));
+    public static final DeferredBlock<Block> STURDY_STONE_VENTS =
+            registerBlock("sturdy_stone_vents", ()->new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.STONE).instrument(NoteBlockInstrument.BASEDRUM)
+                    .requiresCorrectToolForDrops().strength(2.0F, 6.0F)));
+    public static final DeferredBlock<Block> ALT_CHISELED_TUFF =
+            registerBlock("alt_chiseled_tuff", ()->new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GRAY).instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final DeferredBlock<Block> ALT_CHISELED_TUFF_BRICKS =
+            registerBlock("alt_chiseled_tuff_bricks", ()->new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GRAY).instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final DeferredBlock<Block> ALT_REINFORCED_DEEPSLATE =
+            registerBlock("alt_reinforced_deepslate", ()->new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GRAY).instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
+    public static final DeferredBlock<Block> SMITHED_DEEPSLATE =
+            registerBlock("smithed_deepslate", ()->new RotatedPillarBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.TERRACOTTA_GRAY).instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.TUFF).requiresCorrectToolForDrops().strength(1.5F, 6.0F)));
     public static final DeferredBlock<Block> CONDENSED_SCULK_CATALYST =
-            registerBlock("condensed_sculk_catalyst", ()->new RotatedPillarBlock(BlockBehaviour.Properties.of()
-                    .mapColor(DyeColor.CYAN).requiresCorrectToolForDrops().strength(1)
-                    .sound(SoundType.SCULK)) {
-            });
+            registerBlock("condensed_sculk_catalyst", ()->new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.DEEPSLATE).instrument(NoteBlockInstrument.BASEDRUM)
+                    .sound(SoundType.DEEPSLATE).strength(55.0F, 1200.0F)));
+    public static final DeferredBlock<Block> ALT_BONE_BLOCK =
+            registerBlock("alt_bone_block", ()->new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.SAND).instrument(NoteBlockInstrument.XYLOPHONE)
+                    .requiresCorrectToolForDrops().strength(2.0F).sound(SoundType.BONE_BLOCK)));
     //DRIPLEAFS
     public static final DeferredBlock<Block> FIRM_DRIPLEAF =
             registerBlock("firm_dripleaf", ()->new DripleafBlock(BlockBehaviour.Properties.of()
@@ -346,12 +385,205 @@ public class ModBlocks {
             ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_MAGENTA)
                     .instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops()
                     .strength(1.5F, 6.0F)));
+    public static final DeferredBlock<Block> ALT_DRIED_KELP_BLOCK = registerBlock("alt_dried_kelp_block",
+            ()->new Block(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.COLOR_GREEN).strength(0.5F, 2.5F).sound(SoundType.GRASS)));
+    public static final DeferredBlock<Block> ALT_HAY_BALE = registerBlock("alt_hay_bale",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW)
+                    .instrument(NoteBlockInstrument.BANJO).strength(0.5F).sound(SoundType.GRASS)));
+    public static final DeferredBlock<Block> ACTIVE_REDSTONE_LAMP = registerBlock("active_redstone_lamp",
+            ()->new Block(BlockBehaviour.Properties.of().lightLevel(i -> 15).strength(0.3F).sound(SoundType.GLASS)));
+    //CASINGS
     public static final DeferredBlock<Block> OBSIDIAN_CASING = registerBlock("obsidian_casing",
-            ()->new ObsidianCasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE)
-                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F).noOcclusion()));
-    public static final DeferredBlock<Block> PORTALIC_CASING = registerBlock("portalic_casing",
             ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE)
                     .requiresCorrectToolForDrops().strength(1.5F, 6.0F).noOcclusion()));
+    public static final DeferredBlock<Block> STONE_CASING = registerBlock("stone_casing",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+                    .requiresCorrectToolForDrops().strength(1.5F, 6.0F).noOcclusion()));
+    public static final DeferredBlock<Block> DEEPSLATE_CASING = registerBlock("deepslate_casing",
+            ()->new CasingBlock(BlockBehaviour.Properties.of()
+            .mapColor(MapColor.DEEPSLATE).instrument(NoteBlockInstrument.BASEDRUM)
+            .requiresCorrectToolForDrops().strength(3.0F, 6.0F).sound(SoundType.DEEPSLATE).noOcclusion()));
+    public static final DeferredBlock<Block> BLACKSTONE_CASING = registerBlock("blackstone_casing",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLACK)
+                    .instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F).noOcclusion()));
+    public static final DeferredBlock<Block> PLANT_CASING = registerBlock("plant_casing",
+            ()->new CasingBlock(BlockBehaviour.Properties.of()
+                    .mapColor(MapColor.PLANT).strength(0.2F)
+                    .sound(SoundType.GRASS).noOcclusion().ignitedByLava()
+                    .pushReaction(PushReaction.DESTROY)));
+    public static final DeferredBlock<Block> SOUL_IRON_CASING = registerBlock("soul_iron_casing",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+                    .instrument(NoteBlockInstrument.BASEDRUM)
+                    .noOcclusion().sound(SoundType.VAULT).strength(10.0F)));
+    public static final DeferredBlock<Block> SOUL_GOLD_CASING = registerBlock("soul_gold_casing",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.STONE)
+                    .instrument(NoteBlockInstrument.BASEDRUM).noOcclusion()
+                    .sound(SoundType.VAULT).strength(10.0F)));
+    public static final DeferredBlock<Block> BONE_CASING = registerBlock("bone_casing",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_WHITE)
+                    .instrument(NoteBlockInstrument.BASEDRUM).noOcclusion()
+                    .sound(SoundType.VAULT).strength(10.0F)));
+    public static final DeferredBlock<Block> ALT_COPPER_GRATE = registerBlock("alt_copper_grate",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().strength(3.0F, 6.0F)
+                    .sound(SoundType.COPPER_GRATE).mapColor(MapColor.COLOR_ORANGE)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> ALT_EXPOSED_COPPER_GRATE = registerBlock("alt_exposed_copper_grate",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().strength(3.0F, 6.0F)
+                    .sound(SoundType.COPPER_GRATE).mapColor(MapColor.WARPED_STEM)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> ALT_WEATHERED_COPPER_GRATE = registerBlock("alt_weathered_copper_grate",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().strength(3.0F, 6.0F)
+                    .sound(SoundType.COPPER_GRATE).mapColor(MapColor.WARPED_NYLIUM)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> ALT_OXIDIZED_COPPER_GRATE = registerBlock("alt_oxidized_copper_grate",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().strength(3.0F, 6.0F)
+                    .sound(SoundType.COPPER_GRATE).mapColor(MapColor.WARPED_NYLIUM)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> COPPER_FRAME = registerBlock("copper_grate",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().strength(3.0F, 6.0F)
+                    .sound(SoundType.COPPER_GRATE).mapColor(MapColor.COLOR_ORANGE)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> EXPOSED_COPPER_FRAME = registerBlock("exposed_copper_frame",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().strength(3.0F, 6.0F)
+                    .sound(SoundType.COPPER_GRATE).mapColor(MapColor.WARPED_STEM)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> WEATHERED_COPPER_FRAME = registerBlock("weathered_copper_frame",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().strength(3.0F, 6.0F)
+                    .sound(SoundType.COPPER_GRATE).mapColor(MapColor.WARPED_NYLIUM)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> OXIDIZED_COPPER_FRAME = registerBlock("oxidized_copper_frame",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().strength(3.0F, 6.0F)
+                    .sound(SoundType.COPPER_GRATE).mapColor(MapColor.WARPED_NYLIUM)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> OAK_FRAME = registerBlock("oak_frame",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS).strength(3.0F)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> JUNGLE_FRAME = registerBlock("jungle_frame",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.DIRT)
+                    .instrument(NoteBlockInstrument.BASS).strength(3.0F)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> ACACIA_FRAME = registerBlock("acacia_frame",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE)
+                    .instrument(NoteBlockInstrument.BASS).strength(3.0F)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> MANGROVE_FRAME = registerBlock("mangrove_frame",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED)
+                    .instrument(NoteBlockInstrument.BASS).strength(3.0F)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> CHERRY_FRAME = registerBlock("cherry_frame",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.TERRACOTTA_WHITE)
+                    .instrument(NoteBlockInstrument.BASS).strength(3.0F)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> BAMBOO_FRAME = registerBlock("bamboo_frame",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW)
+                    .instrument(NoteBlockInstrument.BASS).sound(SoundType.BAMBOO).strength(3.0F)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> CRIMSON_FRAME = registerBlock("crimson_frame",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.CRIMSON_STEM)
+                    .instrument(NoteBlockInstrument.BASS).strength(3.0F)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> WARPED_FRAME = registerBlock("warped_frame",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.WARPED_STEM)
+                    .instrument(NoteBlockInstrument.BASS).strength(3.0F)
+                    .noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> IRON_FRAME = registerBlock("iron_frame",
+            ()->new CasingBlock(BlockBehaviour.Properties.of().mapColor(MapColor.METAL)
+                    .strength(3.0F).noOcclusion().requiresCorrectToolForDrops()));
+    public static final DeferredBlock<Block> ALT_BRAIN_CORAL_BLOCK = registerBlock("alt_brain_coral_block",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PINK)
+                    .instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK)));
+    public static final DeferredBlock<Block> ALT_BUBBLE_CORAL_BLOCK = registerBlock("alt_bubble_coral_block",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE)
+                    .instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK)));
+    public static final DeferredBlock<Block> ALT_HORN_CORAL_BLOCK = registerBlock("alt_horn_coral_block",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_YELLOW)
+                    .instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK)));
+    public static final DeferredBlock<Block> ALT_TUBE_CORAL_BLOCK = registerBlock("alt_tube_coral_block",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_BLUE)
+                    .instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK)));
+    public static final DeferredBlock<Block> ALT_FIRE_CORAL_BLOCK = registerBlock("alt_fire_coral_block",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED)
+                    .instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops()
+                    .strength(1.5F, 6.0F).sound(SoundType.CORAL_BLOCK)));
+    public static final DeferredBlock<Block> ALT_BROWN_MUSHROOM_BLOCK = registerBlock(
+            "alt_brown_mushroom_block",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.DIRT)
+                    .instrument(NoteBlockInstrument.BASS).strength(0.2F).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> ALT_RED_MUSHROOM_BLOCK = registerBlock(
+            "alt_red_mushroom_block",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_RED)
+                    .instrument(NoteBlockInstrument.BASS).strength(0.2F).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> ALT_MUSHROOM_STEM = registerBlock(
+            "alt_mushroom_stem",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.WOOL)
+                    .instrument(NoteBlockInstrument.BASS).strength(0.2F).sound(SoundType.WOOD)));
+    public static final DeferredBlock<Block> STRIPPED_MUSHROOM_STEM = registerBlock(
+            "stripped_mushroom_stem",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.WOOD)
+                    .instrument(NoteBlockInstrument.BASS).strength(0.2F).sound(SoundType.WOOD)));
+
+    public static final DeferredBlock<Block> ALT_FIRE_CORAL = registerDPlant("alt_fire_coral",SoundType.WET_GRASS);
+    public static final DeferredBlock<Block> ALT_FIRE_CORAL_FAN = registerDPlant("alt_fire_coral_fan",SoundType.WET_GRASS);
+    public static final DeferredBlock<Block> ALT_FIRE_CORAL_WALL_FAN = registerODPlant("alt_fire_coral_wall_fan",SoundType.WET_GRASS);
+    public static final DeferredBlock<Block> ALT_DEAD_FIRE_CORAL = registerDPlant("alt_dead_fire_coral",SoundType.CORAL_BLOCK);
+    public static final DeferredBlock<Block> ALT_DEAD_FIRE_CORAL_FAN = registerDPlant("alt_dead_fire_coral_fan",SoundType.CORAL_BLOCK);
+    public static final DeferredBlock<Block> ALT_DEAD_FIRE_CORAL_WALL_FAN = registerODPlant("alt_dead_fire_coral_wall_fan",SoundType.CORAL_BLOCK);
+
+    public static final DeferredBlock<Block> ALT_HORN_CORAL = registerDPlant("alt_horn_coral",SoundType.WET_GRASS);
+    public static final DeferredBlock<Block> ALT_HORN_CORAL_FAN = registerDPlant("alt_horn_coral_fan",SoundType.WET_GRASS);
+    public static final DeferredBlock<Block> ALT_HORN_CORAL_WALL_FAN = registerODPlant("alt_horn_coral_wall_fan",SoundType.WET_GRASS);
+    public static final DeferredBlock<Block> ALT_DEAD_HORN_CORAL = registerDPlant("alt_dead_horn_coral",SoundType.CORAL_BLOCK);
+    public static final DeferredBlock<Block> ALT_DEAD_HORN_CORAL_FAN = registerDPlant("alt_dead_horn_coral_fan",SoundType.CORAL_BLOCK);
+    public static final DeferredBlock<Block> ALT_DEAD_HORN_CORAL_WALL_FAN = registerODPlant("alt_dead_horn_coral_wall_fan",SoundType.CORAL_BLOCK);
+
+    public static final DeferredBlock<Block> ALT_TUBE_CORAL = registerDPlant("alt_tube_coral",SoundType.WET_GRASS);
+    public static final DeferredBlock<Block> ALT_TUBE_CORAL_FAN = registerDPlant("alt_tube_coral_fan",SoundType.WET_GRASS);
+    public static final DeferredBlock<Block> ALT_TUBE_CORAL_WALL_FAN = registerODPlant("alt_tube_coral_wall_fan",SoundType.WET_GRASS);
+    public static final DeferredBlock<Block> ALT_DEAD_TUBE_CORAL = registerDPlant("alt_dead_tube_coral",SoundType.CORAL_BLOCK);
+    public static final DeferredBlock<Block> ALT_DEAD_TUBE_CORAL_FAN = registerDPlant("alt_dead_tube_coral_fan",SoundType.CORAL_BLOCK);
+    public static final DeferredBlock<Block> ALT_DEAD_TUBE_CORAL_WALL_FAN = registerODPlant("alt_dead_tube_coral_wall_fan",SoundType.CORAL_BLOCK);
+
+    public static final DeferredBlock<Block> ALT_BRAIN_CORAL = registerDPlant("alt_brain_coral",SoundType.WET_GRASS);
+    public static final DeferredBlock<Block> ALT_BRAIN_CORAL_FAN = registerDPlant("alt_brain_coral_fan",SoundType.WET_GRASS);
+    public static final DeferredBlock<Block> ALT_BRAIN_CORAL_WALL_FAN = registerODPlant("alt_brain_coral_wall_fan",SoundType.WET_GRASS);
+    public static final DeferredBlock<Block> ALT_DEAD_BRAIN_CORAL = registerDPlant("alt_dead_brain_coral",SoundType.CORAL_BLOCK);
+    public static final DeferredBlock<Block> ALT_DEAD_BRAIN_CORAL_FAN = registerDPlant("alt_dead_brain_coral_fan",SoundType.CORAL_BLOCK);
+    public static final DeferredBlock<Block> ALT_DEAD_BRAIN_CORAL_WALL_FAN = registerODPlant("alt_dead_brain_coral_wall_fan",SoundType.CORAL_BLOCK);
+
+    public static final DeferredBlock<Block> ALT_BUBBLE_CORAL = registerDPlant("alt_bubble_coral",SoundType.WET_GRASS);
+    public static final DeferredBlock<Block> ALT_BUBBLE_CORAL_FAN = registerDPlant("alt_bubble_coral_fan",SoundType.WET_GRASS);
+    public static final DeferredBlock<Block> ALT_BUBBLE_CORAL_WALL_FAN = registerODPlant("alt_bubble_coral_wall_fan",SoundType.WET_GRASS);
+    public static final DeferredBlock<Block> ALT_DEAD_BUBBLE_CORAL = registerDPlant("alt_dead_bubble_coral",SoundType.CORAL_BLOCK);
+    public static final DeferredBlock<Block> ALT_DEAD_BUBBLE_CORAL_FAN = registerDPlant("alt_dead_bubble_coral_fan",SoundType.CORAL_BLOCK);
+    public static final DeferredBlock<Block> ALT_DEAD_BUBBLE_CORAL_WALL_FAN = registerODPlant("alt_dead_bubble_coral_wall_fan",SoundType.CORAL_BLOCK);
+
+    //FUNGI
+    public static final DeferredBlock<Block> ALT_BROWN_MUSHROOM = registerDPlant("alt_brown_mushroom",SoundType.FUNGUS);
+    public static final DeferredBlock<Block> ALT_RED_MUSHROOM = registerDPlant("alt_red_mushroom",SoundType.FUNGUS);
+    public static final DeferredBlock<Block> ALT_CRIMSON_FUNGUS = registerDPlant("alt_crimson_fungus",SoundType.FUNGUS);
+    public static final DeferredBlock<Block> ALT_WARPED_FUNGUS = registerDPlant("alt_warped_fungus",SoundType.FUNGUS);
+    public static final DeferredBlock<Block> ALT_GLOW_LICHEN = registerBlock("alt_glow_lichen",
+            ()->new GlowLichenBlock(BlockBehaviour.Properties.of().mapColor(MapColor.NONE)
+                    .replaceable().noCollission().strength(0.2F).sound(SoundType.GLOW_LICHEN)
+                    .lightLevel(GlowLichenBlock.emission(7)).ignitedByLava().pushReaction(PushReaction.DESTROY)));
+
+    public static final DeferredBlock<Block> PORTALIC_BLOCK = registerBlock("portalic_block",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_PURPLE)
+                    .noOcclusion().strength(1f).sound(SoundType.GLASS)));
+    public static final DeferredBlock<Block> WATER_TANK = registerBlock("water_tank",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.WATER)
+                    .noOcclusion().strength(1f).sound(SoundType.GLASS)));
+    public static final DeferredBlock<Block> LAVA_TANK = registerBlock("lava_tank",
+            ()->new Block(BlockBehaviour.Properties.of().mapColor(MapColor.COLOR_ORANGE)
+                    .noOcclusion().strength(1f).sound(SoundType.GLASS)));
 
     //VANILLA TEXTURE           WIWWIMC BLOCK SET
     //enchanting_table_top      Diamond Core =

@@ -1,0 +1,14 @@
+{
+  "values": [
+    "#minecraft:pickaxes",
+    "#minecraft:axes",
+    "#minecraft:swords",
+    "#minecraft:shovels",
+    "#minecraft:hoes",
+    "#minecraft:enchantable/armor",
+    "minecraft:flint_and_steel",
+    "#minecraft:creeper_drop_music_discs",
+    "#minecraft:arrows",
+    "#minecraft:trim_templates"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "wiwwimc:block/template_coral_wall_fan_rot",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "fan": "minecraft:block/dead_bubble_coral_fan",
+    "texture": "minecraft:block/dead_bubble_coral_fan"
+  }
+}
