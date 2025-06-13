@@ -41,8 +41,7 @@ import java.util.Objects;
 
 import net.minecraft.data.models.ModelProvider.*;
 
-import static net.minecraft.core.Direction.NORTH;
-import static net.minecraft.core.Direction.UP;
+import static net.minecraft.core.Direction.*;
 import static net.neoforged.neoforge.client.model.generators.ModelProvider.BLOCK_FOLDER;
 
 public class MultidirectionalBlock extends OmniDirectionalBlock {
@@ -60,7 +59,16 @@ public class MultidirectionalBlock extends OmniDirectionalBlock {
     public static final IntegerProperty WEST_UV = IntegerProperty.create("west_uv",1,4);
     public static final IntegerProperty TOP_UV = IntegerProperty.create("up_uv",1,4);
     public static final IntegerProperty BOTTOM_UV = IntegerProperty.create("down_uv",1,4);
-
+    public static final IntegerProperty[] ALL_STATE_TYPES = {BOTTOM_UV,TOP_UV,NORTH_UV,SOUTH_UV,WEST_UV,EAST_UV};
+    public static Direction getDir(IntegerProperty n) {
+        Direction direction = DOWN;
+        if(n==TOP_UV) {direction = UP;}
+        else if(n==NORTH_UV) {direction = NORTH;}
+        else if(n==SOUTH_UV) {direction = SOUTH;}
+        else if(n==EAST_UV) {direction = EAST;}
+        else if(n==WEST_UV) {direction = WEST;}
+        return direction;
+    }
     @Override
     protected VoxelShape getShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return Block.box(0,0,0,16,16,16);

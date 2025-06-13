@@ -1,6 +1,0 @@
-{
-  "parent": "wiwwimc:block/template_multidirectional_vert_rot",
-  "textures": {
-    "texture": "minecraft:block/observer_side"
-  }
-}

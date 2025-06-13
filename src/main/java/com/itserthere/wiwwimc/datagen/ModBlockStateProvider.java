@@ -14,6 +14,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.client.model.CompositeModel;
 import net.neoforged.neoforge.client.model.generators.*;
@@ -484,26 +486,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(bl.get(),models().cubeAll(getBlockName(bl),texture));
     }
     public void multiDirectionalBlock(DeferredBlock<Block> block, ResourceLocation texture) {
-        getVariantBuilder(block.get())
-                .forAllStates(state -> {
-                    int iN = state.getValue(MultidirectionalBlock.NORTH_UV);
-                    int iS = state.getValue(MultidirectionalBlock.SOUTH_UV);
-                    int iE = state.getValue(MultidirectionalBlock.EAST_UV);
-                    int iW = state.getValue(MultidirectionalBlock.WEST_UV);
-                    int iU = state.getValue(MultidirectionalBlock.TOP_UV);
-                    int iD = state.getValue(MultidirectionalBlock.BOTTOM_UV)-1;
-                    int[] vec = {iD,iU,iN,iS,iW,iE};
-                    ModelFile mainModelFile = getMDModel(block, texture,false,0);
-                    ModelFile rotModelFile = getMDModel(block, texture,false,0);
-                    MultiPartBlockStateBuilder multipartBuilder = getMultipartBuilder(block.get());
-                    for(int i=0; i<=5; i++) {
-                        multipartBuilder.part().modelFile(getMDModel(block,texture,Helpers.ALL_DIRECTIONS[i],vec[i],0))
-                                .rotationX((int)Helpers.getRot(Helpers.ALL_DIRECTIONS[i],vec[i]).x)
-                                .rotationY((int)Helpers.getRot(Helpers.ALL_DIRECTIONS[i],vec[i]).y)
-                                .addModel().end();
-                    }
-                    return multipartBuilder.part().build();
-                });
+        MultiPartBlockStateBuilder multipartBuilder = getMultipartBuilder(block.get());
+        for(IntegerProperty n: MultidirectionalBlock.ALL_STATE_TYPES) {
+            for(int i=1; i<=4; i++) {
+                multipartBuilder.part().modelFile(getMDModel(block,texture,MultidirectionalBlock.getDir(n),i,0))
+                        .rotationX((int)Helpers.getRot(n,i).x)
+                        .rotationY((int)Helpers.getRot(n,i).y)
+                        .addModel().condition(n,i).end();
+            }
+        }
     }
     @Description("i->MD Block, Panel top/bottom parts, Panel Side part, Panel Corner part")
     public ModelFile getMDModel(DeferredBlock<Block> block, ResourceLocation texture, boolean isRot, int i) {

@@ -1,9 +1,16 @@
 package com.itserthere.wiwwimc;
 
+import com.itserthere.wiwwimc.Blocks.MultidirectionalBlock;
 import net.minecraft.core.Direction;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.shapes.VoxelShape;
+import net.neoforged.fml.loading.FileUtils;
+import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
+
+import java.io.File;
 
 public class Helpers {
     public static VoxelShape rotate(Direction face, VoxelShape voxelShape) {
@@ -102,7 +109,9 @@ public class Helpers {
     }
     public static boolean isRot(Direction face, int i) {
         return (face == Direction.NORTH || face == Direction.SOUTH || face == Direction.EAST|| face == Direction.WEST)
-                && i%2==1;
+                && i%2==0;
     }
+    public static boolean isRot(IntegerProperty n, int i) {return isRot(MultidirectionalBlock.getDir(n),i);}
+    public static Vec2 getRot(IntegerProperty n, int uv) {return getRot(MultidirectionalBlock.getDir(n),uv);}
     //FOR SHADERS
 }
