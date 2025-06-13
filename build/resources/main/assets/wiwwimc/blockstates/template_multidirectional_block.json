@@ -1,0 +1,27 @@
+{"multipart": [
+    {"apply": {"model": "#model"}, "when": {"bottom_uv": 1}},
+    {"apply": {"model": "#model","y": 90, "uvlock": true}, "when": {"bottom_uv": 2}},
+    {"apply": {"model": "#model","y": 180, "uvlock": true}, "when": {"bottom_uv": 3}},
+    {"apply": {"model": "#model","y": 270, "uvlock": true}, "when": {"bottom_uv": 4}},
+    {"apply": {"model": "#model","x": 180, "uvlock": true}, "when": {"top_uv": 1}},
+    {"apply": {"model": "#model","x": 180,"y": 90, "uvlock": true}, "when": {"top_uv": 2}},
+    {"apply": {"model": "#model","x": 180,"y": 180, "uvlock": true}, "when": {"top_uv": 3}},
+    {"apply": {"model": "#model","x": 180,"y": 270, "uvlock": true}, "when": {"top_uv": 4}},
+    {"apply": {"model": "#model","x": 270, "y": 180, "uvlock": true}, "when": {"south_uv": 1}},
+    {"apply": {"model": "#rot_model","x": 270, "y": 180, "uvlock": true}, "when": {"south_uv": 2}},
+    {"apply": {"model": "#model","x": 90, "uvlock": true}, "when": {"south_uv": 3}},
+    {"apply": {"model": "#rot_model","x": 90, "uvlock": true}, "when": {"south_uv": 4}},
+    {"apply": {"model": "#model","x": 90, "y": 180, "uvlock": true}, "when": {"north_uv": 3}},
+    {"apply": {"model": "#rot_model","x": 90, "y": 180, "uvlock": true}, "when": {"north_uv": 4}},
+    {"apply": {"model": "#model","x": 270, "uvlock": true}, "when": {"north_uv": 1}},
+    {"apply": {"model": "#rot_model","x": 270, "uvlock": true}, "when": {"north_uv": 2}},
+    {"apply": {"model": "#model","x": 90, "y": 90, "uvlock": true}, "when": {"west_uv": 1}},
+    {"apply": {"model": "#rot_model","x": 270, "y": 270, "uvlock": true}, "when": {"west_uv": 2}},
+    {"apply": {"model": "#model","x": 270, "y": 270, "uvlock": true}, "when": {"west_uv": 3}},
+    {"apply": {"model": "#rot_model","x": 90, "y": 90, "uvlock": true}, "when": {"west_uv": 4}},
+    {"apply": {"model": "#model","x": 90, "y": 270, "uvlock": true}, "when": {"east_uv": 1}},
+    {"apply": {"model": "#rot_model","x": 90, "y": 270, "uvlock": true}, "when": {"east_uv": 2}},
+    {"apply": {"model": "#model","x": 270, "y": 90, "uvlock": true}, "when": {"east_uv": 3}},
+    {"apply": {"model": "#rot_model","x": 270, "y": 90, "uvlock": true}, "when": {"east_uv": 4}}
+  ]
+}
