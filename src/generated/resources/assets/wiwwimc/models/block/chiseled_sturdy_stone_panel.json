@@ -1,0 +1,6 @@
+{
+  "parent": "wiwwimc:block/template_md_panel",
+  "textures": {
+    "texture": "minecraft:block/observer_top"
+  }
+}

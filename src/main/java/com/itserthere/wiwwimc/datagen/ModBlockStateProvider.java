@@ -486,10 +486,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockItem(bl.get(),models().cubeAll(getBlockName(bl),texture));
     }
     public void multiDirectionalBlock(DeferredBlock<Block> block, ResourceLocation texture) {
+        ModelFile normModel = getMDModel(block,texture,false,0);
+        ModelFile rotModel = getMDModel(block,texture,true,0);
         MultiPartBlockStateBuilder multipartBuilder = getMultipartBuilder(block.get());
         for(IntegerProperty n: MultidirectionalBlock.ALL_STATE_TYPES) {
             for(int i=1; i<=4; i++) {
-                multipartBuilder.part().modelFile(getMDModel(block,texture,MultidirectionalBlock.getDir(n),i,0))
+                multipartBuilder.part().modelFile(Helpers.isRot(n,i) ? rotModel : normModel)
                         .rotationX((int)Helpers.getRot(n,i).x)
                         .rotationY((int)Helpers.getRot(n,i).y)
                         .addModel().condition(n,i).end();
@@ -498,16 +500,15 @@ public class ModBlockStateProvider extends BlockStateProvider {
     }
     @Description("i->MD Block, Panel top/bottom parts, Panel Side part, Panel Corner part")
     public ModelFile getMDModel(DeferredBlock<Block> block, ResourceLocation texture, boolean isRot, int i) {
-        String modelName = "block/template_md_panel";
+        String suffix = "";
         switch (i) {
-            case 1->modelName+="_tb";
-            case 2->modelName+="_side";
-            case 3->modelName+="_corner";
+            case 1->suffix+="_tb";
+            case 2->suffix+="_side";
+            case 3->suffix+="_corner";
         }
-        if(isRot) {modelName += "_rot";}
-        return models().singleTexture(getBlockName(block),
-                ResourceLocation.fromNamespaceAndPath(WIWWIMC.MODID, "block/template_md_panel" + (isRot ? "_rot" : "")
-                ), texture);
+        if(isRot) {suffix += "_rot";}
+        return models().singleTexture(getBlockName(block) + "_panel" + suffix,
+                ResourceLocation.fromNamespaceAndPath(WIWWIMC.MODID, "block/template_md_panel" + suffix), texture);
     }
     public ModelFile getMDModel(DeferredBlock<Block> block, ResourceLocation texture, Direction face, Direction front, int i) {
         return getMDModel(block,texture,Helpers.isRot(face,front),i);

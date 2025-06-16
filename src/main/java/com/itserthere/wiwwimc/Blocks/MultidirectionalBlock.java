@@ -44,7 +44,7 @@ import net.minecraft.data.models.ModelProvider.*;
 import static net.minecraft.core.Direction.*;
 import static net.neoforged.neoforge.client.model.generators.ModelProvider.BLOCK_FOLDER;
 
-public class MultidirectionalBlock extends OmniDirectionalBlock {
+public class MultidirectionalBlock extends Block {
     public MultidirectionalBlock(Properties properties) {
         super(properties);
         this.registerDefaultState(
@@ -86,10 +86,10 @@ public class MultidirectionalBlock extends OmniDirectionalBlock {
                 .setValue(NORTH_UV,1).setValue(SOUTH_UV,1).setValue(EAST_UV,1).setValue(WEST_UV,1);
     }
 
+
     @Override
     protected ItemInteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
-        if(stack.is(Items.STICK)) {
-            Vec3 v = player.getEyePosition();
+        if(stack.is(ItemTags.PICKAXES)) {
             UseOnContext context = new UseOnContext(player,hand,hitResult);
             Direction direction = context.getClickedFace().getOpposite();
             switch (direction) {
