@@ -7,7 +7,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.neoforged.fml.loading.FileUtils;
 import net.neoforged.neoforge.client.model.generators.BlockModelBuilder;
 
 import java.io.File;
